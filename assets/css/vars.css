@@ -1,0 +1,11 @@
+@layer vars {
+	:root {
+		--color-primary: royalblue;
+		--color-secondary: goldenrod;
+		--color-text-primary: black;
+		--color-text-secondary: white;
+		--color-bg: antiquewhite;
+
+		font-size: 1.2rem;
+	}
+}

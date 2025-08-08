@@ -1,0 +1,7 @@
+@layers fonts, vars, base, components;
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap') layer(fonts);
+
+@import './vars.css';
+@import './base.css';
+@import './components/index.css';

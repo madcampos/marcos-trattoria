@@ -1,0 +1,8 @@
+@layer components {
+	hero-image {
+		grid-area: hero;
+		align-self: stretch;
+		justify-self: stretch;
+		height: max(20rem, 70dvh);
+	}
+}

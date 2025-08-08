@@ -1,0 +1,114 @@
+@layer base {
+	:root {
+		--font-body: 'Cormorant Infant', Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+		--font-headings: 'Cookie', 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
+
+		box-sizing: border-box;
+		font-family: var(--font-body);
+	}
+
+	*, *::before, *::after {
+		box-sizing: inherit;
+		font-family: inherit;
+	}
+
+	html, body { height: 100%; }
+	body {
+		margin: 0;
+		background: var(--color-bg);
+		color: var(--color-text-primary);
+
+		& > header {
+			display: grid;
+			grid-template-rows: auto 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'menu'
+				'hero';
+			place-items: center;
+			background: var(--color-primary);
+			color: var(--color-text-secondary);
+
+			nav {
+				grid-area: menu;
+
+				ul {
+					display: flex;
+					gap: 1rem;
+					margin: 0;
+					padding: 0.5rem;
+					list-style: none;
+				}
+
+				a {
+					border-radius: 0.2rem;
+					padding: 0.2rem 0.5rem;
+					color: var(--color-text-secondary);
+					text-decoration-thickness: 0.05rem;
+					text-underline-offset: 0.15rem;
+
+					&:focus {
+						outline: none;
+						background-color: var(--color-secondary);
+						color: var(--color-text-primary);
+						text-decoration-thickness: 0.1rem;
+						text-underline-offset: 0.2rem;
+					}
+				}
+			}
+
+			#skip-to-main {
+				display: block;
+				grid-area: menu;
+				transform: translateY(-100%);
+				z-index: 1;
+				background: var(--color-bg);
+				padding: 1rem 1.5rem;
+				width: 100%;
+				text-align: center;
+
+				&:focus {
+					transform: translateY(0);
+					outline: none;
+				}
+			}
+
+			hgroup {
+				display: grid;
+				grid-area: hero;
+				align-content: center;
+				place-items: center;
+				align-self: stretch;
+				justify-self: stretch;
+				backdrop-filter: blur(0.1rem);
+				background: color-mix(in srgb, black, transparent 70%);
+				pointer-events: none;
+
+				* { margin: 0; }
+
+				h1::after {
+					display: block;
+					margin-inline: auto;
+					margin-block: 0.2rem 0.5rem;
+					border-bottom: solid currentColor 0.1rem;
+					width: 3rem;
+					height: 0;
+					content: '';
+				}
+			}
+		}
+
+		main {}
+
+		& > footer {}
+	}
+
+	:is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-headings); }
+	h1 { font-size: 3.05rem; }
+	h2 { font-size: 2.44rem; }
+	h3 { font-size: 1.95rem; }
+	h4 { font-size: 1.56rem; }
+	h5 { font-size: 1.25rem; }
+	h6 { font-size: 1rem; }
+	small { font-size: 0.64rem; }
+}

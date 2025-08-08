@@ -1,0 +1,24 @@
+@layer components {
+	hero-controls {
+		display: flex;
+		grid-area: hero;
+		justify-content: space-between;
+		align-items: end;
+		align-self: end;
+		justify-self: stretch;
+		gap: 1rem;
+		z-index: 1;
+
+		button {
+			display: flex;
+			align-items: center;
+			justify-items: center;
+			margin: 1rem;
+			border: solid 0.1rem var(--color-secondary);
+			border-radius: 100vmax;
+			background-color: var(--color-primary);
+			padding: 0.5rem;
+			color: var(--color-secondary);
+		}
+	}
+}
