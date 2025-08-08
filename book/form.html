@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Booking Form | Marco&rsquo;s Trattoria</title>
+	</head>
+	<body>
+		<form action="/book/thank-you.html" method="post">
+			<p>
+				<label for="book-name">Your Name</label> <input type="text" name="name" id="book-name" />
+			</p>
+			<p>
+				<label for="book-email">Your Email</label> <input type="email" name="email" id="book-email" />
+			</p>
+			<p>
+				<label for="book-date">Date</label> <input type="date" name="date" id="book-date" />
+			</p>
+			<p>
+				<label for="book-time">Time</label>
+				<input type="time" name="time" id="book-time" min="10:00" max="01:00" step="3600" list="#book-time-suggestions" />
+				<datalist id="book-time-suggestions">
+					<option value="10:00">10:00 am</option>
+					<option value="11:00">11:00 am</option>
+					<option value="12:00">12:00 pm</option>
+					<option value="13:00">1:00 pm</option>
+					<option value="14:00">2:00 pm</option>
+					<option value="15:00">3:00 pm</option>
+					<option value="16:00">4:00 pm</option>
+					<option value="17:00">5:00 pm</option>
+					<option value="18:00">6:00 pm</option>
+					<option value="19:00">7:00 pm</option>
+					<option value="20:00">8:00 pm</option>
+					<option value="21:00">9:00 pm</option>
+					<option value="22:00">10:00 pm</option>
+					<option value="23:00">11:00 pm</option>
+					<option value="00:00">12:00 am</option>
+					<option value="01:00">01:00 am</option>
+				</datalist>
+			</p>
+			<p>
+				<label for="book-special-needs">Special needs</label> <textarea name="special-needs" id="book-special-needs" cols="22" rows="10"></textarea>
+			</p>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
