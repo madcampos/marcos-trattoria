@@ -1,0 +1,80 @@
+@layer pages {
+	iframe {
+		display: block;
+		margin-inline: auto;
+		border: none;
+		aspect-ratio: 1 / 1;
+		width: clamp(10rem, 100%, 20rem);
+		height: clamp(10rem, 100%, 20rem);
+	}
+
+	main {
+		img {
+			box-shadow: 0.1rem 0.1rem 0.5rem color-mix(in srgb, black, transparent);
+			border: solid 0.1rem var(--color-primary);
+			border-radius: 1rem;
+			width: 100%;
+		}
+
+		figure { margin: 1rem; }
+		figcaption { text-align: center; }
+	}
+
+	#our-history {
+		& > div {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+
+			@media (max-width: 40rem) { grid-template-columns: 1fr; }
+		}
+
+		p::first-letter {
+			font-size: 3rem;
+			initial-letter: 3 2;
+			padding: 0.2rem;
+		}
+	}
+
+	#book-table {
+		margin-inline: -0.5rem;
+		box-shadow: 0 0 0.5rem color-mix(in srgb, black, transparent 50%);
+		border: solid 0.1rem var(--color-secondary);
+		border-radius: 1rem;
+		background-image: url('../../images/bg-pattern.svg');
+		background-size: 17rem;
+		padding-block: 3rem;
+		text-align: center;
+
+		h2, p { margin: 0; }
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			backdrop-filter: blur(0.2rem);
+			margin-inline: auto;
+			border: solid 0.1rem var(--color-secondary);
+			border-radius: 1rem;
+			background-color: color-mix(in srgb, var(--color-bg), transparent 30%);
+			padding: 3rem;
+			width: fit-content;
+		}
+	}
+
+	#our-trattoria {
+		& > div {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+
+			@media (max-width: 40rem) { grid-template-columns: 1fr; }
+		}
+
+		#trattoria-description p:first-of-type::first-letter {
+			font-size: 3rem;
+			initial-letter: 3 2;
+			padding: 0.2rem;
+		}
+	}
+}

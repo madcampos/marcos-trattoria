@@ -1,0 +1,7 @@
+@layer components {
+	main {
+		margin-inline: auto;
+		padding: 1rem;
+		max-width: 120ch;
+	}
+}

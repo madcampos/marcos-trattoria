@@ -9,16 +9,26 @@
 		gap: 1rem;
 		z-index: 1;
 
-		button {
-			display: flex;
-			align-items: center;
-			justify-items: center;
-			margin: 1rem;
-			border: solid 0.1rem var(--color-secondary);
-			border-radius: 100vmax;
-			background-color: var(--color-primary);
-			padding: 0.5rem;
-			color: var(--color-secondary);
+		#video-description {
+			border: solid 0.15rem var(--color-primary);
+			border-radius: 0.5rem;
+			background-color: var(--color-bg);
+			padding: 1rem;
+			max-width: 70vmin;
+			max-height: 70vmin;
+			overflow: auto;
+			overscroll-behavior: contain;
+
+			&::backdrop {
+				backdrop-filter: blur(0.5rem);
+				background-color: color-mix(in srgb, black, transparent);
+			}
+
+			h2 {
+				margin: 0;
+				color: var(--color-primary);
+				text-align: center;
+			}
 		}
 	}
 }

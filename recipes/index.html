@@ -65,6 +65,15 @@
 							d="M17 7H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2m0 4H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2m2-9H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h11.59l3.7 3.71A1 1 0 0 0 21 22a.84.84 0 0 0 .38-.08A1 1 0 0 0 22 21V5a3 3 0 0 0-3-3m1 16.59l-2.29-2.3A1 1 0 0 0 17 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1Z"
 						/>
 					</symbol>
+					<symbol id="uil--bars" viewBox="0 0 24 24">
+						<path fill="currentColor" d="M3 8h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2m18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2m0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2" />
+					</symbol>
+					<symbol id="uil--times" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="m13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29l-4.3 4.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l4.29-4.3l4.29 4.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42Z"
+						/>
+					</symbol>
 				</defs>
 			</svg>
 		</svg-defs>
@@ -74,16 +83,37 @@
 		<header>
 			<a id="skip-to-main" href="#main">Skip to main</a>
 
-			<nav>
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/about">About</a></li>
-					<li><a href="/menu">Menu</a></li>
-					<li><a href="/recipes">Recipes</a></li>
-					<li><a href="/book">Book a Table</a></li>
-					<li><a href="/contact">Contact</a></li>
-				</ul>
-			</nav>
+			<main-menu>
+				<button popovertarget="main-menu">
+					<sr-only>Open menu</sr-only>
+					<x-icon role="none" aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use href="#uil--bars" />
+						</svg>
+					</x-icon>
+				</button>
+				<dialog popover id="main-menu">
+					<button popovertarget="main-menu">
+						<sr-only>Close menu</sr-only>
+						<x-icon role="none" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--times" />
+							</svg>
+						</x-icon>
+					</button>
+					<nav aria-labelledby="main-menu-label">
+						<sr-only id="main-menu-label">Main Menu</sr-only>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/about">About</a></li>
+							<li><a href="/menu">Menu</a></li>
+							<li><a href="/recipes">Recipes</a></li>
+							<li><a href="/book">Book a Table</a></li>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
+					</nav>
+				</dialog>
+			</main-menu>
 
 			<hgroup>
 				<h1>Recipes</h1>
@@ -113,36 +143,44 @@
 		<footer>
 			<section>
 				<h2>Contact Info</h2>
-				<address>
-					<div>
-						<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--store" /></svg></x-icon>
-						<blockquote>
-							<p>227 Queen Street West</p>
-							<p>Toronto, ON</p>
-							<p>M5V 1Z4</p>
-						</blockquote>
-					</div>
-					<p>
-						<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--envelope-edit" /></svg></x-icon>
-						<strong>Email:</strong>
-						<span>book@marcos-trattoria.com</span>
-						<a href="mailto:book@marcos-trattoria.com">
-							<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--external-link-alt" /></svg>
-						</a>
-					</p>
-					<p>
-						<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--phone" /></svg></x-icon>
-						<strong>Tel:</strong>
-						<span>(647) 123-4567</span>
-						<a href="tel:+16471234567">
-							<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--external-link-alt" /></svg>
-						</a>
-					</p>
-					<p>
-						<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--map-marker" /></svg></x-icon>
-						<a href="https://www.google.com/maps?ll=43.650376,-79.388112&z=17&t=m&hl=en&gl=CA&mapclient=embed&q=227+Queen+St+W+Toronto,+ON+M5V+1Z4">Map link</a>
-					</p>
-				</address>
+				<contact-info>
+					<address>
+						<div>
+							<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--store" /></svg></x-icon>
+							<blockquote>
+								<p>227 Queen Street West</p>
+								<p>Toronto, ON</p>
+								<p>M5V 1Z4</p>
+							</blockquote>
+						</div>
+						<p>
+							<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--envelope-edit" /></svg></x-icon>
+							<strong>Email:</strong>
+							<span>book@marcos-trattoria.com</span>
+							<sup>
+								<a href="mailto:book@marcos-trattoria.com" target="_blank">
+									<sr-only>Send an email to us</sr-only>
+									<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--external-link-alt" /></svg></x-icon>
+								</a>
+							</sup>
+						</p>
+						<p>
+							<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--phone" /></svg></x-icon>
+							<strong>Tel:</strong>
+							<span>(647) 123-4567</span>
+							<sup>
+								<a href="tel:+16471234567" target="_blank">
+									<sr-only>Call phone number</sr-only>
+									<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--external-link-alt" /></svg></x-icon>
+								</a>
+							</sup>
+						</p>
+						<p>
+							<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--map-marker" /></svg></x-icon>
+							<a href="https://www.google.com/maps?ll=43.650376,-79.388112&z=17&t=m&hl=en&gl=CA&mapclient=embed&q=227+Queen+St+W+Toronto,+ON+M5V+1Z4">Map link</a>
+						</p>
+					</address>
+				</contact-info>
 			</section>
 			<section>
 				<h2>Book a table</h2>

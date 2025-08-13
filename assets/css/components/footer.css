@@ -1,0 +1,48 @@
+@layer components {
+	body > footer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: start;
+		gap: 1rem;
+		background-color: var(--color-primary);
+		padding: 1rem;
+		color: var(--color-text-secondary);
+
+		:is(section, nav) { flex-grow: 1; }
+
+		h2 {
+			margin: 0;
+			color: var(--color-secondary);
+		}
+
+		ul { margin-block: 0; }
+
+		a { color: var(--color-secondary); }
+	}
+
+	#reservation-dialog {
+		display: flex;
+		flex-direction: column;
+		border: solid 0.15rem var(--color-primary);
+		border-radius: 0.5rem;
+		background-color: var(--color-bg);
+		padding: 1rem;
+		min-width: 50vmin;
+		max-width: 70vmin;
+		min-height: 50vmin;
+		max-height: 70vmin;
+
+		&::backdrop {
+			backdrop-filter: blur(0.5rem);
+			background-color: color-mix(in srgb, black, transparent);
+		}
+
+		iframe { flex-grow: 1; }
+
+		footer {
+			display: flex;
+			justify-content: end;
+		}
+	}
+}

@@ -1,5 +1,10 @@
 @import './svg-defs.css';
+@import './icon.css';
+@import './header.css';
+@import './main.css';
+@import './footer.css';
 @import './hero-controls.css';
 @import './hero-image.css';
 @import './sr-only.css';
-@import './icon.css';
+@import './contact-info.css';
+@import './main-menu.css';

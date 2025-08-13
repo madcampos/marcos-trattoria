@@ -1,0 +1,68 @@
+@layer components {
+	main-menu {
+		button {
+			display: none;
+			@media (max-width: 35rem) { display: flex; }
+		}
+
+		dialog {
+			display: flex;
+			position: relative;
+			margin-block: 0;
+			border: none;
+			background-color: var(--color-primary);
+			width: 100%;
+			height: fit-content;
+			max-height: 70vh;
+
+			button { align-self: center; }
+
+			&:popover-open { display: flex; }
+
+			&::backdrop {
+				backdrop-filter: blur(0.5rem);
+				background-color: color-mix(in srgb, black, transparent);
+			}
+
+			@media (max-width: 35rem) {
+				display: none;
+				position: absolute;
+				flex-direction: column;
+				z-index: 1;
+				padding: 1rem;
+				overflow: auto;
+			}
+		}
+
+		nav {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				gap: 1rem;
+				margin: 0;
+				padding: 1rem 0.5rem;
+				list-style: none;
+
+				@media (max-width: 35rem) { flex-direction: column; }
+			}
+
+			a {
+				border-radius: 0.2rem;
+				padding: 0.2rem 0.5rem;
+				color: var(--color-text-secondary);
+				text-decoration-thickness: 0.05rem;
+				text-underline-offset: 0.15rem;
+
+				&:focus {
+					outline: none;
+					background-color: var(--color-secondary);
+					color: var(--color-text-primary);
+					text-decoration-thickness: 0.1rem;
+					text-underline-offset: 0.2rem;
+				}
+			}
+		}
+	}
+}

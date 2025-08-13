@@ -1,11 +1,16 @@
 @layer vars {
 	:root {
-		--color-primary: royalblue;
-		--color-secondary: goldenrod;
-		--color-text-primary: black;
+		--color-primary: #2f4da7;
+		--color-secondary: #f0cd75;
+		--color-text-primary: #2a2a2a;
 		--color-text-secondary: white;
 		--color-bg: antiquewhite;
+		--color-link: orangered;
+		--color-link-visited: firebrick;
+		--color-link-hover: maroon;
+		--color-link-focus: darkorange;
+		--color-link-active: yellow;
 
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 	}
 }

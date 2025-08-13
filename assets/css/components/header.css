@@ -1,0 +1,62 @@
+@layer components {
+	body > header {
+		display: grid;
+		grid-template-rows: auto min(70dvh, 30rem);
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'menu'
+			'hero';
+		place-items: center;
+		background: var(--color-primary);
+		color: var(--color-text-secondary);
+
+		main-menu { grid-area: menu; }
+
+		#skip-to-main {
+			--skip-link-padding: 0.5rem;
+
+			display: block;
+			position: absolute;
+			grid-area: menu;
+			transform: translateY(calc((100% + var(--skip-link-padding)) * -1));
+			z-index: 1;
+			inset-block: var(--skip-link-padding) auto;
+			inset-inline: var(--skip-link-padding);
+			background: var(--color-bg);
+			padding: 1rem 1.5rem;
+			width: calc(100% - var(--skip-link-padding) * 2);
+			text-align: center;
+
+			&:focus {
+				transform: translateY(0);
+				outline: solid var(--skip-link-padding) var(--color-secondary);
+				color: var(--color-text-primary);
+			}
+		}
+
+		hgroup {
+			display: grid;
+			grid-area: hero;
+			align-content: center;
+			place-items: center;
+			align-self: stretch;
+			justify-self: stretch;
+			backdrop-filter: blur(0.1rem);
+			background: color-mix(in srgb, black, transparent 70%);
+			text-align: center;
+
+			* { margin: 0; }
+			h1 { color: var(--color-secondary); }
+
+			h1::after {
+				display: block;
+				margin-inline: auto;
+				margin-block: 0.2rem 0.5rem;
+				border-bottom: solid currentColor 0.1rem;
+				width: 3rem;
+				height: 0;
+				content: '';
+			}
+		}
+	}
+}

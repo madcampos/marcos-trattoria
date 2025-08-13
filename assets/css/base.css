@@ -18,97 +18,70 @@
 		background: var(--color-bg);
 		color: var(--color-text-primary);
 
-		& > header {
-			display: grid;
-			grid-template-rows: auto 1fr;
-			grid-template-columns: 1fr;
-			grid-template-areas:
-				'menu'
-				'hero';
-			place-items: center;
-			background: var(--color-primary);
-			color: var(--color-text-secondary);
-
-			nav {
-				grid-area: menu;
-
-				ul {
-					display: flex;
-					gap: 1rem;
-					margin: 0;
-					padding: 0.5rem;
-					list-style: none;
-				}
-
-				a {
-					border-radius: 0.2rem;
-					padding: 0.2rem 0.5rem;
-					color: var(--color-text-secondary);
-					text-decoration-thickness: 0.05rem;
-					text-underline-offset: 0.15rem;
-
-					&:focus {
-						outline: none;
-						background-color: var(--color-secondary);
-						color: var(--color-text-primary);
-						text-decoration-thickness: 0.1rem;
-						text-underline-offset: 0.2rem;
-					}
-				}
-			}
-
-			#skip-to-main {
-				display: block;
-				grid-area: menu;
-				transform: translateY(-100%);
-				z-index: 1;
-				background: var(--color-bg);
-				padding: 1rem 1.5rem;
-				width: 100%;
-				text-align: center;
-
-				&:focus {
-					transform: translateY(0);
-					outline: none;
-				}
-			}
-
-			hgroup {
-				display: grid;
-				grid-area: hero;
-				align-content: center;
-				place-items: center;
-				align-self: stretch;
-				justify-self: stretch;
-				backdrop-filter: blur(0.1rem);
-				background: color-mix(in srgb, black, transparent 70%);
-				pointer-events: none;
-
-				* { margin: 0; }
-
-				h1::after {
-					display: block;
-					margin-inline: auto;
-					margin-block: 0.2rem 0.5rem;
-					border-bottom: solid currentColor 0.1rem;
-					width: 3rem;
-					height: 0;
-					content: '';
-				}
-			}
+		& > hr {
+			margin: 0;
+			box-shadow: 0 0 1rem 0.5rem color-mix(in srgb, black, transparent 50%);
+			border: solid 0.01rem var(--color-secondary);
 		}
-
-		main {}
-
-		& > footer {}
 	}
 
-	:is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-headings); }
-	h1 { font-size: 3.05rem; }
+	:is(h1, h2, h3, h4, h5, h6) {
+		color: var(--color-primary);
+		font-family: var(--font-headings);
+	}
+	h1 { font-size: 5rem; }
 	h2 { font-size: 2.44rem; }
 	h3 { font-size: 1.95rem; }
 	h4 { font-size: 1.56rem; }
 	h5 { font-size: 1.25rem; }
 	h6 { font-size: 1rem; }
 	small { font-size: 0.64rem; }
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-items: center;
+		margin: 1rem;
+		border: solid 0.1rem currentColor;
+		border-radius: 100vmax;
+		background-color: var(--color-primary);
+		padding: 0.5rem;
+		color: var(--color-secondary);
+
+		&:focus {
+			outline: solid 0.1rem var(--color-secondary);
+			background-color: var(--color-secondary);
+			color: var(--color-text-primary);
+		}
+
+		&:hover {
+			background-color: var(--color-text-secondary);
+			color: var(--color-text-primary);
+		}
+
+		&:active {
+			outline-color: var(--color-primary);
+			background-color: var(--color-text-secondary);
+			color: var(--color-primary);
+		}
+	}
+
+	a {
+		color: var(--color-link);
+		text-decoration-thickness: 0.05em;
+		text-underline-offset: 0.15em;
+
+		&:visited { color: var(--color-link-visited); }
+
+		&:focus {
+			outline: solid 0.1rem var(--color-link-focus);
+			outline-offset: 0.1rem;
+			border-radius: 0.2rem;
+			background-color: var(--color-text-primary);
+			color: var(--color-link-focus);
+		}
+
+		&:hover { color: var(--color-link-hover); }
+		&:active { color: var(--color-link-active); }
+	}
 }
