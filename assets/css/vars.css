@@ -10,6 +10,9 @@
 		--color-link-hover: maroon;
 		--color-link-focus: darkorange;
 		--color-link-active: yellow;
+		--color-required: firebrick;
+		--color-error: crimson;
+		--color-valid: forestgreen;
 
 		font-size: 1.25rem;
 	}

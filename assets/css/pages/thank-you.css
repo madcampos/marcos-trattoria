@@ -1,0 +1,34 @@
+@layer pages {
+	header {
+		grid-template-rows: 1fr;
+		grid-template-areas: 'hero';
+		background-color: var(--color-bg);
+		width: 100%;
+		height: 100%;
+		color: var(--color-text-primary);
+	}
+
+	hero-image {
+		mask: radial-gradient(circle at center, black 50%, transparent 70%);
+		background-image: url('/assets/images/bg-pattern.svg');
+		background-size: 25rem;
+		background-color: var(--color-bg);
+	}
+
+	hgroup {
+		align-self: center;
+		justify-self: center;
+		border: solid 0.1rem var(--color-secondary);
+		border-radius: 1rem;
+		background-color: color-mix(in srgb, var(--color-bg), transparent 30%);
+		padding: 2rem;
+
+		@media (max-width: 20rem) { padding: 1rem; }
+	}
+
+	h1 {
+		color: var(--color-primary);
+
+		@media (max-width: 20rem) { font-size: 3rem; }
+	}
+}

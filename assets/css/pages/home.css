@@ -1,14 +1,14 @@
 @layer pages {
-	iframe {
-		display: block;
-		margin-inline: auto;
-		border: none;
-		aspect-ratio: 1 / 1;
-		width: clamp(10rem, 100%, 20rem);
-		height: clamp(10rem, 100%, 20rem);
-	}
-
 	main {
+		iframe {
+			display: block;
+			margin-inline: auto;
+			border: none;
+			aspect-ratio: 1 / 1;
+			width: clamp(10rem, 100%, 20rem);
+			height: clamp(10rem, 100%, 20rem);
+		}
+
 		img {
 			box-shadow: 0.1rem 0.1rem 0.5rem color-mix(in srgb, black, transparent);
 			border: solid 0.1rem var(--color-primary);

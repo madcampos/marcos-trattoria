@@ -1,0 +1,128 @@
+@layer components {
+	form {
+		--input-margin: 0.5rem;
+
+		display: grid;
+		grid-template-rows: repeat(6, auto);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			'name name'
+			'email email'
+			'phone phone'
+			'date time'
+			'special special'
+			'buttons buttons';
+		gap: 1rem;
+		width: 100%;
+
+		@media (max-width: 25rem) {
+			grid-template-rows: repeat(7, auto);
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'name'
+				'email'
+				'phone'
+				'date'
+				'time'
+				'special'
+				'buttons';
+		}
+
+		div:has(#book-name) { grid-area: name; }
+		div:has(#book-email) { grid-area: email; }
+		div:has(#book-phone) { grid-area: phone; }
+		div:has(#book-date) { grid-area: date; }
+		div:has(#book-time) { grid-area: time; }
+		div:has(#book-special-needs) { grid-area: special; }
+
+		div:has(button) {
+			display: flex;
+			grid-area: buttons;
+			justify-content: end;
+			gap: 1rem;
+			padding-inline: 1rem;
+
+			@media (max-width: 25rem) {
+				justify-content: center;
+				padding-inline: 0;
+			}
+		}
+
+		div:has(:is(input, select):required) label::after {
+			content: ' (Required)';
+			color: var(--color-required);
+		}
+
+		div:has(> x-icon) {
+			display: flex;
+			align-items: center;
+			gap: 0.2rem;
+
+			&:has(textarea) { align-items: baseline; }
+		}
+
+		div:has(:is(input, textarea, select):user-invalid) {
+			color: var(--color-error);
+			:is(input, textarea, select) { border-color: var(--color-error); }
+			label { color: var(--color-error); }
+			.error-message { display: block; }
+			.error-mark { display: block; }
+		}
+
+		div:has(:is(input, textarea, select):user-valid) {
+			color: var(--color-valid);
+			:is(input, textarea, select) { border-color: var(--color-valid); }
+			label { color: var(--color-valid); }
+			.valid-mark { display: block; }
+		}
+
+		:is(input, textarea, select) {
+			display: block;
+			margin: var(--input-margin);
+			border: solid 0.1rem var(--color-primary);
+			border-radius: 0.3rem;
+			background-color: var(--color-secondary);
+			padding: 0.3rem 0.4rem;
+			width: calc(100% - var(--input-margin) * 2);
+			resize: none;
+			font-size: 1rem;
+
+			&:focus {
+				outline: none;
+				border-color: var(--color-secondary);
+				background-color: var(--color-primary);
+				color: var(--color-text-secondary);
+			}
+		}
+
+		option {
+			&:focus {
+				background-color: var(--color-secondary);
+				color: var(--color-text-primary);
+			}
+
+			&:hover {
+				background-color: var(--color-text-secondary);
+				color: var(--color-text-primary);
+			}
+		}
+
+		textarea { height: 30ch; }
+
+		button {
+			margin: 0;
+			min-width: 10ch;
+			font-size: 1rem;
+		}
+
+		.error-message {
+			display: none;
+			margin-inline: var(--input-margin);
+			color: var(--color-error);
+
+			font-size: smaller;
+		}
+
+		:where(.error-mark, .valid-mark) { display: none; }
+	}
+}
