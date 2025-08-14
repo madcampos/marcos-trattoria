@@ -46,7 +46,7 @@
 		box-shadow: 0 0 0.5rem color-mix(in srgb, black, transparent 50%);
 		border: solid 0.1rem var(--color-secondary);
 		border-radius: 1rem;
-		background-image: url('/assets/images/bg-pattern.svg');
+		background-image: url('/assets/images/bg-pattern.png');
 		background-size: 25rem;
 		padding-block: 3rem;
 		text-align: center;

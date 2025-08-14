@@ -1,0 +1,52 @@
+@layer pages {
+	main {
+		dl { columns: 45ch auto; }
+
+		dt {
+			margin-block-start: 1rem;
+			font-weight: bold;
+			font-size: 1.3rem;
+		}
+
+		dd {
+			break-before: avoid;
+			break-inside: avoid;
+		}
+
+		img {
+			box-shadow: 0.1rem 0.1rem 0.5rem color-mix(in srgb, black, transparent);
+			border: solid 0.1rem var(--color-primary);
+			border-radius: 1rem;
+			width: 100%;
+			height: auto;
+		}
+
+		figure {
+			float: left;
+			margin: 1rem;
+			max-width: max(30ch, min(40vw, 50ch));
+
+			@media (max-width: 40rem) {
+				float: none;
+				margin-inline: auto;
+			}
+		}
+
+		section:nth-of-type(even) figure {
+			float: right;
+
+			@media (max-width: 40rem) {
+				float: none;
+				margin-inline: auto;
+			}
+		}
+
+		figcaption {
+			font-style: italic;
+			font-size: smaller;
+			text-align: center;
+		}
+
+		section { display: flow-root; }
+	}
+}

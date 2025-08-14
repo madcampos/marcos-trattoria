@@ -5,6 +5,8 @@
 		<title>Menu | Marco&rsquo;s Trattoria</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/assets/css/index.css" />
+		<link rel="stylesheet" href="/assets/css/pages/menu.css" />
+		<script type="module" src="/assets/script/main.js"></script>
 	</head>
 	<body>
 		<!-- #region SVG assets -->
@@ -115,10 +117,63 @@
 				</dialog>
 			</main-menu>
 
-			<hgroup>
+			<hero-image>
+				<video
+					muted
+					playsinline
+					loop
+					disablepictureinpicture
+					disableremoteplayback
+					width="480"
+					height="480"
+					src="/assets/video/menu-hero.mp4"
+					poster="/assets/video/menu-hero.jpg"
+					aria-describedby="video-description"
+					aria-labelledby="hero-title"
+				>
+				</video>
+			</hero-image>
+
+			<hgroup id="hero-title">
 				<h1>Menu</h1>
 				<p>A delight in every bite</p>
 			</hgroup>
+
+			<hero-controls hidden>
+				<button type="button" id="video-play-pause-button">
+					<span id="video-play-icon">
+						<sr-only>Play Video</sr-only>
+						<x-icon role="none" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--play" />
+							</svg>
+						</x-icon>
+					</span>
+					<span id="video-pause-icon" hidden>
+						<sr-only>Pause Video</sr-only>
+						<x-icon role="none" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--pause" />
+							</svg>
+						</x-icon>
+					</span>
+				</button>
+				<button type="button" popovertarget="video-description">
+					<sr-only>Video Description</sr-only>
+					<x-icon role="none" aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<use href="#uil--comment-alt-message" />
+						</svg>
+					</x-icon>
+				</button>
+				<dialog popover="hint" id="video-description">
+					<h2>Video Description</h2>
+					<p>A panoramic shot of a table with food.</p>
+					<p>From left to right there is a charcuttery board with cheese, dark rye bread and spinash dips.</p>
+					<p>Then in the middle a small bowl of pasta with pesto sauce.</p>
+					<p>To the right a focaccia bread with some green leafs.</p>
+				</dialog>
+			</hero-controls>
 		</header>
 		<hr />
 		<!-- #endregion -->
@@ -131,37 +186,46 @@
 					<dt>Chianti Classico DOCG (Tuscany)</dt>
 					<dd>
 						<span><strong>Type:</strong> Red</span>
-						<span><strong>Notes:</strong> Medium-bodied with bright cherry, earthy spice, and a touch of oak</span>
-						<span><strong>Pairing:</strong> Perfect with Tagliatelle al Ragù or Pizza Capricciosa</span>
+						<br />
+						<span><strong>Notes:</strong> Medium-bodied with bright cherry, earthy spice, and a touch of oak.</span>
+						<br />
+						<span><strong>Pairing:</strong> Perfect with Tagliatelle al Ragù or Pizza Capricciosa.</span>
 					</dd>
 
 					<dt>Pinot Grigio delle Venezie DOC (Veneto)</dt>
 					<dd>
 						<span><strong>Type:</strong> White</span>
-						<span><strong>Notes:</strong> Crisp and refreshing with citrus, green apple, and floral hints</span>
-						<span><strong>Pairing:</strong> Ideal with Bruschetta, Caccio e Peppe, or Insalata</span>
-						Caprese
+						<br />
+						<span><strong>Notes:</strong> Crisp and refreshing with citrus, green apple, and floral hints.</span>
+						<br />
+						<span><strong>Pairing:</strong> Ideal with Bruschetta, Caccio e Peppe, or Insalata Caprese.</span>
 					</dd>
 
 					<dt>Barolo DOCG (Piedmont)</dt>
 					<dd>
 						<span><strong>Type:</strong> Red</span>
-						<span><strong>Notes:</strong> Full-bodied with notes of dark cherry, rose, and leather; elegant tannins</span>
-						<span><strong>Pairing:</strong> Pairs beautifully with rich dishes like Gnocchi al Pesto or Diavola Pizza</span>
+						<br />
+						<span><strong>Notes:</strong> Full-bodied with notes of dark cherry, rose, and leather; elegant tannins.</span>
+						<br />
+						<span><strong>Pairing:</strong> Pairs beautifully with rich dishes like Gnocchi al Pesto or Diavola Pizza.</span>
 					</dd>
 
 					<dt>Prosecco Superiore DOCG (Valdobbiadene)</dt>
 					<dd>
 						<span><strong>Type:</strong> Sparkling White</span>
-						<span><strong>Notes:</strong> Light and bubbly with pear, white peach, and floral aromas</span>
-						<span><strong>Pairing:</strong> A festive start with Prosciutto e Melone or Arancini. Also pairs greatly with dessert</span>
+						<br />
+						<span><strong>Notes:</strong> Light and bubbly with pear, white peach, and floral aromas.</span>
+						<br />
+						<span><strong>Pairing:</strong> A festive start with Prosciutto e Melone or Arancini. Also pairs greatly with dessert.</span>
 					</dd>
 
 					<dt>Verdicchio dei Castelli di Jesi DOC (Marche)</dt>
 					<dd>
 						<span><strong>Type:</strong> White</span>
-						<span><strong>Notes:</strong> Dry and mineral-driven with almond, citrus, and herbal undertones</span>
-						<span><strong>Pairing:</strong> Excellent with pizzas or Panna Cotta</span>
+						<br />
+						<span><strong>Notes:</strong> Dry and mineral-driven with almond, citrus, and herbal undertones.</span>
+						<br />
+						<span><strong>Pairing:</strong> Excellent with pizzas or Panna Cotta.</span>
 					</dd>
 				</dl>
 			</section>
@@ -170,21 +234,27 @@
 			<!-- #region Antipasti -->
 			<section>
 				<h2>Antipasti</h2>
+
+				<figure>
+					<img width="480" src="/assets/images/focaccia.jpg" alt="A close up shot of a focaccia bread topped with tomatos and herbs." />
+					<figcaption>Focaccia</figcaption>
+				</figure>
+
 				<dl>
 					<dt>Focaccia</dt>
-					<dd>House made focaccia, olive oil, and rosemary</dd>
+					<dd>House made focaccia, olive oil, and rosemary.</dd>
 
 					<dt>Brucceta al Pomodoro</dt>
-					<dd>Grilled bread topped with marinated tomatoes, garlic, and basil</dd>
+					<dd>Grilled bread topped with marinated tomatoes, garlic, and basil.</dd>
 
 					<dt>Arancini Siciliani</dt>
-					<dd>Crispy risotto balls filled with mozzarella and vegan ragù</dd>
+					<dd>Crispy risotto balls filled with mozzarella and vegan ragù.</dd>
 
 					<dt>Prosciutto e Melone</dt>
-					<dd>Sweet cantaloupe paired with smoked mushroom slices, in the style of Parma ham</dd>
+					<dd>Sweet cantaloupe paired with smoked mushroom slices, in the style of Parma ham.</dd>
 
 					<dt>Insalata Caprese</dt>
-					<dd>Fresh mozzarella, tomatoes, basil, and extra virgin olive oil</dd>
+					<dd>Fresh mozzarella, tomatoes, basil, and extra virgin olive oil.</dd>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -193,21 +263,26 @@
 			<section>
 				<h2>Pasta</h2>
 
+				<figure>
+					<img width="480" src="/assets/images/pasta2.jpg" alt="A top shot of plate of pasta with mushroom bolognese sauce and sprinkled cilantro." />
+					<figcaption>Tagliatelle al Ragù</figcaption>
+				</figure>
+
 				<dl>
 					<dt>Spaghetti alla Carbonara</dt>
-					<dd>Egg yolk, vegan sausage, Pecorino Romano, and black pepper</dd>
+					<dd>Egg yolk, vegan sausage, Pecorino Romano, and black pepper.</dd>
 
 					<dt>Tagliatelle al Ragù</dt>
-					<dd>Slow-cooked mushroom and lentil ragù over fresh tagliatelle</dd>
+					<dd>Slow-cooked mushroom and lentil ragù over fresh tagliatelle.</dd>
 
 					<dt>Penne all’Arrabbiata</dt>
-					<dd>Spicy tomato sauce with garlic and chili flakes</dd>
+					<dd>Spicy tomato sauce with garlic and chili flakes.</dd>
 
 					<dt>Caccio e Peppe</dt>
-					<dd>Spaghetti, grated pecorino, and black pepper</dd>
+					<dd>Spaghetti, grated pecorino, and black pepper.</dd>
 
 					<dt>Gnocchi al Pesto Genovese</dt>
-					<dd>Potato gnocchi tossed in basil pesto and pine nuts</dd>
+					<dd>Potato gnocchi tossed in basil pesto and pine nuts.</dd>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -215,27 +290,37 @@
 			<!-- #region Pizza -->
 			<section>
 				<h2>Pizza</h2>
+
+				<figure>
+					<img
+						width="480"
+						src="/assets/images/pizza.jpg"
+						alt="A top shot of a pizza topped with olives, onions, zuccini, red and yellow peppers, corn, cilantro, and sesame seeds."
+					/>
+					<figcaption>Brazillian Style</figcaption>
+				</figure>
+
 				<dl>
 					<dt>Margherita</dt>
-					<dd>San Marzano tomato, mozzarella di bufala, and fresh basil</dd>
+					<dd>San Marzano tomato, mozzarella di bufala, and fresh basil.</dd>
 
 					<dt>Quattro Formaggi</dt>
-					<dd>Mozzarella, Gorgonzola, Fontina, and Parmigiano</dd>
+					<dd>Mozzarella, Gorgonzola, Fontina, and Parmigiano.</dd>
 
 					<dt>Diavola</dt>
-					<dd>Spicy vegan salami, tomato sauce, mozzarella, and chili oil</dd>
+					<dd>Spicy vegan salami, tomato sauce, mozzarella, and chili oil.</dd>
 
 					<dt>Funghi e Tartufo</dt>
-					<dd>Wild mushrooms, truffle cream, and mozzarella</dd>
+					<dd>Wild mushrooms, truffle cream, and mozzarella.</dd>
 
 					<dt>Capricciosa</dt>
-					<dd>Artichokes, olives, mushrooms, and tomato sauce</dd>
+					<dd>Artichokes, olives, mushrooms, and tomato sauce.</dd>
 
 					<dt>Brazillian Style</dt>
-					<dd>A little bit of everything, it is as delicious as it is outragious</dd>
+					<dd>A little bit of everything, it is as delicious as it is outragious.</dd>
 
 					<dt>Mezzo-a-Mezzo</dt>
-					<dd>Half and Half pizza. Choose two topping options</dd>
+					<dd>Half and Half pizza. Choose two topping options.</dd>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -243,30 +328,40 @@
 			<!-- #region Dessert -->
 			<section>
 				<h2>Dessert</h2>
+
+				<figure>
+					<img
+						width="480"
+						src="/assets/images/tiramisu.jpg"
+						alt="A photo of a creamy tiramisu, covered with cocoa powder"
+					/>
+					<figcaption>Tiramisù Classico</figcaption>
+				</figure>
+
 				<dl>
 					<dt>Tiramisù Classico</dt>
-					<dd>Layers of espresso-soaked ladyfingers and mascarpone cream</dd>
+					<dd>Layers of espresso-soaked ladyfingers and mascarpone cream.</dd>
 
 					<dt>Panna Cotta alla Vaniglia</dt>
-					<dd>Silky vanilla custard with berry coulis</dd>
+					<dd>Silky vanilla custard with berry coulis.</dd>
 
 					<dt>Cannoli Siciliani</dt>
-					<dd>Crispy pastry shells filled with sweet ricotta and chocolate chips</dd>
+					<dd>Crispy pastry shells filled with sweet ricotta and chocolate chips.</dd>
 
 					<dt>Gelato Artigianale</dt>
-					<dd>Choice of pistachio, hazelnut, stracciatella, or lemon</dd>
+					<dd>Choice of pistachio, hazelnut, stracciatella, or lemon.</dd>
 
 					<dt>Affogato al Caffè</dt>
-					<dd>Vanilla gelato drowned in hot espresso</dd>
+					<dd>Vanilla gelato drowned in hot espresso.</dd>
 
 					<dt>Apple Pie</dt>
-					<dd>Layers of apple intersected with a buttery flaky crust</dd>
+					<dd>Layers of apple intersected with a buttery flaky crust.</dd>
 
 					<dt><em lang="pt-BR">Brigadeiro</em></dt>
-					<dd>Traditional Brazilian chocolate fudge balls</dd>
+					<dd>Traditional Brazilian chocolate fudge balls.</dd>
 
 					<dt><em lang="pt-BR">Francisquito</em></dt>
-					<dd>Soft cookie with crusty shell</dd>
+					<dd>Soft cookie with crusty shell.</dd>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -280,7 +375,9 @@
 				<contact-info>
 					<address>
 						<div>
-							<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--store" /></svg></x-icon>
+							<x-icon role="presentation" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--store" /></svg>
+							</x-icon>
 							<blockquote>
 								<p>227 Queen Street West</p>
 								<p>Toronto, ON</p>
@@ -288,29 +385,43 @@
 							</blockquote>
 						</div>
 						<p>
-							<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--envelope-edit" /></svg></x-icon>
+							<x-icon role="presentation" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--envelope-edit" /></svg>
+							</x-icon>
 							<strong>Email:</strong>
 							<span>book@marcos-trattoria.com</span>
 							<sup>
 								<a href="mailto:book@marcos-trattoria.com" target="_blank">
 									<sr-only>Send an email to us</sr-only>
-									<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--external-link-alt" /></svg></x-icon>
+									<x-icon role="presentation" aria-hidden="true">
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use href="#uil--external-link-alt" />
+										</svg>
+									</x-icon>
 								</a>
 							</sup>
 						</p>
 						<p>
-							<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--phone" /></svg></x-icon>
+							<x-icon role="presentation" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--phone" /></svg>
+							</x-icon>
 							<strong>Tel:</strong>
 							<span>(647) 123-4567</span>
 							<sup>
 								<a href="tel:+16471234567" target="_blank">
 									<sr-only>Call phone number</sr-only>
-									<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--external-link-alt" /></svg></x-icon>
+									<x-icon role="presentation" aria-hidden="true">
+										<svg width="24" height="24" viewBox="0 0 24 24">
+											<use href="#uil--external-link-alt" />
+										</svg>
+									</x-icon>
 								</a>
 							</sup>
 						</p>
 						<p>
-							<x-icon><svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--map-marker" /></svg></x-icon>
+							<x-icon role="presentation" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--map-marker" /></svg>
+							</x-icon>
 							<a href="https://www.google.com/maps?ll=43.650376,-79.388112&z=17&t=m&hl=en&gl=CA&mapclient=embed&q=227+Queen+St+W+Toronto,+ON+M5V+1Z4">Map link</a>
 						</p>
 					</address>
