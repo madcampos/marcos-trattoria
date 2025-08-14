@@ -9,6 +9,8 @@
 		gap: 1rem;
 		z-index: 1;
 
+		#video-play-pause-button span:not([hidden]) { display: flex; }
+
 		#video-description {
 			border: solid 0.15rem var(--color-primary);
 			border-radius: 0.5rem;

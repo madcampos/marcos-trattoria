@@ -1,0 +1,24 @@
+const video = /** @type {HTMLVideoElement} */ (document.querySelector('hero-image video'));
+const playPauseButton = /** @type {HTMLButtonElement} */ (document.querySelector('#video-play-pause-button'));
+const playIcon = /** @type {HTMLSpanElement} */ (document.querySelector('#video-play-icon'));
+const pauseIcon = /** @type {HTMLSpanElement} */ (document.querySelector('#video-pause-icon'));
+
+video.addEventListener('play', () => {
+	playIcon.hidden = true;
+	pauseIcon.hidden = false;
+});
+
+video.addEventListener('pause', () => {
+	playIcon.hidden = false;
+	pauseIcon.hidden = true;
+});
+
+playPauseButton.addEventListener('click', () => {
+	if (video.paused) {
+		video.play();
+	} else {
+		video.pause();
+	}
+});
+
+video.play();

@@ -6,6 +6,7 @@
 		<title>Marco&rsquo;s Trattoria</title>
 		<link rel="stylesheet" href="/assets/css/index.css" />
 		<link rel="stylesheet" href="/assets/css/pages/home.css" />
+		<script type="module" src="/assets/script/main.js"></script>
 	</head>
 	<body>
 		<!-- #region SVG assets -->
@@ -138,19 +139,23 @@
 				<p>A delight in each bite</p>
 			</hgroup>
 			<hero-controls>
-				<button type="button">
-					<sr-only>Play Video</sr-only>
-					<x-icon role="none" aria-hidden="true">
-						<svg width="24" height="24" viewBox="0 0 24 24">
-							<use href="#uil--play" />
-						</svg>
-					</x-icon>
-					<sr-only hidden>Pause Video</sr-only>
-					<x-icon hidden role="none" aria-hidden="true">
-						<svg width="24" height="24" viewBox="0 0 24 24">
-							<use href="#uil--pause" />
-						</svg>
-					</x-icon>
+				<button type="button" id="video-play-pause-button">
+					<span id="video-play-icon">
+						<sr-only>Play Video</sr-only>
+						<x-icon role="none" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--play" />
+							</svg>
+						</x-icon>
+					</span>
+					<span id="video-pause-icon" hidden>
+						<sr-only>Pause Video</sr-only>
+						<x-icon role="none" aria-hidden="true">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--pause" />
+							</svg>
+						</x-icon>
+					</span>
 				</button>
 				<button type="button" popovertarget="video-description">
 					<sr-only>Video Description</sr-only>
