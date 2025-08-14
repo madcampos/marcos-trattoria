@@ -42,7 +42,22 @@
 			align-self: stretch;
 			justify-self: stretch;
 			backdrop-filter: blur(0.1rem);
-			background: color-mix(in srgb, black, transparent 70%);
+			background-image:
+				linear-gradient(
+					to bottom,
+					color-mix(in srgb, black, transparent 30%),
+					transparent 10%,
+					transparent 90%,
+					color-mix(in srgb, black, transparent 30%)
+				),
+				linear-gradient(
+				to right,
+				color-mix(in srgb, black, transparent 30%),
+				transparent 5%,
+				transparent 95%,
+				color-mix(in srgb, black, transparent 30%)
+			);
+			background-color: color-mix(in srgb, black, transparent 65%);
 			text-align: center;
 
 			* { margin: 0; }

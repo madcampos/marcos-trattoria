@@ -1,0 +1,102 @@
+@layer pages {
+	hero-image img { object-position: 0 70%; }
+
+	main {
+		img {
+			box-shadow: 0.1rem 0.1rem 0.5rem color-mix(in srgb, black, transparent);
+			border: solid 0.1rem var(--color-primary);
+			border-radius: 1rem;
+			width: 100%;
+			height: auto;
+		}
+
+		figure { margin: 1rem; }
+		figcaption {
+			font-style: italic;
+			font-size: smaller;
+			text-align: center;
+		}
+
+		p:first-of-type:first-letter {
+			font-size: 3rem;
+			initial-letter: 3 2;
+			padding: 0.2rem;
+		}
+
+		.dual-pane {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+
+			@media (max-width: 40rem) { grid-template-columns: 1fr; }
+		}
+
+		#the-chef {
+			img {
+				mask-image:
+					url('/assets/images/chef-mask.svg'),
+					linear-gradient(to right, transparent, black 25%),
+					linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+				mask-composite: intersect;
+
+				box-shadow: none;
+				border: none;
+
+				@media (max-width: 35rem) {
+					mask: none;
+					box-shadow: 0.1rem 0.1rem 0.5rem color-mix(in srgb, black, transparent);
+					border: solid 0.1rem var(--color-primary);
+				}
+			}
+
+			#chef-picture {
+				float: left;
+				shape-margin: 1rem;
+				shape-outside: url('/assets/images/chef-mask.svg');
+				width: 50vw;
+
+				@media (max-width: 35rem) {
+					float: none;
+					margin-inline: auto;
+				}
+			}
+
+			div {
+				display: flow-root;
+
+				p:first-of-type {
+					margin-block-start: 7rem;
+
+					@media (max-width: 35rem) { margin-block-start: revert; }
+				}
+			}
+
+			hr {
+				border: solid 0.05rem var(--color-primary);
+				width: 12ch;
+			}
+
+			figure:has(blockquote) {
+				margin-inline: auto;
+				max-width: 50ch;
+
+				blockquote {
+					color: var(--color-primary);
+					font-style: italic;
+					font-size: 1.5rem;
+					text-align: center;
+
+					&::before { content: '“'; }
+					&::after { content: '”'; }
+				}
+
+				figcaption {
+					font-size: 1rem;
+					text-align: end;
+
+					&::before { content: '—'; }
+				}
+			}
+		}
+	}
+}
