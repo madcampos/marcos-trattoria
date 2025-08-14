@@ -1,0 +1,30 @@
+@layer pages {
+	main {
+		min-height: 50vh;
+
+		hr {
+			border: solid 0.05rem var(--color-primary);
+			width: 12ch;
+		}
+
+		figure {
+			margin-inline: auto;
+			max-width: 50ch;
+
+			p:first-of-type:first-line { font-weight: bold; }
+			blockquote {
+				margin: 0;
+				color: var(--color-primary);
+				font-style: italic;
+				text-align: center;
+			}
+
+			figcaption {
+				font-size: 0.9rem;
+				text-align: end;
+
+				&::before { content: '— '; }
+			}
+		}
+	}
+}
