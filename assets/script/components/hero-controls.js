@@ -21,4 +21,8 @@ playPauseButton.addEventListener('click', () => {
 	}
 });
 
-video.play();
+if (window.matchMedia('(prefers-reduced-motion: no-preference), (prefers-reduced-data: no-preference)')) {
+	video.play();
+}
+
+document.querySelector('hero-controls')?.removeAttribute('hidden');
