@@ -5,8 +5,10 @@
 		height: fit-content;
 
 		iframe {
+			display: block;
+			margin-inline: auto;
 			border: none;
-			width: 100%;
+			width: clamp(12rem, 50vw, 40rem);
 			height: 45rem;
 
 			@media (max-width: 25rem) { height: 50rem; }

@@ -2,12 +2,6 @@
 	main {
 		dl { columns: 45ch auto; }
 
-		dt {
-			margin-block-start: 1rem;
-			font-weight: bold;
-			font-size: 1.3rem;
-		}
-
 		dd {
 			break-before: avoid;
 			break-inside: avoid;

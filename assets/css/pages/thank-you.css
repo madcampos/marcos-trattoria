@@ -9,7 +9,7 @@
 	}
 
 	hero-image {
-		mask: radial-gradient(circle at center, black 50%, transparent 70%);
+		mask: radial-gradient(circle at center, black 50%, transparent 60%);
 		background-image: url('/assets/images/bg-pattern.png');
 		background-size: 25rem;
 		background-color: var(--color-bg);
@@ -20,6 +20,7 @@
 		justify-self: center;
 		border: solid 0.1rem var(--color-secondary);
 		border-radius: 1rem;
+		background-image: none;
 		background-color: color-mix(in srgb, var(--color-bg), transparent 30%);
 		padding: 2rem;
 

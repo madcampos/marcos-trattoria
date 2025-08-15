@@ -4,19 +4,172 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contact Form | Marco&rsquo;s Trattoria</title>
+		<link rel="stylesheet" href="/assets/css/index.css" />
+		<link rel="stylesheet" href="/assets/css/pages/contact-form.css" />
 	</head>
 	<body>
+		<!-- #region SVG assets -->
+		<svg-defs role="none" aria-hidden="true">
+			<svg width="1" height="1" viewBox="0 0 24 24">
+				<defs>
+					<symbol id="uil--envelope" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m-.41 2l-5.88 5.88a1 1 0 0 1-1.42 0L5.41 6ZM20 17a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7.41l5.88 5.88a3 3 0 0 0 4.24 0L20 7.41Z"
+						/>
+					</symbol>
+					<symbol id="uil--user" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19M12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4"
+						/>
+					</symbol>
+					<symbol id="uil--phone" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M19.44 13c-.22 0-.45-.07-.67-.12a9.4 9.4 0 0 1-1.31-.39a2 2 0 0 0-2.48 1l-.22.45a12.2 12.2 0 0 1-2.66-2a12.2 12.2 0 0 1-2-2.66l.42-.28a2 2 0 0 0 1-2.48a10 10 0 0 1-.39-1.31c-.05-.22-.09-.45-.12-.68a3 3 0 0 0-3-2.49h-3a3 3 0 0 0-3 3.41a19 19 0 0 0 16.52 16.46h.38a3 3 0 0 0 2-.76a3 3 0 0 0 1-2.25v-3a3 3 0 0 0-2.47-2.9m.5 6a1 1 0 0 1-.34.75a1.05 1.05 0 0 1-.82.25A17 17 0 0 1 4.07 5.22a1.1 1.1 0 0 1 .25-.82a1 1 0 0 1 .75-.34h3a1 1 0 0 1 1 .79q.06.41.15.81a11 11 0 0 0 .46 1.55l-1.4.65a1 1 0 0 0-.49 1.33a14.5 14.5 0 0 0 7 7a1 1 0 0 0 .76 0a1 1 0 0 0 .57-.52l.62-1.4a14 14 0 0 0 1.58.46q.4.09.81.15a1 1 0 0 1 .79 1Z"
+						/>
+					</symbol>
+					<symbol id="uil--times" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="m13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29l-4.3 4.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l4.29-4.3l4.29 4.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42Z"
+						/>
+					</symbol>
+					<symbol id="uil--check" viewBox="0 0 24 24">
+						<path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47" />
+					</symbol>
+					<symbol id="uil--comment-message" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20m0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20m5-9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2m-2 4H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2M9 9h6a1 1 0 0 0 0-2H9a1 1 0 0 0 0 2"
+						/>
+					</symbol>
+				</defs>
+			</svg>
+		</svg-defs>
+		<!-- #endregion -->
+
 		<form action="/contact/thank-you.html" method="post">
-			<p>
-				<label for="contact-name">Your Name</label> <input type="text" name="name" id="contact-name" />
-			</p>
-			<p>
-				<label for="contact-email">Your Email</label> <input type="email" name="email" id="contact-email" />
-			</p>
-			<p>
-				<label for="contact-message">Your Message</label> <textarea name="message" id="contact-message" cols="22" rows="10"></textarea>
-			</p>
-			<button type="submit">Submit</button>
+			<div>
+				<div>
+					<x-icon role="presentation" aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--user" /></svg>
+					</x-icon>
+
+					<label for="contact-name">Your Name</label>
+				</div>
+
+				<div>
+					<x-icon role="presentation" aria-hidden="true" class="error-mark">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--times" /></svg>
+					</x-icon>
+					<x-icon role="presentation" aria-hidden="true" class="valid-mark">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--check" /></svg>
+					</x-icon>
+					<input
+						type="text"
+						name="name"
+						id="contact-name"
+						required
+						autocapitalize="words"
+						autocomplete="name"
+						aria-describedby="contact-name-error-message"
+					/>
+				</div>
+				<span class="error-message" id="contact-name-error-message">Please provide your name.</span>
+			</div>
+
+			<div>
+				<div>
+					<x-icon role="presentation" aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--envelope" /></svg>
+					</x-icon>
+					<label for="contact-email">Your Email</label>
+				</div>
+
+				<div>
+					<x-icon role="presentation" aria-hidden="true" class="error-mark">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--times" /></svg>
+					</x-icon>
+					<x-icon role="presentation" aria-hidden="true" class="valid-mark">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--check" /></svg>
+					</x-icon>
+					<input
+						type="email"
+						name="email"
+						id="contact-email"
+						required
+						autocomplete="email"
+						inputmode="email"
+						aria-describedby="contact-email-error-message"
+					/>
+				</div>
+				<span class="error-message" id="contact-email-error-message">Please provide a valid email address.</span>
+			</div>
+
+			<div>
+				<div>
+					<x-icon role="presentation" aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--phone" /></svg>
+					</x-icon>
+
+					<label for="contact-phone">Your Phone</label>
+				</div>
+
+				<div>
+					<x-icon role="presentation" aria-hidden="true" class="error-mark">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--times" /></svg>
+					</x-icon>
+					<x-icon role="presentation" aria-hidden="true" class="valid-mark">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--check" /></svg>
+					</x-icon>
+					<input
+						type="tel"
+						name="phone"
+						id="contact-phone"
+						required
+						autocapitalize="off"
+						autocomplete="tel"
+						inputmode="tel"
+						aria-describedby="contact-phone-error-message"
+					/>
+				</div>
+				<span class="error-message" id="contact-phone-error-message">Please provide a valid phone number.</span>
+			</div>
+
+			<div>
+				<div>
+					<x-icon role="presentation" aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--comment-message" /></svg>
+					</x-icon>
+					<label for="contact-message">Your Message</label>
+				</div>
+
+				<div>
+					<x-icon role="presentation" aria-hidden="true" class="error-mark">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--times" /></svg>
+					</x-icon>
+					<x-icon role="presentation" aria-hidden="true" class="valid-mark">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--check" /></svg>
+					</x-icon>
+					<textarea
+						name="message"
+						id="contact-message"
+						cols="22"
+						rows="10"
+						required
+						autocapitalize="on"
+						aria-describedby="contact-message-error-message"
+					></textarea>
+				</div>
+				<span class="error-message" id="contact-message-error-message">Please add a message.</span>
+			</div>
+
+			<div>
+				<button type="reset">Reset</button>
+				<button type="submit">Submit</button>
+			</div>
 		</form>
 	</body>
 </html>

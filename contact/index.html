@@ -5,6 +5,7 @@
 		<title>Contact | Marco&rsquo;s Trattoria</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/assets/css/index.css" />
+		<link rel="stylesheet" href="/assets/css/pages/contact.css" />
 	</head>
 	<body>
 		<!-- #region SVG assets -->
@@ -33,12 +34,6 @@
 						<path
 							fill="currentColor"
 							d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8m0 17.65c-2.13-2-6-6.31-6-9.65a6 6 0 0 1 12 0c0 3.34-3.87 7.66-6 9.65M12 6a4 4 0 1 0 4 4a4 4 0 0 0-4-4m0 6a2 2 0 1 1 2-2a2 2 0 0 1-2 2"
-						/>
-					</symbol>
-					<symbol id="uil--share" viewBox="0 0 24 24">
-						<path
-							fill="currentColor"
-							d="m21.707 11.293l-8-8A1 1 0 0 0 12 4v3.545A11.015 11.015 0 0 0 2 18.5V20a1 1 0 0 0 1.784.62a11.46 11.46 0 0 1 7.887-4.049c.05-.006.175-.016.329-.026V20a1 1 0 0 0 1.707.707l8-8a1 1 0 0 0 0-1.414M14 17.586V15.5a1 1 0 0 0-1-1c-.255 0-1.296.05-1.562.085a14 14 0 0 0-7.386 2.948A9.013 9.013 0 0 1 13 9.5a1 1 0 0 0 1-1V6.414L19.586 12Z"
 						/>
 					</symbol>
 					<symbol id="uil--store" viewBox="0 0 24 24">
@@ -115,6 +110,14 @@
 				</dialog>
 			</main-menu>
 
+			<hero-image>
+				<img
+					height="480"
+					src="/assets/images/pizza-hands.jpg"
+					alt="A picture of a dining table with a plate of pizza. Multiple hands are reaching out for slices of the pizza."
+				/>
+			</hero-image>
+
 			<hgroup>
 				<h1>Talk to Us</h1>
 				<p>Send us a message or come for a meal</p>
@@ -129,6 +132,8 @@
 				<h2>Our Location</h2>
 				<div>
 					<p>Located in the heart of the Toronto Downtown it is the best place for Italian Food in Toronto.</p>
+				</div>
+				<div id="contact-and-map">
 					<contact-info>
 						<address>
 							<div>
@@ -177,8 +182,6 @@
 							</p>
 						</address>
 					</contact-info>
-				</div>
-				<div>
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1443.4469304289491!2d-79.38875543034386!3d43.650376568570756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34ce2c575bc5%3A0x3b8b4af586178424!2s227%20Queen%20St%20W%2C%20Toronto%2C%20ON%20M5V%201Z4!5e0!3m2!1sen!2sca!4v1754604876962!5m2!1sen!2sca"
 						width="600"
@@ -225,7 +228,7 @@
 			<section>
 				<h2>Contact us</h2>
 
-				<iframe src="/contact/form.html"></iframe>
+				<iframe id="contact-form" src="/contact/form.html"></iframe>
 			</section>
 			<!-- #endregion -->
 		</main>

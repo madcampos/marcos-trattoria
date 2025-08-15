@@ -26,10 +26,24 @@
 				background-color: color-mix(in srgb, black, transparent);
 			}
 
+			header {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			button { margin: 0; }
+
 			h2 {
+				flex-grow: 1;
 				margin: 0;
 				color: var(--color-primary);
 				text-align: center;
+			}
+
+			@media (max-width: 30rem) {
+				max-width: calc(100dvw - 1rem);
+				max-height: calc(100dvh - 1rem);
 			}
 		}
 	}

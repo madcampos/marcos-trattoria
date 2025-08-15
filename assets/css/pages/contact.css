@@ -1,0 +1,40 @@
+@layer pages {
+	hero-image img { object-position: 0 70%; }
+
+	main {
+		iframe {
+			display: block;
+			margin-inline: auto;
+			border: none;
+			aspect-ratio: 1 / 1;
+			width: clamp(10rem, 100%, 20rem);
+			height: clamp(10rem, 100%, 20rem);
+		}
+
+		#contact-and-map {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+
+			@media (max-width: 40rem) { grid-template-columns: 1fr; }
+		}
+
+		contact-info {
+			align-self: center;
+			justify-self: center;
+		}
+
+		dl { columns: 45ch auto; }
+
+		dd {
+			break-before: avoid;
+			break-inside: avoid;
+		}
+
+		#contact-form {
+			aspect-ratio: unset;
+			width: clamp(12rem, 50vw, 40rem);
+			height: 40rem;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+@layer pages {
+	form {
+		display: grid;
+		grid-template-rows: repeat(5, auto);
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'name'
+			'email'
+			'phone'
+			'message'
+			'buttons';
+		gap: 1rem;
+		width: 100%;
+
+		div:has(#contact-name) { grid-area: name; }
+		div:has(#contact-email) { grid-area: email; }
+		div:has(#contact-phone) { grid-area: phone; }
+		div:has(#contact-message) { grid-area: message; }
+	}
+}

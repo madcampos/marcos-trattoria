@@ -96,4 +96,13 @@
 		&:hover { color: var(--color-link-hover); }
 		&:active { color: var(--color-link-active); }
 	}
+
+	dt {
+		margin-block-start: 1rem;
+		color: var(--color-primary);
+		font-weight: bold;
+		font-size: 1.3rem;
+
+		&:first-of-type { margin-block-start: 0; }
+	}
 }

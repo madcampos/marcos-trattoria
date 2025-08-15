@@ -15,7 +15,7 @@
 			}
 		}
 
-		div:has(:is(input, select):required) label::after {
+		div:has(:is(input, select, textarea):required) label::after {
 			content: ' (Required)';
 			color: var(--color-required);
 		}

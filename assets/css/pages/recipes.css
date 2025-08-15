@@ -27,12 +27,6 @@
 			}
 		}
 
-		dt {
-			margin-block-start: 1rem;
-			font-weight: bold;
-			font-size: 1.3rem;
-		}
-
 		li::marker {
 			color: var(--color-primary);
 			font-weight: bold;
