@@ -4,6 +4,8 @@
 		--font-headings: 'Cookie', 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
 
 		box-sizing: border-box;
+		scrollbar-color: var(--color-primary) color-mix(in hsl, var(--color-bg), black 30%);
+		accent-color: var(--color-primary);
 		font-family: var(--font-body);
 	}
 
@@ -48,7 +50,10 @@
 		background-color: var(--color-primary);
 		padding: 0.5rem;
 		color: var(--color-secondary);
+		font-size: 1rem;
 		text-align: center;
+
+		&:not(:has(x-icon)) { padding: 0.4rem 0.8rem; }
 
 		&[type='reset'] {
 			background-color: var(--color-bg);

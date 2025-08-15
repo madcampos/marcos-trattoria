@@ -18,7 +18,9 @@
 			border: solid 0.1rem var(--color-primary);
 			border-radius: 1rem;
 			width: 100%;
+			max-width: 25rem;
 			height: auto;
+			max-height: 25rem;
 		}
 
 		figure {

@@ -5,6 +5,8 @@
 		<title>Apple Pie | Recipes | Marco&rsquo;s Trattoria</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/assets/css/index.css" />
+		<link rel="stylesheet" href="/assets/css/pages/recipes.css" />
+		<script type="module" src="/assets/script/main.js"></script>
 	</head>
 	<body>
 		<!-- #region SVG assets -->
@@ -74,6 +76,48 @@
 							d="m13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29l-4.3 4.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l4.29-4.3l4.29 4.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42Z"
 						/>
 					</symbol>
+					<symbol id="uil--share-alt" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M18 14a4 4 0 0 0-3.08 1.48l-5.1-2.35a3.64 3.64 0 0 0 0-2.26l5.1-2.35A4 4 0 1 0 14 6a4 4 0 0 0 .07.71L8.79 9.14a4 4 0 1 0 0 5.72l5.28 2.43A4 4 0 0 0 14 18a4 4 0 1 0 4-4m0-10a2 2 0 1 1-2 2a2 2 0 0 1 2-2M6 14a2 2 0 1 1 2-2a2 2 0 0 1-2 2m12 6a2 2 0 1 1 2-2a2 2 0 0 1-2 2"
+						/>
+					</symbol>
+					<symbol id="uil--envelope-share" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M20 14a1 1 0 0 0-1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.41l5.88 5.89a3 3 0 0 0 2.11.87a3.08 3.08 0 0 0 2.16-.9l1.72-1.72a1 1 0 1 0-1.42-1.42l-1.75 1.75a1 1 0 0 1-1.4 0L4.41 8H10a1 1 0 0 0 0-2H4a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a1 1 0 0 0-1-1m0-6a2 2 0 0 0-1.18.39l-1.75-.8L19 6.71A2 2 0 0 0 20 7a2 2 0 1 0-2-2l-1.9.87A2 2 0 0 0 15 5.5a2 2 0 0 0 0 4a1.9 1.9 0 0 0 .92-.24l2.1 1A2 2 0 1 0 20 8"
+						/>
+					</symbol>
+					<symbol id="uil--link" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="m10 17.55l-1.77 1.72a2.47 2.47 0 0 1-3.5-3.5l4.54-4.55a2.46 2.46 0 0 1 3.39-.09l.12.1a1 1 0 0 0 1.4-1.43a3 3 0 0 0-.18-.21a4.46 4.46 0 0 0-6.09.22l-4.6 4.55a4.48 4.48 0 0 0 6.33 6.33L11.37 19A1 1 0 0 0 10 17.55M20.69 3.31a4.49 4.49 0 0 0-6.33 0L12.63 5A1 1 0 0 0 14 6.45l1.73-1.72a2.47 2.47 0 0 1 3.5 3.5l-4.54 4.55a2.46 2.46 0 0 1-3.39.09l-.12-.1a1 1 0 0 0-1.4 1.43a3 3 0 0 0 .23.21a4.47 4.47 0 0 0 6.09-.22l4.55-4.55a4.49 4.49 0 0 0 .04-6.33"
+						/>
+					</symbol>
+					<symbol id="uil--comment-share" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M19.06 13.51a1 1 0 0 0-1.11.87A7 7 0 0 1 11 20.5H5.41l.64-.63a1 1 0 0 0 0-1.41a7 7 0 0 1 3.2-11.74a1 1 0 0 0-.5-1.94A9 9 0 0 0 4 19.12l-1.71 1.67a1 1 0 0 0-.21 1.09a1 1 0 0 0 .92.62h8a9 9 0 0 0 8.93-7.88a1 1 0 0 0-.87-1.11M19 7.5a2 2 0 0 0-1.18.39l-1.75-.8L18 6.21a2 2 0 0 0 1 .29a2 2 0 1 0-2-2l-1.9.87A2 2 0 0 0 14 5a2 2 0 0 0 0 4a2 2 0 0 0 .93-.24l2.09 1A2 2 0 1 0 19 7.5"
+						/>
+					</symbol>
+					<symbol id="uil--file-download-alt" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M8 8a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm5 12H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5v3a3 3 0 0 0 3 3h3v2a1 1 0 0 0 2 0V8.94a1.3 1.3 0 0 0-.06-.27v-.09a1 1 0 0 0-.19-.28l-6-6a1 1 0 0 0-.28-.19a.3.3 0 0 0-.1 0a1.1 1.1 0 0 0-.31-.11H6a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h7a1 1 0 0 0 0-2m0-14.59L15.59 8H14a1 1 0 0 1-1-1ZM14 12H8a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2m6.71 6.29a1 1 0 0 0-1.42 0l-.29.3V16a1 1 0 0 0-2 0v2.59l-.29-.3a1 1 0 0 0-1.42 1.42l2 2a1 1 0 0 0 .33.21a.94.94 0 0 0 .76 0a1 1 0 0 0 .33-.21l2-2a1 1 0 0 0 0-1.42M12 18a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2Z"
+						/>
+					</symbol>
+					<symbol id="uil--print" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M7 10a1 1 0 1 0 1 1a1 1 0 0 0-1-1m12-4h-1V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3h1a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3M8 4h8v2H8Zm8 16H8v-4h8Zm4-5a1 1 0 0 1-1 1h-1v-1a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1Z"
+						/>
+					</symbol>
+					<symbol id="uil--file-share-alt" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M13.5 12.5a1 1 0 0 0-1-1h-5a1 1 0 0 0 0 2h5a1 1 0 0 0 1-1m5 5a2 2 0 0 0-1.18.39l-1.75-.8l1.91-.88a2 2 0 0 0 1 .29a2 2 0 1 0-2-2l-1.89.87A2 2 0 1 0 13.5 19a1.9 1.9 0 0 0 .92-.24l2.1 1a2 2 0 1 0 2-2.23Zm-8 2h-5a1 1 0 0 1-1-1v-14a1 1 0 0 1 1-1h5v3a3 3 0 0 0 3 3h3a1 1 0 0 0 2 0V8.44a1.3 1.3 0 0 0-.06-.27v-.09a1 1 0 0 0-.19-.28l-6-6a1 1 0 0 0-.28-.19a.3.3 0 0 0-.1 0a1 1 0 0 0-.26-.06H5.5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h5a1 1 0 0 0 0-2Zm2-14.59l2.59 2.59H13.5a1 1 0 0 1-1-1Zm-5 10.59a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm0-6h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2"
+						/>
+					</symbol>
 				</defs>
 			</svg>
 		</svg-defs>
@@ -115,42 +159,203 @@
 				</dialog>
 			</main-menu>
 
+			<hero-image>
+				<img
+					height="480"
+					src="/assets/images/apple-pie.jpg"
+					alt="A close up shot of an apple pie in a plate, with a knife to the side and a slice missing."
+				/>
+			</hero-image>
+
 			<hgroup>
-				<h1>Apple Pie</h1>
-				<p>A mix of Italian and German influences makes for a tasty dessert</p>
+				<h1 data-share-title>Apple Pie</h1>
+				<p data-share-text>A mix of Italian and German influences makes for a tasty dessert</p>
 			</hgroup>
 		</header>
 		<hr />
 		<!-- #endregion -->
 
 		<main id="main">
-			<section>
-				<h2>Ingredients</h2>
-				<ul>
-					<li>6 large apples, pealed and sliced</li>
-					<li>2 cups of all purpose flour</li>
-					<li>1 <abbr title="Table Spoon">tbsp</abbr> of baking powder</li>
-					<li>1 cup of brown suggar</li>
-					<li>&frac12; cup of margarine</li>
-					<li>1 egg</li>
-					<li>1 cup of granulated suggar</li>
-					<li>2 <abbr title="Table Spoon">tbsp</abbr> of cinnamon</li>
-				</ul>
-			</section>
-			<section>
-				<h2>Instructions</h2>
-				<ol>
-					<li>Grease and flour a large pan.</li>
-					<li>Place the apple slices in the pan trying to leave no gaps, you may use small apple slices to fill in the gaps.</li>
-					<li>Mix the flour, baking powder, and the brown suggar.</li>
-					<li>Cover the apples with the mixture.</li>
-					<li>Using the back of a spoon carefully smooth the dry ingredients mixture.</li>
-					<li>Soften the margarine until liquid, then carefully pour it on the pan trying not to peel the dry ingredients mixture.</li>
-					<li>Mix the egg yolk and white and pour it on the pan.</li>
-					<li>Mix the cinnamon and the granulated suggarm, then sprinkle it on the pan.</li>
-					<li>Bake at 350 F for about 40 minutes.</li>
-				</ol>
-			</section>
+			<share-options>
+				<h2>Share Recipe</h2>
+
+				<div>
+					<button type="button" id="share-os-link" title="Share Recipe Link">
+						<sr-only>Share Recipe Link</sr-only>
+						<x-icon>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--share-alt" />
+							</svg>
+						</x-icon>
+					</button>
+					<button type="button" id="share-os-file" title="Share Recipe Text">
+						<sr-only>Share Recipe Text</sr-only>
+						<x-icon>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--file-share-alt" />
+							</svg>
+						</x-icon>
+					</button>
+					<button type="button" id="share-copy" title="Copy Link">
+						<sr-only>Copy link</sr-only>
+						<x-icon>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--link" />
+							</svg>
+						</x-icon>
+					</button>
+					<button type="button" id="share-email" title="Share via Email">
+						<sr-only>Share via Email</sr-only>
+						<x-icon>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--envelope-share" />
+							</svg>
+						</x-icon>
+					</button>
+					<button type="button" id="share-sms" title="Share via SMS">
+						<sr-only>Share via SMS</sr-only>
+						<x-icon>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--comment-share" />
+							</svg>
+						</x-icon>
+					</button>
+					<button type="button" id="share-download" title="Download Recipe Text">
+						<sr-only>Download Recipe Text</sr-only>
+						<x-icon>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--file-download-alt" />
+							</svg>
+						</x-icon>
+					</button>
+					<button type="button" id="share-print" title="Print Recipe">
+						<sr-only>Print Recipe</sr-only>
+						<x-icon>
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use href="#uil--print" />
+							</svg>
+						</x-icon>
+					</button>
+				</div>
+			</share-options>
+
+			<form action="#" method="post">
+				<section>
+					<h2>Ingredients</h2>
+					<ul data-share-list="Ingredients">
+						<li>
+							<span>
+								<input type="checkbox" id="ingredient-1" />
+								<label for="ingredient-1">6 large apples, pealed and sliced</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="ingredient-2" />
+								<label for="ingredient-2">2 cups of all purpose flour</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="ingredient-3" />
+								<label for="ingredient-3">1 <abbr title="Table Spoon">tbsp</abbr> of baking powder</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="ingredient-4" />
+								<label for="ingredient-4">1 cup of brown suggar</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="ingredient-5" />
+								<label for="ingredient-5">&frac12; cup of margarine</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="ingredient-6" />
+								<label for="ingredient-6">1 egg</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="ingredient-7" />
+								<label for="ingredient-7">1 cup of granulated suggar</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="ingredient-8" />
+								<label for="ingredient-8">2 <abbr title="Table Spoon">tbsp</abbr> of cinnamon</label>
+							</span>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Instructions</h2>
+					<ol data-share-list="Instructions">
+						<li>
+							<span>
+								<input type="checkbox" id="step-1" />
+								<label for="step-1">Grease and flour a large pan.</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="step-2" />
+								<label for="step-2">Place the apple slices in the pan trying to leave no gaps, you may use small apple slices to fill in the gaps.</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="step-3" />
+								<label for="step-3">Mix the flour, baking powder, and the brown suggar.</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="step-4" />
+								<label for="step-4">Cover the apples with the mixture.</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="step-5" />
+								<label for="step-5">Using the back of a spoon carefully smooth the dry ingredients mixture.</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="step-6" />
+								<label for="step-6">Soften the margarine until liquid, then carefully pour it on the pan trying not to peel the dry ingredients mixture.</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="step-7" />
+								<label for="step-7">Mix the egg yolk and white and pour it on the pan.</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="step-8" />
+								<label for="step-8">Mix the cinnamon and the granulated suggarm, then sprinkle it on the pan.</label>
+							</span>
+						</li>
+						<li>
+							<span>
+								<input type="checkbox" id="step-9" />
+								<label for="step-9">Bake at 350 &#x2109; for about 40 minutes.</label>
+							</span>
+						</li>
+					</ol>
+				</section>
+				<div>
+					<button type="reset">Clear Checked Items</button>
+				</div>
+			</form>
 		</main>
 
 		<!-- #region Footer -->

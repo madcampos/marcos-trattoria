@@ -1,0 +1,12 @@
+@layer components {
+	share-options {
+		h2 { font-size: 2rem; }
+		button { margin: 0.5rem; }
+
+		div {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}

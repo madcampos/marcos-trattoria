@@ -1,0 +1,36 @@
+@layer pages {
+	form {
+		display: grid;
+		grid-template-rows: repeat(6, auto);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+			'name name'
+			'email email'
+			'phone phone'
+			'date time'
+			'special special'
+			'buttons buttons';
+		gap: 1rem;
+		width: 100%;
+
+		@media (max-width: 25rem) {
+			grid-template-rows: repeat(7, auto);
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'name'
+				'email'
+				'phone'
+				'date'
+				'time'
+				'special'
+				'buttons';
+		}
+
+		div:has(#book-name) { grid-area: name; }
+		div:has(#book-email) { grid-area: email; }
+		div:has(#book-phone) { grid-area: phone; }
+		div:has(#book-date) { grid-area: date; }
+		div:has(#book-time) { grid-area: time; }
+		div:has(#book-special-needs) { grid-area: special; }
+	}
+}

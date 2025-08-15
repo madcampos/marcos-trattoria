@@ -26,5 +26,40 @@
 				&::before { content: '— '; }
 			}
 		}
+
+		dt {
+			margin-block-start: 1rem;
+			font-weight: bold;
+			font-size: 1.3rem;
+		}
+
+		li::marker {
+			color: var(--color-primary);
+			font-weight: bold;
+			font-size: 1rem;
+		}
+
+		ul li::marker { content: '◇ '; }
+
+		ol li { list-style: upper-roman; }
+
+		li span:has(input) {
+			display: flex;
+			align-items: center;
+			gap: 0.3rem;
+			width: fit-content;
+		}
+
+		input {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
+
+		input:checked ~ label {
+			text-decoration: line-through;
+			text-decoration-style: solid;
+			text-decoration-color: color-mix(in srgb, var(--color-primary), transparent);
+			text-decoration-thickness: 1ch;
+		}
 	}
 }
