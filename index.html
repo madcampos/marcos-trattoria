@@ -4,6 +4,64 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Marco&rsquo;s Trattoria</title>
+
+		<link rel="canonical" href="https://trattoria.madcampos.dev/" />
+		<link rel="sitemap" href="/sitemap.xml" />
+
+		<!-- App Metadata -->
+		<link rel="icon" href="/assets/icons/icon.svg" sizes="any" type="image/svg+xml" />
+		<link rel="icon" href="/favicon.ico" sizes="48x48" type="image/x-icon" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="license" href="/license/" />
+
+		<!-- Social metadata -->
+		<meta property="og:title" name="twitter:title" itemprop="name" content="Marco&rsquo;s Trattoria" />
+
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<meta property="og:locale" itemprop="inLanguage" content="en_US" />
+		<meta property="og:url" itemprop="url" content="https://trattoria.madcampos.dev/" />
+
+		<meta property="og:description" name="description" itemprop="abstract" content="A delight in each bite." />
+		<meta name="twitter:description" content="A delight in each bite." />
+
+		<meta property="og:image" name="twitter:image" itemprop="image" content="https://trattoria.madcampos.dev/assets/images/social/home.png" />
+		<meta
+			property="og:image:alt"
+			name="twitter:image:alt"
+			content="A close up shot of a pan with frying veggetables. Two hands break some herbs and put them on the veggies."
+		/>
+
+		<meta property="article:author" name="author" content="Marco Campos" />
+		<meta name="twitter:creator" content="@madcampos" />
+
+		<meta name="twitter:dnt" content="on" />
+		<meta name="twitter:widgets:csp" content="on" />
+		<meta name="twitter:widgets:autoload" content="off" />
+		<meta name="twitter:widgets:theme" content="dark" />
+
+		<meta name="keywords" itemprop="keywords" property="article:tag" content="food, restaurant, italian, pasta, pizza" />
+
+		<!-- Apple icons -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- Print Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/assets/css/print.css" media="print" />
+
+		<!-- Prefetch speculation rules -->
+		<!-- dprint-ignore -->
+		<script type="speculationrules">
+			{
+				"prefetch": [{
+					"where": { "and": [{ "selector_matches": "a" }, {"href_matches": "/*" }] },
+					"eagerness": "moderate",
+					"requires": ["anonymous-client-ip-when-cross-origin"]
+				}]
+			}
+		</script>
+
 		<link rel="stylesheet" href="/assets/css/index.css" />
 		<link rel="stylesheet" href="/assets/css/pages/home.css" />
 		<script type="module" src="/assets/script/main.js"></script>
@@ -35,12 +93,6 @@
 						<path
 							fill="currentColor"
 							d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8m0 17.65c-2.13-2-6-6.31-6-9.65a6 6 0 0 1 12 0c0 3.34-3.87 7.66-6 9.65M12 6a4 4 0 1 0 4 4a4 4 0 0 0-4-4m0 6a2 2 0 1 1 2-2a2 2 0 0 1-2 2"
-						/>
-					</symbol>
-					<symbol id="uil--share" viewBox="0 0 24 24">
-						<path
-							fill="currentColor"
-							d="m21.707 11.293l-8-8A1 1 0 0 0 12 4v3.545A11.015 11.015 0 0 0 2 18.5V20a1 1 0 0 0 1.784.62a11.46 11.46 0 0 1 7.887-4.049c.05-.006.175-.016.329-.026V20a1 1 0 0 0 1.707.707l8-8a1 1 0 0 0 0-1.414M14 17.586V15.5a1 1 0 0 0-1-1c-.255 0-1.296.05-1.562.085a14 14 0 0 0-7.386 2.948A9.013 9.013 0 0 1 13 9.5a1 1 0 0 0 1-1V6.414L19.586 12Z"
 						/>
 					</symbol>
 					<symbol id="uil--store" viewBox="0 0 24 24">
@@ -164,12 +216,22 @@
 						</svg>
 					</x-icon>
 				</button>
-				<dialog popover="hint" id="video-description">
-					<h2>Video Description</h2>
-					<p>A close up shot of a plate of spaghetti pasta with tomato sauce.</p>
-					<p>A hand comes into view from the top and sprinkle shredded cheese on the pasta.</p>
-					<p>The light in the video is warm and soft.</p>
-					<p>The background is a brick wall, slightly blurried.</p>
+				<dialog popover="auto" id="video-description">
+					<header>
+						<h2>Video Description</h2>
+						<button popovertarget="video-description">
+							<sr-only>Close Video Description</sr-only>
+							<x-icon role="none" aria-hidden="true">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<use href="#uil--times" />
+								</svg>
+							</x-icon>
+						</button>
+					</header>
+
+					<p>A close up shot of a pan with frying veggetables.</p>
+					<p>Two hands break some herbs and put them on the veggies.</p>
+					<p>The hands then steer the pan.</p>
 				</dialog>
 			</hero-controls>
 		</header>
