@@ -1,5 +1,6 @@
 @layer components {
 	sr-only {
+		display: block;
 		border: 0;
 		clip: rect(1px, 1px, 1px, 1px);
 		position: absolute;
