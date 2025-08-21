@@ -1,0 +1,10 @@
+@layer components {
+	keep-screen {
+		flex-grow: 1;
+
+		button {
+			&[data-has-lock] :is(#screen-lock-icon, #screen-lock-label) { display: none; }
+			&:not([data-has-lock]) :is(#screen-unlock-icon, #screen-unlock-label) { display: none; }
+		}
+	}
+}
