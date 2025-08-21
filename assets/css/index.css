@@ -4,4 +4,5 @@
 
 @import './vars.css';
 @import './base.css';
+@import './transitions.css';
 @import './components/index.css';
