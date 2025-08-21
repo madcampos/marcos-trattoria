@@ -45,6 +45,18 @@
 							d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20m0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20m5-9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2m-2 4H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2M9 9h6a1 1 0 0 0 0-2H9a1 1 0 0 0 0 2"
 						/>
 					</symbol>
+					<symbol id="uil--redo" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M21 11a1 1 0 0 0-1 1a8.05 8.05 0 1 1-2.22-5.5h-2.4a1 1 0 0 0 0 2h4.53a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1.77A10 10 0 1 0 22 12a1 1 0 0 0-1-1"
+						/>
+					</symbol>
+					<symbol id="uil--message" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="m20.34 9.32l-14-7a3 3 0 0 0-4.08 3.9l2.4 5.37a1.06 1.06 0 0 1 0 .82l-2.4 5.37A3 3 0 0 0 5 22a3.14 3.14 0 0 0 1.35-.32l14-7a3 3 0 0 0 0-5.36Zm-.89 3.57l-14 7a1 1 0 0 1-1.35-1.3l2.39-5.37a2 2 0 0 0 .08-.22h6.89a1 1 0 0 0 0-2H6.57a2 2 0 0 0-.08-.22L4.1 5.41a1 1 0 0 1 1.35-1.3l14 7a1 1 0 0 1 0 1.78"
+						/>
+					</symbol>
 				</defs>
 			</svg>
 		</svg-defs>
@@ -167,8 +179,18 @@
 			</div>
 
 			<div>
-				<button type="reset">Reset</button>
-				<button type="submit">Submit</button>
+				<button type="reset">
+					<x-icon role="presentation" aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--redo" /></svg>
+					</x-icon>
+					<span>Reset</span>
+				</button>
+				<button type="submit">
+					<x-icon role="presentation" aria-hidden="true">
+						<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--message" /></svg>
+					</x-icon>
+					<span>Submit</span>
+				</button>
 			</div>
 		</form>
 	</body>

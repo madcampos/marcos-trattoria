@@ -34,7 +34,7 @@
 		#contact-form {
 			aspect-ratio: unset;
 			width: clamp(12rem, 50vw, 40rem);
-			height: 40rem;
+			height: 45rem;
 		}
 	}
 }

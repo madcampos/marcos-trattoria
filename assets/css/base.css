@@ -39,7 +39,7 @@
 	h6 { font-size: 1rem; }
 	small { font-size: 0.64rem; }
 
-	button {
+	button:not([hidden]) {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -48,12 +48,15 @@
 		border: solid 0.1rem currentColor;
 		border-radius: 100vmax;
 		background-color: var(--color-primary);
-		padding: 0.5rem;
+		padding: 0.4rem 0.8rem;
 		color: var(--color-secondary);
 		font-size: 1rem;
 		text-align: center;
 
-		&:not(:has(x-icon)) { padding: 0.4rem 0.8rem; }
+		&:has(x-icon) {
+			gap: 0.3rem;
+			padding: 0.5rem;
+		}
 
 		&[type='reset'] {
 			background-color: var(--color-bg);
