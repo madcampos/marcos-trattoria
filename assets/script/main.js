@@ -1,6 +1,12 @@
 import './components/index.js';
 
+const DEV_MODE = true;
+
 async function registerServiceWorker() {
+	if (DEV_MODE) {
+		return;
+	}
+
 	if ('serviceWorker' in navigator) {
 		try {
 			const serviceWorkerRegistration = await navigator.serviceWorker.register('/sw.js', {
