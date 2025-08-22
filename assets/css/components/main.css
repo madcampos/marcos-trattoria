@@ -1,5 +1,8 @@
 @layer components {
 	main {
+		break-before: always;
+		break-after: always;
+		break-inside: avoid;
 		margin-inline: auto;
 		margin-block: 1rem;
 		padding: 1rem;

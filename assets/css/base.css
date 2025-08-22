@@ -24,6 +24,8 @@
 			margin: 0;
 			box-shadow: 0 0 1rem 0.5rem color-mix(in srgb, black, transparent 50%);
 			border: solid 0.01rem var(--color-secondary);
+
+			@media print { box-shadow: none; }
 		}
 	}
 

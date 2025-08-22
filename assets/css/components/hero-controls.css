@@ -46,5 +46,7 @@
 				max-height: calc(100dvh - 1rem);
 			}
 		}
+
+		@media print { display: none; }
 	}
 }

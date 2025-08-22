@@ -42,7 +42,7 @@
 				box-shadow: none;
 				border: none;
 
-				@media (max-width: 35rem) {
+				@media (max-width: 35rem), print {
 					mask: none;
 					box-shadow: 0.1rem 0.1rem 0.5rem color-mix(in srgb, black, transparent);
 					border: solid 0.1rem var(--color-primary);
@@ -55,7 +55,7 @@
 				shape-outside: url('/assets/images/chef-mask.svg');
 				width: 50vw;
 
-				@media (max-width: 35rem) {
+				@media (max-width: 35rem), print {
 					float: none;
 					margin-inline: auto;
 				}
@@ -67,7 +67,7 @@
 				p:first-of-type {
 					margin-block-start: 7rem;
 
-					@media (max-width: 35rem) { margin-block-start: revert; }
+					@media (max-width: 35rem), print { margin-block-start: revert; }
 				}
 			}
 

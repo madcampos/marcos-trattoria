@@ -5,6 +5,7 @@
 		justify-content: center;
 		align-items: start;
 		gap: 1rem;
+		break-inside: avoid;
 		background-color: var(--color-primary);
 		padding: 1rem;
 		color: var(--color-text-secondary);
@@ -19,6 +20,8 @@
 		ul { margin-block: 0; }
 
 		a { color: var(--color-secondary); }
+
+		:is(nav, section:nth-of-type(2)) { @media print { display: none; } }
 	}
 
 	#reservation-dialog:popover-open {

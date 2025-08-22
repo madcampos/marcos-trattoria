@@ -13,6 +13,8 @@
 				justify-content: center;
 				padding-inline: 0;
 			}
+
+			@media print { display: none; }
 		}
 
 		div:has(:is(input, select, textarea):required) label::after {

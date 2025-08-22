@@ -65,6 +65,8 @@
 			padding: 3rem;
 			width: fit-content;
 		}
+
+		@media print { display: none; }
 	}
 
 	#our-trattoria {

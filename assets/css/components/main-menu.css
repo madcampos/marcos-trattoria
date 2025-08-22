@@ -5,7 +5,7 @@
 			@media (max-width: 35rem) { display: flex; }
 		}
 
-		dialog {
+		dialog:popover-open {
 			display: flex;
 			position: relative;
 			margin-block: 0;
@@ -60,6 +60,8 @@
 						object-fit: contain;
 					}
 				}
+
+				li:not(#home-link) { @media print { display: none; } }
 			}
 
 			a {
@@ -77,6 +79,12 @@
 					text-underline-offset: 0.2rem;
 				}
 			}
+		}
+
+		#main-menu-desktop {
+			display: flex;
+
+			@media (max-width: 35rem) { display: none; }
 		}
 	}
 }
