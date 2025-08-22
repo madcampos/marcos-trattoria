@@ -1,0 +1,9 @@
+@layer pages {
+	main {
+		p:first-of-type:first-letter {
+			font-size: 3rem;
+			initial-letter: 3 2;
+			padding: 0.2rem;
+		}
+	}
+}
