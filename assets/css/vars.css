@@ -13,6 +13,8 @@
 		--color-required: firebrick;
 		--color-error: crimson;
 		--color-valid: forestgreen;
+		--color-bg-selection: darkgoldenrod;
+		--color-text-selection: black;
 
 		font-size: 1.25rem;
 	}

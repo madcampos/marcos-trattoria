@@ -51,7 +51,10 @@
 		padding: 0.4rem 0.8rem;
 		color: var(--color-secondary);
 		font-size: 1rem;
+		user-select: none;
 		text-align: center;
+
+		* { pointer-events: none; }
 
 		&:has(x-icon) {
 			gap: 0.3rem;
@@ -107,5 +110,10 @@
 		font-size: 1.3rem;
 
 		&:first-of-type { margin-block-start: 0; }
+	}
+
+	::selection {
+		background-color: var(--color-bg-selection);
+		color: var(--color-text-selection);
 	}
 }
