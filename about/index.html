@@ -48,8 +48,7 @@
 
 		<meta name="keywords" itemprop="keywords" property="article:tag" content="food, restaurant, italian, pasta, pizza" />
 
-		<!-- Apple icons -->
-		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!-- Apple tags -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<!-- Print Stylesheet -->
@@ -142,7 +141,26 @@
 			<a id="skip-to-main" href="#main">Skip to main</a>
 
 			<main-menu>
-				<button type="button" popovertarget="main-menu">
+				<nav id="main-menu-desktop" aria-labelledby="main-menu-label">
+					<sr-only id="main-menu-label">Main Menu</sr-only>
+					<ul>
+						<li id="home-link">
+							<a href="/">
+								<sr-only>Home</sr-only>
+								<img src="/assets/images/logo.svg" width="150" alt="" role="presentation" aria-hidden="true" />
+							</a>
+						</li>
+						<li><a href="/about/">About</a></li>
+						<li><a href="/menu/">Menu</a></li>
+						<li><a href="/recipes/">Recipes</a></li>
+						<li><a href="/book/">Book a Table</a></li>
+						<li><a href="/contact/">Contact</a></li>
+						<li><a href="/accessibility/">Accessibility</a></li>
+						<li><a href="/license/">License</a></li>
+					</ul>
+				</nav>
+
+				<button type="button" popovertarget="main-menu-mobile">
 					<sr-only>Open menu</sr-only>
 					<x-icon role="none" aria-hidden="true">
 						<svg width="24" height="24" viewBox="0 0 24 24">
@@ -150,8 +168,9 @@
 						</svg>
 					</x-icon>
 				</button>
-				<dialog popover id="main-menu">
-					<button type="button" popovertarget="main-menu">
+
+				<dialog popover id="main-menu-mobile">
+					<button type="button" popovertarget="main-menu-mobile">
 						<sr-only>Close menu</sr-only>
 						<x-icon role="none" aria-hidden="true">
 							<svg width="24" height="24" viewBox="0 0 24 24">
@@ -160,7 +179,6 @@
 						</x-icon>
 					</button>
 					<nav aria-labelledby="main-menu-label">
-						<sr-only id="main-menu-label">Main Menu</sr-only>
 						<ul>
 							<li id="home-link">
 								<a href="/">
