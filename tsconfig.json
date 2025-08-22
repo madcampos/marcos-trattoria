@@ -1,4 +1,9 @@
 {
+	"include": [
+		"src/**/*",
+		"eslint.config.mjs"
+	],
+	"exclude": ["node_modules/**/*"],
 	"compilerOptions": {
 		"allowImportingTsExtensions": true,
 		"allowJs": true,
@@ -38,6 +43,7 @@
 		"target": "ESNext",
 		"useDefineForClassFields": true,
 		"useUnknownInCatchVariables": false,
-		"verbatimModuleSyntax": true
+		"verbatimModuleSyntax": true,
+		"types": []
 	}
 }
