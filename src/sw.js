@@ -67,7 +67,7 @@ self.addEventListener('install', (/** @type {ExtendableEvent}*/ event) => {
 
 self.addEventListener('activate', (/** @type {ExtendableEvent} */ event) => {
 	event.waitUntil((async () => {
-		self.registration?.navigationPreload.enable();
+		await self.registration?.navigationPreload.enable();
 
 		await clients.claim();
 
@@ -76,7 +76,7 @@ self.addEventListener('activate', (/** @type {ExtendableEvent} */ event) => {
 		await Promise.all(
 			keyList
 				.filter((key) => key !== CACHE_VERSION)
-				.map((cache) => caches.delete(cache))
+				.map(async (cache) => caches.delete(cache))
 		);
 	})());
 });
@@ -91,7 +91,7 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */ event) => {
 			ignoreSearch: true
 		});
 
-		if (preloadResponse) {
+		if (preloadResponse !== undefined) {
 			response = await preloadResponse;
 
 			if (response) {
@@ -105,17 +105,17 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */ event) => {
 
 				await cache.put(request, response.clone());
 			} catch (error) {
+				console.error(error);
+
 				response = await caches.match(FALLBACK_URL, {
 					cacheName: CACHE_VERSION,
 					ignoreSearch: true
 				});
 
-				if (!response) {
-					response = new Response('Network error happened', {
-						status: 408,
-						headers: { 'Content-Type': 'text/plain' }
-					});
-				}
+				response ??= new Response('Network error happened', {
+					status: 408,
+					headers: { 'Content-Type': 'text/plain' }
+				});
 			}
 		}
 
