@@ -62,6 +62,7 @@
 		"importDeclaration.forceMultiLine": "never"
 	},
 	"json": {
+		"associations": [".webmanifest"],
 		"commentLine.forceSpaceAfterSlashes": true,
 		"preferSingleLine": false,
 		"trailingCommas": "never",
