@@ -10,14 +10,13 @@
 	"preview_urls": false,
 	"route": { "pattern": "trattoria.madcampos.dev", "custom_domain": true },
 	"dev": {
-		"ip": "0.0.0.0",
+		"ip": "localhost",
 		"port": 4242,
 		"local_protocol": "https",
 		"upstream_protocol": "https"
 	},
 	"assets": {
 		"directory": "./src/",
-		"binding": "Assets",
 		"run_worker_first": false,
 		"html_handling": "auto-trailing-slash",
 		"not_found_handling": "404-page"
