@@ -1,1 +1,7 @@
-@layer print { /* TODO */ }
+@layer print {
+	:root {
+		--color-secondary: color-mix(in srgb, darkgoldenrod, black);
+		--color-text-primary: black;
+		--color-text-secondary: black;
+	}
+}
