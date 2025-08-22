@@ -18,36 +18,46 @@ function Convert-Icons {
 		[ValidateNotNullOrEmpty()]
 		[string]$MonochromeIcon,
 
-		[Alias('o')]
+		[Alias('d')]
 		[Parameter()]
 		[ValidateNotNullOrEmpty()]
-		[string]$Output = $PWD
+		[string]$Destination = $PWD
 	)
 
-	@('192', '512')
-	| ForEach-Object {
-		$Size = "${_}x${_}"
+	$Destination = Resolve-Path $Destination
 
-		magick -background 'none' "$Icon" -resize "$Size^" -gravity 'center' -extent "$Size" "$Output\icon-$Size.png"
-		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$Output\icon-$Size.png"
-
-		magick -background 'none' "$MaskableIcon" -resize "$Size^" -gravity 'center' -extent "$Size" "$Output\icon-mask-$Size.png"
-		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$Output\icon-mask-$Size.png"
-
-		magick -background 'none' "$MonochromeIcon" -resize "$Size^" -gravity 'center' -extent "$Size" "$Output\icon-mono-$Size.png"
-		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$Output\icon-mono-$Size.png"
-	}
-
-	$PngFiles = @('16', '32') |
+	@('64', '192', '512', '1024') |
 	ForEach-Object {
 		$Size = "${_}x${_}"
 
-		magick -background 'none' "$Icon" -resize "$Size^" -gravity 'center' -extent "$Size" "$Env:Temp\icon-$Size.png"
+		magick -background 'none' "$Icon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Destination -ChildPath "./icon-$Size.png")"
+		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Destination -ChildPath "./icon-$Size.png")"
 
-		"$Temp\icon-$Size.png"
+		magick -background 'none' "$MaskableIcon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Destination -ChildPath "./icon-mask-$Size.png")"
+		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Destination -ChildPath "./icon-mask-$Size.png")"
+
+		magick -background 'none' "$MonochromeIcon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Destination -ChildPath "./icon-mono-$Size.png")"
+		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Destination -ChildPath "./icon-mono-$Size.png")"
 	}
 
-	magick $PngFiles '.\favicon.ico'
+	$PngFiles = @('16', '32', '64', '256') |
+	ForEach-Object {
+		$Size = "${_}x${_}"
+
+		magick -background 'none' "$Icon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Env:Temp -ChildPath "./icon-$Size.png")"
+		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Env:Temp -ChildPath "./icon-$Size.png")"
+
+		"$(Join-Path -Path $Env:Temp -ChildPath "./icon-$Size.png")"
+	}
+
+	magick $PngFiles "$(Join-Path -Path $Destination -ChildPath './favicon.ico')"
 
 	$PngFiles | Remove-Item -ErrorAction 'SilentlyContinue'
+}
+
+Convert-Icons -Icon "$PSScriptRoot/../src/assets/icons/icon.svg" -MaskableIcon "$PSScriptRoot/../src/assets/icons/icon-mask.svg" -MonochromeIcon "$PSScriptRoot/../src/assets/icons/icon-mono.svg" -Destination "$PSScriptRoot/../src/assets/icons/"
+
+Get-ChildItem "$PSScriptRoot/../src/assets/icons/shortcuts" -Directory |
+ForEach-Object {
+	Convert-Icons -Icon "$_/icon.svg" -MaskableIcon "$_/icon-mask.svg" -MonochromeIcon "$_/icon-mono.svg" -Destination "$_"
 }

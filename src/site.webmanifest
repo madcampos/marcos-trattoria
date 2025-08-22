@@ -1,4 +1,5 @@
 {
+	"$schema": "https://www.schemastore.org/web-manifest-combined.json",
 	"id": "/?id=45bd6ca0-c827-4e58-bce2-7a80ff0dce9b",
 	"scope": "/",
 	"start_url": "/",
@@ -9,16 +10,23 @@
 	"dir": "ltr",
 	"description": "Marco's Trattoria — A delight in each bite",
 	"categories": ["food", "restaurant", "italian", "pasta", "pizza"],
-	"display": "minimal-ui",
+	"display": "browser",
 	"orientation": "any",
 	"background_color": "#252525",
 	"theme_color": "#0080ff",
 	"prefer_related_applications": false,
+	"related_applications": [],
 	"icons": [
 		{
 			"src": "/assets/icons/icon.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
+			"purpose": "any"
+		},
+		{
+			"src": "/assets/icons/icon-1024x1204.png",
+			"sizes": "1024x1204",
+			"type": "image/png",
 			"purpose": "any"
 		},
 		{
@@ -33,11 +41,23 @@
 			"type": "image/png",
 			"purpose": "any"
 		},
+		{
+			"src": "/assets/icons/icon-64x64.png",
+			"sizes": "64x64",
+			"type": "image/png",
+			"purpose": "any"
+		},
 
 		{
 			"src": "/assets/icons/icon-mask.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/assets/icons/icon-mask-1024x1204.png",
+			"sizes": "1024x1204",
+			"type": "image/png",
 			"purpose": "maskable"
 		},
 		{
@@ -52,11 +72,23 @@
 			"type": "image/png",
 			"purpose": "maskable"
 		},
+		{
+			"src": "/assets/icons/icon-mask-64x64.png",
+			"sizes": "64x64",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
 
 		{
 			"src": "/assets/icons/icon-mono.svg",
 			"sizes": "any",
 			"type": "image/svg+xml",
+			"purpose": "monochrome"
+		},
+		{
+			"src": "/assets/icons/icon-mono-1024x1204.png",
+			"sizes": "1024x1204",
+			"type": "image/png",
 			"purpose": "monochrome"
 		},
 		{
@@ -70,6 +102,12 @@
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "monochrome"
+		},
+		{
+			"src": "/assets/icons/icon-mono-64x64.png",
+			"sizes": "64x64",
+			"type": "image/png",
+			"purpose": "monochrome"
 		}
 	],
 	"shortcuts": [
@@ -79,6 +117,98 @@
 			"description": "Marco's Trattoria Home Page",
 			"url": "/",
 			"icons": [
+				{
+					"src": "/assets/icons/shortcuts/home/icon.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "any"
+				},
+
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mask.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mask-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mask-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mask-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mask-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mono.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mono-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mono-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mono-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/home/icon-mono-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "monochrome"
+				}
 			]
 		},
 		{
@@ -87,6 +217,98 @@
 			"description": "Marco's Trattoria Menu",
 			"url": "/menu/",
 			"icons": [
+				{
+					"src": "/assets/icons/shortcuts/menu/icon.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "any"
+				},
+
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mask.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mask-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mask-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mask-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mask-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mono.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mono-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mono-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mono-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/menu/icon-mono-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "monochrome"
+				}
 			]
 		},
 		{
@@ -95,6 +317,98 @@
 			"description": "A list of recipes from Marco's Trattoria",
 			"url": "/recipes/",
 			"icons": [
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "any"
+				},
+
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mask.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mask-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mask-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mask-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mask-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mono.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mono-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mono-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mono-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/recipes/icon-mono-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "monochrome"
+				}
 			]
 		},
 		{
@@ -103,6 +417,98 @@
 			"description": "Book a time with us",
 			"url": "/book/",
 			"icons": [
+				{
+					"src": "/assets/icons/shortcuts/book/icon.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "any"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "any"
+				},
+
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mask.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mask-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mask-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mask-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mask-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "maskable"
+				},
+
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mono.svg",
+					"sizes": "any",
+					"type": "image/svg+xml",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mono-1024x1204.png",
+					"sizes": "1024x1204",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mono-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mono-192x192.png",
+					"sizes": "192x192",
+					"type": "image/png",
+					"purpose": "monochrome"
+				},
+				{
+					"src": "/assets/icons/shortcuts/book/icon-mono-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png",
+					"purpose": "monochrome"
+				}
 			]
 		}
 	],
@@ -116,5 +522,6 @@
 	],
 	"edge_side_panel": {
 		"preffer_width": 460
-	}
+	},
+	"screenshots": []
 }
