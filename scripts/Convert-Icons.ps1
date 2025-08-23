@@ -9,38 +9,50 @@ function Convert-Icons {
 		[string]$Icon,
 
 		[Alias('m')]
-		[Parameter(Mandatory = $true)]
-		[ValidateNotNullOrEmpty()]
+		[Parameter()]
 		[string]$MaskableIcon,
 
 		[Alias('c')]
-		[Parameter(Mandatory = $true)]
-		[ValidateNotNullOrEmpty()]
+		[Parameter()]
 		[string]$MonochromeIcon,
 
 		[Alias('d')]
 		[Parameter()]
 		[ValidateNotNullOrEmpty()]
-		[string]$Destination = $PWD
+		[string]$Destination = $PWD,
+
+		[Alias('s')]
+		[Parameter()]
+		[ValidateNotNullOrEmpty()]
+		[string[]]$Sizes = @('64', '192', '512', '1024'),
+
+		[Alias('f')]
+		[Parameter()]
+		[ValidateNotNullOrEmpty()]
+		[string[]]$FaviconSizes = @('16', '32', '64', '256')
 	)
 
 	$Destination = Resolve-Path $Destination
 
-	@('64', '192', '512', '1024') |
+	$Sizes |
 	ForEach-Object {
 		$Size = "${_}x${_}"
 
 		magick -background 'none' "$Icon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Destination -ChildPath "./icon-$Size.png")"
 		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Destination -ChildPath "./icon-$Size.png")"
 
-		magick -background 'none' "$MaskableIcon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Destination -ChildPath "./icon-mask-$Size.png")"
-		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Destination -ChildPath "./icon-mask-$Size.png")"
+		if ($MaskableIcon) {
+			magick -background 'none' "$MaskableIcon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Destination -ChildPath "./icon-mask-$Size.png")"
+			oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Destination -ChildPath "./icon-mask-$Size.png")"
+		}
 
-		magick -background 'none' "$MonochromeIcon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Destination -ChildPath "./icon-mono-$Size.png")"
-		oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Destination -ChildPath "./icon-mono-$Size.png")"
+		if ($MonochromeIcon) {
+			magick -background 'none' "$MonochromeIcon" -resize "$Size^" -gravity 'center' -extent "$Size" "$(Join-Path -Path $Destination -ChildPath "./icon-mono-$Size.png")"
+			oxipng -o max --strip all --interlace 1 --scale16 --filters '0-9' --fast --zopfli "$(Join-Path -Path $Destination -ChildPath "./icon-mono-$Size.png")"
+		}
 	}
 
-	$PngFiles = @('16', '32', '64', '256') |
+	$PngFiles = $FaviconSizes |
 	ForEach-Object {
 		$Size = "${_}x${_}"
 
@@ -61,3 +73,5 @@ Get-ChildItem "$PSScriptRoot/../src/assets/icons/shortcuts" -Directory |
 ForEach-Object {
 	Convert-Icons -Icon "$_/icon.svg" -MaskableIcon "$_/icon-mask.svg" -MonochromeIcon "$_/icon-mono.svg" -Destination "$_"
 }
+
+Convert-Icons -Icon "$PSScriptRoot/../src/assets/icons/file/icon.svg" -Destination "$PSScriptRoot/../src/assets/icons/file" -Sizes @('1024', '512', '256', '96', '64', '48', '32', '24', '16') -FaviconSizes @('16', '24', '32', '48', '64', '96', '256')

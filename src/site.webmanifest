@@ -1,21 +1,29 @@
 {
 	"$schema": "https://www.schemastore.org/web-manifest-combined.json",
 	"id": "/?id=45bd6ca0-c827-4e58-bce2-7a80ff0dce9b",
-	"scope": "/",
-	"start_url": "/",
-	"scope_extensions": [{ "type": "origin", "origin": "https://trattoria.madcampos.dev/" }],
+
 	"name": "Marco's Trattoria",
 	"short_name": "Marco's",
-	"lang": "en-US",
-	"dir": "ltr",
 	"description": "Marco's Trattoria — A delight in each bite",
 	"categories": ["food", "restaurant", "italian", "pasta", "pizza"],
-	"display": "browser",
+
+	"lang": "en-US",
+	"dir": "ltr",
+
+	"scope": "/",
+	"scope_extensions": [{ "type": "origin", "origin": "https://trattoria.madcampos.dev/" }],
+	"start_url": "/",
+
+	"background_color": "#faebd7",
+	"theme_color": "#2f4da7",
+	"display": "minimal-ui",
 	"orientation": "any",
-	"background_color": "#252525",
-	"theme_color": "#0080ff",
+	"display_override": ["window-controls-overlay", "minimal-ui", "browser"],
+
+	"iarc_rating_id": "fc965bf1-bffc-4400-b558-881ddff7e498",
 	"prefer_related_applications": false,
 	"related_applications": [],
+
 	"icons": [
 		{
 			"src": "/assets/icons/icon.svg",
@@ -110,6 +118,7 @@
 			"purpose": "monochrome"
 		}
 	],
+
 	"shortcuts": [
 		{
 			"name": "Home",
@@ -512,16 +521,109 @@
 			]
 		}
 	],
+
 	"handle_links": "preffered",
-	"launch_handler": { "client_mode": "auto" },
-	"protocol_handlers": [
+	"launch_handler": { "client_mode": "navigate-existing" },
+	"protocol_handlers": [{ "protocol": "web+trattoria", "url": "/recipes/?recipe=%s" }],
+
+	"share_target": {
+		"action": "/contact/",
+		"method": "POST",
+		"enctype": "application/x-www-form-urlencoded",
+		"params": {
+			"title": "title",
+			"text": "text"
+		}
+	},
+
+	"file_handlers": [
 		{
-			"protocol": "web+trattoria",
-			"url": "/?url=%s"
+			"action": "/book/",
+			"accept": {
+				"application/json": [".mtb"]
+			},
+			"icons": [
+				{
+					"src": "/assets/icons/file/icon-1024x1024.png",
+					"sizes": "1024x1024",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon-512x512.png",
+					"sizes": "512x512",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon-256x256.png",
+					"sizes": "256x256",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon-96x96.png",
+					"sizes": "96x96",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon-64x64.png",
+					"sizes": "64x64",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon-48x48.png",
+					"sizes": "48x48",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon-32x32.png",
+					"sizes": "32x32",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon-24x24.png",
+					"sizes": "24x24",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon-16x16.png",
+					"sizes": "16x16",
+					"type": "image/png"
+				},
+				{
+					"src": "/assets/icons/file/icon.ico",
+					"sizes": "16x16 32x32 48x48 64x64 96x96 128x128 256x256",
+					"type": "image/x-icon"
+				},
+				{
+					"src": "/assets/icons/file/icon.icns",
+					"sizes": "any",
+					"type": "image/x-icns"
+				},
+				{
+					"src": "/assets/icons/file/icon.svg",
+					"sizes": "any",
+					"type": "image/svg+xml"
+				}
+			],
+			"launch_type": "single-client"
 		}
 	],
+
 	"edge_side_panel": {
 		"preffer_width": 460
 	},
-	"screenshots": []
+	"screenshots": [],
+
+	"changelog": {
+		"version": "1.0.0",
+		"history": [
+			{
+				"url": "/changelog.html",
+				"type": "text/html"
+			},
+			{
+				"url": "/changelog.rss",
+				"type": "application/rss+xml"
+			}
+		]
+	}
 }
