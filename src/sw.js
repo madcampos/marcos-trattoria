@@ -136,3 +136,27 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */ event) => {
 		return response;
 	})());
 });
+
+self.addEventListener('push', (/** @type {PushEvent} */ event) => {
+	if (!(self.Notification && self.Notification.permission === 'granted')) {
+		return;
+	}
+
+	event.waitUntil(
+		self.registration.showNotification("Marco's Trattoria Booking", {
+			body: 'Your booking is coming soon!',
+			badge: '/assets/icons/icon-mono.svg',
+			icon: '/assets/icons/icon.svg',
+			// @ts-expect-error
+			image: '/assets/images/focaccia.webp',
+			lang: 'en-US',
+			timestamp: Date.now(),
+			vibrate: [200, 100, 200]
+		})
+	);
+});
+
+self.addEventListener('notificationclick', (/** @type {NotificationEvent} */ event) => {
+	event.notification.close();
+	// TODO: go to booking page
+});
