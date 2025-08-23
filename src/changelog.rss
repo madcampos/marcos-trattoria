@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+	<title>Marco's Trattoria Changelog</title>
+	<description>Changelog (Version History) for Marco's Trattoria Website.</description>
+	<link>http://trattoria.madcampos.dev/changelog.html</link>
+
+	<item>
+		<title>Version 1.0.0 "Good Food"</title>
+		<pubDate>Sat, 23 Aug 2025 02:39:00 -0400</pubDate>
+		<description><![CDATA[
+			<p>This release contain the first full fledged version of the Marco's Trattoria Website.</p>
+			<p>It includes PWA support and all of the basic pages</p>
+			<p>Pages included are:</p>
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+				<li>Book</li>
+				<li>Contact</li>
+				<li>Accessibility</li>
+				<li>License</li>
+				<li>Menu</li>
+				<li>Recipes</li>
+			</ul>
+		]]></description>
+	</item>
+</channel>
+</rss>
