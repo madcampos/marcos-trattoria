@@ -1,6 +1,6 @@
 import './components/index.js';
 
-const DEV_MODE = true;
+const DEV_MODE = false;
 
 async function registerServiceWorker() {
 	if (DEV_MODE) {
