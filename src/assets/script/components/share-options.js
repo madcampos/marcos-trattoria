@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 const shareOptions = document.querySelector('share-options');
 
 if (shareOptions) {
@@ -33,16 +35,16 @@ if (shareOptions) {
 		);
 	const file = new File([fileContents], `${title}.txt`, { type: 'text/plain' });
 
-	shareOptions.querySelector('button#share-os-link')?.addEventListener('click', () => {
-		navigator.share({
+	shareOptions.querySelector('button#share-os-link')?.addEventListener('click', async () => {
+		await navigator.share({
 			url,
 			title,
 			text: description
 		});
 	});
 
-	shareOptions.querySelector('button#share-os-file')?.addEventListener('click', () => {
-		navigator.share({
+	shareOptions.querySelector('button#share-os-file')?.addEventListener('click', async () => {
+		await navigator.share({
 			url,
 			title,
 			text: description,
@@ -63,8 +65,8 @@ if (shareOptions) {
 		window.open(`mailto:?subject=${subject}&body=${body}`);
 	});
 
-	shareOptions.querySelector('button#share-copy')?.addEventListener('click', () => {
-		navigator.clipboard.writeText(url);
+	shareOptions.querySelector('button#share-copy')?.addEventListener('click', async () => {
+		await navigator.clipboard.writeText(url);
 	});
 
 	shareOptions.querySelector('button#share-download')?.addEventListener('click', () => {

@@ -17,14 +17,18 @@ if (video) {
 
 	playPauseButton.addEventListener('click', () => {
 		if (video.paused) {
-			video.play();
+			void video.play();
 		} else {
 			video.pause();
 		}
 	});
 
 	if (window.matchMedia('(prefers-reduced-motion: no-preference), (prefers-reduced-data: no-preference)')) {
-		video.play();
+		try {
+			void video.play();
+		} catch (err) {
+			console.error(err);
+		}
 	}
 
 	document.querySelector('hero-controls')?.removeAttribute('hidden');
