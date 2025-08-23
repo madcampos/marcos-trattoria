@@ -1,0 +1,7 @@
+{
+	"tracking": "N",
+	"same-party": [
+		"trattoria.madcampos.dev"
+	],
+	"policy": "/.well-known/dnt-policy.txt"
+}
