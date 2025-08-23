@@ -10,7 +10,7 @@
 
 	hero-image {
 		mask: radial-gradient(circle at center, black 50%, transparent 60%);
-		background-image: url('/assets/images/bg-pattern.png');
+		background-image: url('/assets/images/bg-pattern.webp');
 		background-size: 25rem;
 		background-color: var(--color-bg);
 	}
@@ -31,5 +31,15 @@
 		color: var(--color-primary);
 
 		@media (max-width: 20rem) { font-size: 3rem; }
+	}
+
+	div:has(button) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		margin-block-start: 1rem;
+
+		@media print { display: none; }
 	}
 }
