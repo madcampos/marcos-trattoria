@@ -22,6 +22,7 @@ const CACHE_MANIFEST = [
 	'/assets/css/components/share-options.css',
 	'/assets/css/components/sr-only.css',
 	'/assets/css/components/svg-defs.css',
+	'/assets/css/fonts.css',
 	'/assets/css/index.css',
 	'/assets/css/pages/about.css',
 	'/assets/css/pages/book-form.css',
@@ -36,6 +37,9 @@ const CACHE_MANIFEST = [
 	'/assets/css/print.css',
 	'/assets/css/transitions.css',
 	'/assets/css/vars.css',
+	'/assets/fonts/cookie-regular.woff2',
+	'/assets/fonts/cormorantinfant-variablefont_wght.woff2',
+	'/assets/fonts/cormorantinfant-italic-variablefont_wght.woff2',
 	'/assets/images/logo.svg',
 	'/assets/script/components/hero-controls.js',
 	'/assets/script/components/index.js',
@@ -151,6 +155,7 @@ self.addEventListener('push', (/** @type {PushEvent} */ event) => {
 			image: '/assets/images/focaccia.webp',
 			lang: 'en-US',
 			timestamp: Date.now(),
+			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 			vibrate: [200, 100, 200]
 		})
 	);

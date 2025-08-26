@@ -1,0 +1,35 @@
+@layer fonts {
+	@font-face {
+		font-style: normal;
+		font-weight: 1 1000;
+		line-height: 1.6;
+		src: url('/assets/fonts/cormorantinfant-variablefont_wght.woff2') format('woff2');
+		font-family: 'Cormorant Infant';
+		font-display: swap;
+		letter-spacing: 0.3px;
+		word-spacing: -0.55px;
+	}
+
+	@font-face {
+		font-style: italic;
+		font-weight: 1 1000;
+		line-height: 1.6;
+		src: url('/assets/fonts/cormorantinfant-italic-variablefont_wght.woff2') format('woff2');
+		font-family: 'Cormorant Infant';
+		font-display: swap;
+		letter-spacing: 0.3px;
+		word-spacing: -0.55px;
+	}
+
+	@font-face {
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1.35;
+		src: url('/assets/fonts/cookie-regular.woff2') format('woff2');
+		font-family: 'Cookie';
+		font-display: swap;
+		font-synthesis: none;
+		letter-spacing: 1.05px;
+		word-spacing: 0.8px;
+	}
+}
