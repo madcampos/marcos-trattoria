@@ -9,9 +9,9 @@
 			margin-inline: auto;
 			border: none;
 			width: clamp(12rem, 50vw, 40rem);
-			height: 50rem;
+			height: 55rem;
 
-			@media (max-width: 25rem) { height: 55rem; }
+			@media (max-width: 25rem) { height: 60rem; }
 		}
 	}
 }
