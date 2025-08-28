@@ -1,0 +1,16 @@
+@layer components {
+	title-bar {
+		display: block;
+		position: fixed;
+		top: env(titlebar-area-y, 0);
+		left: env(titlebar-area-x, 0);
+		z-index: calc(infinite);
+		width: env(titlebar-area-width, 100%);
+		height: env(titlebar-area-height, 0);
+		-webkit-app-region: drag;
+		app-region: drag;
+		background-color: var(--color-primary);
+	}
+
+	body { padding-top: calc(env(titlebar-area-y, 0) + env(titlebar-area-height, 0)); }
+}
