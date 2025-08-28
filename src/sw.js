@@ -3,6 +3,7 @@
 /**
  * @typedef {Object} ServiceWorkerMessages
  * @prop {'sw-registered'} REGISTERED
+ * @prop {'booking-saved'} BOOKING_SAVED
  */
 
 const FALLBACK_URL = '/404.html';
@@ -91,7 +92,10 @@ self.addEventListener('activate', (/** @type {ExtendableEvent} */ event) => {
 		);
 
 		(await clients.matchAll({ type: 'window' })).forEach(async ({ id }) => {
-			(await clients.get(id))?.postMessage(/** @type {ServiceWorkerMessages['REGISTERED']} */ ('sw-registered'));
+			/** @satisfies {ServiceWorkerMessages['REGISTERED']} */
+			const message = 'sw-registered';
+
+			(await clients.get(id))?.postMessage(message);
 		});
 	})());
 });
@@ -149,6 +153,10 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */ event) => {
 
 		return response;
 	})());
+});
+
+self.addEventListener('message', (/** @type {ExtendableMessageEvent} */ event) => {
+	// TODO: add background sync
 });
 
 self.addEventListener('push', (/** @type {PushEvent} */ event) => {

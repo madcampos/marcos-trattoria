@@ -96,7 +96,7 @@ const rules = {
 	'no-implicit-globals': 'warn',
 	'no-implied-eval': 'off',
 	'no-import-assign': 'error',
-	'no-inline-comments': ['warn', { ignorePattern: '(?:@vite-ignore|@ts-expect-error|@type).+' }],
+	'no-inline-comments': ['warn', { ignorePattern: '(?:@vite-ignore|@ts-expect-error|@type|@satisfies).+' }],
 	'no-inner-declarations': ['error', 'both'],
 	'no-invalid-regexp': 'error',
 	'no-invalid-this': 'off',

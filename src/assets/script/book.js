@@ -1,15 +1,19 @@
-if ('launchQueue' in window) {
-	window.launchQueue?.setConsumer(async (launchParams) => {
-		if (launchParams.files && launchParams.files.length > 0) {
-			const file = await launchParams.files[0]?.getFile();
-			const text = await file?.text();
-			const json = JSON.parse(text ?? '{}');
+(/** @type {NodeListOf<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>} */ (document.querySelectorAll('form :is(input, select, textarea)'))).forEach((field) => {
+	const savedValue = localStorage.getItem(field.id);
 
-			// TODO: load booking into form
-		}
-	});
-}
+	if (savedValue) {
+		field.value = savedValue;
+	}
+});
 
 document.querySelector('form')?.addEventListener('submit', () => {
-	// TODO: save form data to local storage
+	(/** @type {NodeListOf<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>} */ (document.querySelectorAll('form :is(input, select, textarea)'))).forEach((field) => {
+		localStorage.setItem(field.id, field.value);
+	});
+});
+
+document.querySelector('form')?.addEventListener('reset', () => {
+	(/** @type {NodeListOf<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>} */ (document.querySelectorAll('form :is(input, select, textarea)'))).forEach((field) => {
+		localStorage.removeItem(field.id);
+	});
 });
