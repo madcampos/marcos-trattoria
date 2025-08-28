@@ -1,4 +1,5 @@
 @layer base {
+	/* TODO: add proper transitions */
 	@view-transition { navigation: auto; }
 
 	::view-transition-old(root) { animation: old-page-animation 0s ease-in-out both; }
