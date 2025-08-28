@@ -60,7 +60,7 @@ const rules = {
 	'no-class-assign': 'error',
 	'no-compare-neg-zero': 'error',
 	'no-cond-assign': ['error', 'always'],
-	'no-console': ['warn', { allow: ['warn', 'error'] }],
+	'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
 	'no-const-assign': 'error',
 	'no-constant-binary-expression': 'error',
 	'no-constant-condition': 'error',

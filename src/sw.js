@@ -1,5 +1,10 @@
 /// <reference types="@types/serviceworker" />
 
+/**
+ * @typedef {Object} ServiceWorkerMessages
+ * @prop {'sw-registered'} REGISTERED
+ */
+
 const FALLBACK_URL = '/404.html';
 const CACHE_VERSION = 'v1';
 const CACHE_MANIFEST = [
@@ -84,6 +89,10 @@ self.addEventListener('activate', (/** @type {ExtendableEvent} */ event) => {
 				.filter((key) => key !== CACHE_VERSION)
 				.map(async (cache) => caches.delete(cache))
 		);
+
+		(await clients.matchAll({ type: 'window' })).forEach(async ({ id }) => {
+			(await clients.get(id))?.postMessage(/** @type {ServiceWorkerMessages['REGISTERED']} */ ('sw-registered'));
+		});
 	})());
 });
 
@@ -99,6 +108,7 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */ event) => {
 			localStorage.setItem('contact-form-title', title);
 			localStorage.setItem('contact-form-text', text);
 
+			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 			return Response.redirect('/contact/', 303);
 		}
 

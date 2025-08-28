@@ -9,9 +9,9 @@
 		<link rel="sitemap" href="/sitemap.xml" />
 
 		<!-- Preloads -->
-		<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cookie-regular.woff2" />
-		<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cormorantinfant-variablefont_wght.woff2" />
-		<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cormorantinfant-italic-variablefont_wght.woff2" />
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/cookie-regular.woff2" />
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/cormorantinfant-variablefont_wght.woff2" />
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/cormorantinfant-italic-variablefont_wght.woff2" />
 
 		<!-- App Metadata -->
 		<link rel="icon" href="/assets/icons/icon.svg" sizes="any" type="image/svg+xml" />
@@ -564,5 +564,23 @@
 			</nav>
 		</footer>
 		<!-- #endregion -->
+
+		<pwa-banner
+			hidden
+			role="status"
+			aria-live="polite"
+			aria-atomic="true"
+			aria-relevant="text"
+		>
+			<span>The website can be used offline now.</span>
+			<button type="button">
+				<sr-only>Close banner</sr-only>
+				<x-icon role="none" aria-hidden="true">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use href="#uil--times" />
+					</svg>
+				</x-icon>
+			</button>
+		</pwa-banner>
 	</body>
 </html>

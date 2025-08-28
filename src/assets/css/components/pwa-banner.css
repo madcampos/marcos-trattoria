@@ -1,0 +1,25 @@
+@layer components {
+	pwa-banner:not([hidden]) {
+		display: flex;
+		position: fixed;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		transform: translateX(-50%);
+		margin-block-end: 1rem;
+		inset-block-end: 0;
+		inset-block-start: auto;
+		inset-inline: 50%;
+		border: solid 0.1rem var(--color-primary);
+		border-radius: 0.5rem;
+		background-color: var(--color-bg);
+		padding: 1rem;
+		width: clamp(20rem, 70vw, 35rem);
+		height: fit-content;
+		color: var(--color-text-primary);
+
+		span { flex-grow: 1; }
+
+		button { margin: 0; }
+	}
+}

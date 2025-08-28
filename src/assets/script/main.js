@@ -9,18 +9,32 @@ async function registerServiceWorker() {
 
 	if ('serviceWorker' in navigator) {
 		try {
-			const serviceWorkerRegistration = await navigator.serviceWorker.register('/sw.js', {
+			await navigator.serviceWorker.register('/sw.js', {
 				scope: '/',
 				type: 'module'
 			});
 
-			if (serviceWorkerRegistration.active) {
-				// TODO: show alert the page is ready to work offline
-			}
+			navigator.serviceWorker.addEventListener('message', (event) => {
+				const messageType = /** @type {import('../../sw.js').ServiceWorkerMessages[keyof import('../../sw.js').ServiceWorkerMessages]} */ (event.data);
+
+				switch (messageType) {
+					case 'sw-registered':
+						console.info('[⚙️] Service Worker registered');
+
+						document.querySelector('pwa-banner button')?.addEventListener('click', () => {
+							document.querySelector('pwa-banner')?.toggleAttribute('hidden');
+						});
+
+						document.querySelector('pwa-banner')?.removeAttribute('hidden');
+						break;
+					default:
+						break;
+				}
+			});
 		} catch (error) {
 			console.error(`Registration failed with ${error}`);
 		}
 	}
 }
 
-registerServiceWorker();
+void registerServiceWorker();
