@@ -6,6 +6,11 @@
  * @prop {'booking-saved'} BOOKING_SAVED
  */
 
+/**
+ * @typedef {Object} ServiceWorkerSyncTag
+ * @prop {'check-booking'} CHECK_BOOKING
+ */
+
 const FALLBACK_URL = '/404.html';
 const CACHE_VERSION = 'v1';
 const CACHE_MANIFEST = [
@@ -66,6 +71,100 @@ const CACHE_MANIFEST = [
 	'/recipes/francisquito.html',
 	'/recipes/nonnas-pasta.html'
 ];
+
+async function registerPeriodicSync() {
+	try {
+		/** @satisfies {ServiceWorkerSyncTag['CHECK_BOOKING']} */
+		const tag = 'check-booking';
+
+		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+		const FIVE_MINUTES_IN_MS = 5 * 60 * 60 * 1000;
+
+		await self.registration.periodicSync?.register(tag, {
+			minInterval: FIVE_MINUTES_IN_MS
+		});
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+async function unregisterPeriodicSync() {
+	/** @satisfies {ServiceWorkerSyncTag['CHECK_BOOKING']} */
+	const tag = 'check-booking';
+
+	await self.registration.periodicSync?.unregister(tag);
+}
+
+async function showBookingNotification() {
+	if (!(self.Notification && self.Notification.permission === 'granted')) {
+		return;
+	}
+
+	const savedTimestamp = localStorage.getItem('reservation-timestamp');
+
+	if (!savedTimestamp) {
+		return;
+	}
+
+	const reservationTimestamp = new Date(savedTimestamp);
+	const now = new Date();
+
+	if (now.getTime() > reservationTimestamp.getTime()) {
+		localStorage.removeItem('reservation-timestamp');
+		await unregisterPeriodicSync();
+
+		return;
+	}
+
+	const oneHourToReservation = new Date(reservationTimestamp);
+	oneHourToReservation.setHours(oneHourToReservation.getHours() - 1);
+
+	if (now.getTime() > oneHourToReservation.getTime()) {
+		return;
+	}
+
+	let message = 'Your reservation is an hour away!';
+
+	const thirtyMinutesToReservation = new Date(reservationTimestamp);
+	thirtyMinutesToReservation.setHours(thirtyMinutesToReservation.getHours() - 1);
+
+	if (now.getTime() <= thirtyMinutesToReservation.getTime()) {
+		message = 'Your reservation is 30 miutes away!';
+	}
+
+	const fifteenMinutesToReservation = new Date(reservationTimestamp);
+	fifteenMinutesToReservation.setHours(fifteenMinutesToReservation.getHours() - 1);
+
+	if (now.getTime() <= fifteenMinutesToReservation.getTime()) {
+		message = 'Your reservation is 15 miutes away!';
+	}
+
+	if ('setAppBadge' in navigator) {
+		await navigator.setAppBadge(1);
+	}
+
+	return self.registration.showNotification("Marco's Trattoria Booking", {
+		body: message,
+		badge: '/assets/icons/icon-mono.svg',
+		icon: '/assets/icons/icon.svg',
+		// @ts-expect-error
+		image: '/assets/images/focaccia.webp',
+		lang: 'en-US',
+		timestamp: Date.now(),
+		actions: [
+			{
+				action: 'dismiss',
+				title: 'Okay'
+			},
+			{
+				action: 'cancel',
+				title: 'Cancel Reminder'
+			}
+		],
+		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+		vibrate: [200, 100, 200]
+	});
+}
 
 self.addEventListener('install', (/** @type {ExtendableEvent}*/ event) => {
 	event.waitUntil((async () => {
@@ -155,31 +254,35 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */ event) => {
 	})());
 });
 
-self.addEventListener('message', (/** @type {ExtendableMessageEvent} */ event) => {
-	// TODO: add background sync
+self.addEventListener('periodicsync', (/** @type {PeriodicSyncEvent} */ event) => {
+	const tagName = /** @type {ServiceWorkerSyncTag[keyof ServiceWorkerSyncTag]} */ (event.tag);
+
+	switch (tagName) {
+		case 'check-booking':
+			event.waitUntil(showBookingNotification());
+			break;
+		default:
+			break;
+	}
 });
 
-self.addEventListener('push', (/** @type {PushEvent} */ event) => {
-	if (!(self.Notification && self.Notification.permission === 'granted')) {
-		return;
-	}
+self.addEventListener('message', (/** @type {ExtendableMessageEvent} */ event) => {
+	const message = /** @type {ServiceWorkerMessages[keyof ServiceWorkerMessages]} */ (event.data);
 
-	event.waitUntil(
-		self.registration.showNotification("Marco's Trattoria Booking", {
-			body: 'Your booking is coming soon!',
-			badge: '/assets/icons/icon-mono.svg',
-			icon: '/assets/icons/icon.svg',
-			// @ts-expect-error
-			image: '/assets/images/focaccia.webp',
-			lang: 'en-US',
-			timestamp: Date.now(),
-			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-			vibrate: [200, 100, 200]
-		})
-	);
+	switch (message) {
+		case 'booking-saved':
+			event.waitUntil(registerPeriodicSync());
+			break;
+		case 'sw-registered':
+		default:
+			break;
+	}
 });
 
 self.addEventListener('notificationclick', (/** @type {NotificationEvent} */ event) => {
 	event.notification.close();
-	// TODO: go to booking page
+
+	if (event.action === 'cancel') {
+		event.waitUntil(unregisterPeriodicSync());
+	}
 });
