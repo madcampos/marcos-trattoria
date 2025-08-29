@@ -16,11 +16,10 @@
 
 	"background_color": "#faebd7",
 	"theme_color": "#2f4da7",
-	"display": "minimal-ui",
+	"display": "browser",
 	"orientation": "any",
-	"display_override": ["window-controls-overlay", "minimal-ui", "browser"],
+	"display_override": ["minimal-ui", "browser"],
 
-	"iarc_rating_id": "fc965bf1-bffc-4400-b558-881ddff7e498",
 	"prefer_related_applications": false,
 	"related_applications": [],
 
@@ -524,11 +523,11 @@
 
 	"handle_links": "preffered",
 	"launch_handler": { "client_mode": "navigate-existing" },
-	"protocol_handlers": [{ "protocol": "web+trattoria", "url": "/recipes/?recipe=%s" }],
+	"protocol_handlers": [{ "protocol": "web+mtr", "url": "/recipes/?recipe=%s" }],
 
 	"share_target": {
 		"action": "/contact/",
-		"method": "POST",
+		"method": "GET",
 		"enctype": "application/x-www-form-urlencoded",
 		"params": {
 			"title": "title",

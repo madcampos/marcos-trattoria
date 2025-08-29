@@ -222,7 +222,10 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */ event) => {
 			try {
 				response = await fetch(request);
 
-				await cache.put(request, response.clone());
+				// eslint-disable-next-line @typescript-eslint/no-magic-numbers
+				if (url.origin === self.origin && response.status === 200) {
+					await cache.put(request, response.clone());
+				}
 			} catch (error) {
 				console.error(error);
 
