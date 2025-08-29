@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA" itemscope itemtype="https://schema.org/Restaurant">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,11 +13,24 @@
 		<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/cormorantinfant-variablefont_wght.woff2" />
 		<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/cormorantinfant-italic-variablefont_wght.woff2" />
 
+		<!-- General metadata -->
+		<meta itemprop="logo" content="https://trattoria.madcampos.dev/assets/images/logo.svg" />
+		<meta itemprop="servesCuisine" content="Italian" />
+		<meta itemprop="priceRange" content="$$" />
+		<meta itemprop="menu" content="https://trattoria.madcampos.dev/menu/" />
+		<meta itemprop="acceptsReservations" content="https://trattoria.madcampos.dev/book/" />
+
+		<!-- Images metadata -->
+		<meta itemprop="image" content="https://trattoria.madcampos.dev/assets/images/restaurant-inside.webp" />
+		<meta itemprop="image" content="https://trattoria.madcampos.dev/assets/images/focaccia.webp" />
+		<meta itemprop="image" content="https://trattoria.madcampos.dev/assets/images/pasta.webp" />
+
 		<!-- App Metadata -->
 		<link rel="icon" href="/assets/icons/icon.svg" sizes="any" type="image/svg+xml" />
 		<link rel="icon" href="/favicon.ico" sizes="48x48" type="image/x-icon" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="license" href="/license/" />
+		<link rel="author" href="/humans.txt" />
 
 		<!-- Social metadata -->
 		<meta property="og:title" name="twitter:title" itemprop="name" content="Marco&rsquo;s Trattoria" />
@@ -25,13 +38,13 @@
 		<meta property="og:type" content="website" />
 		<meta name="twitter:card" content="summary_large_image" />
 
-		<meta property="og:locale" itemprop="inLanguage" content="en_US" />
+		<meta property="og:locale" content="en_US" />
 		<meta property="og:url" itemprop="url" content="https://trattoria.madcampos.dev/" />
 
-		<meta property="og:description" name="description" itemprop="abstract" content="A delight in each bite." />
+		<meta property="og:description" name="description" content="A delight in each bite." />
 		<meta name="twitter:description" content="A delight in each bite." />
 
-		<meta property="og:image" name="twitter:image" itemprop="image" content="https://trattoria.madcampos.dev/assets/images/social/home.jpg" />
+		<meta property="og:image" name="twitter:image" content="https://trattoria.madcampos.dev/assets/images/social/home.jpg" />
 		<meta
 			property="og:image:alt"
 			name="twitter:image:alt"
@@ -47,6 +60,18 @@
 		<meta name="twitter:widgets:theme" content="dark" />
 
 		<meta name="keywords" itemprop="keywords" property="article:tag" content="food, restaurant, italian, pasta, pizza" />
+
+		<!-- Changelog -->
+		<link rel="alternate" type="application/atom+xml" href="/changelog.rss" title="Changelog (Version History)" />
+		<link rel="alternate" type="text/html" href="/changelog.html" title="Changelog (Version History)" />
+
+		<!-- Published date -->
+		<meta property="article:published_time" content="2025-08-29T20:55:09.030Z" />
+		<meta name="publish_date" property="og:publish_date" content="2025-08-29T20:55:09.030Z" />
+
+		<!-- Modified date -->
+		<meta property="article:modified_time" content="2025-08-29T20:55:09.030Z" />
+		<meta name="updated_date" property="og:updated_date" content="2025-08-29T20:55:09.030Z" />
 
 		<!-- Apple tags -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -322,18 +347,26 @@
 								<x-icon role="presentation" aria-hidden="true">
 									<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--store" /></svg>
 								</x-icon>
-								<blockquote>
-									<p>227 Queen Street West</p>
-									<p>Toronto, ON</p>
-									<p>M5V 1Z4</p>
+								<blockquote itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+									<p itemprop="streetAddress">227 Queen Street West</p>
+									<p>
+										<span itemprop="addressLocality">Toronto</span>,
+										<span itemprop="addressRegion">ON</span>
+										<meta itemprop="addressCountry" content="CA" />
+									</p>
+									<p itemprop="postalCode">M5V 1Z4</p>
 								</blockquote>
+								<div hidden itemscope itemtype="https://schema.org/GeoCoordinates">
+									<meta itemprop="latitude" content="43.650550667533764" />
+									<meta itemprop="longitude" content="-79.38815491534251" />
+								</div>
 							</div>
 							<p>
 								<x-icon role="presentation" aria-hidden="true">
 									<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--envelope-edit" /></svg>
 								</x-icon>
 								<strong>Email:</strong>
-								<span>book@marcos-trattoria.com</span>
+								<span itemprop="email">book@marcos-trattoria.com</span>
 								<sup>
 									<a href="mailto:book@marcos-trattoria.com" target="_blank">
 										<sr-only>Send an email to us</sr-only>
@@ -350,7 +383,7 @@
 									<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--phone" /></svg>
 								</x-icon>
 								<strong>Tel:</strong>
-								<span>(647) 123-4567</span>
+								<span itemprop="telephone">+1 (647) 123-4567</span>
 								<sup>
 									<a href="tel:+16471234567" target="_blank">
 										<sr-only>Call phone number</sr-only>
@@ -363,6 +396,26 @@
 								</sup>
 							</p>
 						</address>
+
+						<div hidden itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+							<meta itemprop="dayOfWeek" content="Monday" />
+							<meta itemprop="opens" content="00:00" />
+							<meta itemprop="closes" content="00:00" />
+						</div>
+						<div hidden itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+							<meta itemprop="dayOfWeek" content="Tuesday" />
+							<meta itemprop="dayOfWeek" content="Wednesday" />
+							<meta itemprop="dayOfWeek" content="Thursday" />
+							<meta itemprop="opens" content="11:00" />
+							<meta itemprop="closes" content="23:00" />
+						</div>
+						<div hidden itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+							<meta itemprop="dayOfWeek" content="Friday" />
+							<meta itemprop="dayOfWeek" content="Saturday" />
+							<meta itemprop="dayOfWeek" content="Sunday" />
+							<meta itemprop="opens" content="10:00" />
+							<meta itemprop="closes" content="01:00" />
+						</div>
 					</contact-info>
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1443.4469304289491!2d-79.38875543034386!3d43.650376568570756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34ce2c575bc5%3A0x3b8b4af586178424!2s227%20Queen%20St%20W%2C%20Toronto%2C%20ON%20M5V%201Z4!5e0!3m2!1sen!2sca!4v1754604876962!5m2!1sen!2sca"

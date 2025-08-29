@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA" itemscope itemtype="https://schema.org/WebPage">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +18,7 @@
 		<link rel="icon" href="/favicon.ico" sizes="48x48" type="image/x-icon" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="license" href="/license/" />
+		<link rel="author" href="/humans.txt" />
 
 		<!-- Social metadata -->
 		<meta property="og:title" name="twitter:title" itemprop="name" content="License - Marco&rsquo;s Trattoria" />
@@ -330,16 +331,29 @@
 		<footer>
 			<section>
 				<h2>Contact Info</h2>
-				<contact-info>
+				<contact-info itemscope itemtype="https://schema.org/Restaurant">
+					<meta itemprop="logo" content="https://trattoria.madcampos.dev/assets/images/logo.svg" />
+					<meta itemprop="servesCuisine" content="Italian" />
+					<meta itemprop="priceRange" content="$$" />
+					<meta itemprop="menu" content="https://trattoria.madcampos.dev/menu/" />
+					<meta itemprop="acceptsReservations" content="https://trattoria.madcampos.dev/book/" />
+					<meta itemprop="name" content="Marco&rsquo;s Trattoria" />
+					<meta itemprop="url" content="https://trattoria.madcampos.dev/" />
+					<meta itemprop="keywords" content="food, restaurant, italian, pasta, pizza" />
+
 					<address>
 						<div>
 							<x-icon role="presentation" aria-hidden="true">
 								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--store" /></svg>
 							</x-icon>
-							<blockquote>
-								<p>227 Queen Street West</p>
-								<p>Toronto, ON</p>
-								<p>M5V 1Z4</p>
+							<blockquote itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+								<p itemprop="streetAddress">227 Queen Street West</p>
+								<p>
+									<span itemprop="addressLocality">Toronto</span>,
+									<span itemprop="addressRegion">ON</span>
+									<meta itemprop="addressCountry" content="CA" />
+								</p>
+								<p itemprop="postalCode">M5V 1Z4</p>
 							</blockquote>
 						</div>
 						<p>
@@ -347,7 +361,7 @@
 								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--envelope-edit" /></svg>
 							</x-icon>
 							<strong>Email:</strong>
-							<span>book@marcos-trattoria.com</span>
+							<span itemprop="email">book@marcos-trattoria.com</span>
 							<sup>
 								<a href="mailto:book@marcos-trattoria.com" target="_blank">
 									<sr-only>Send an email to us</sr-only>
@@ -364,7 +378,7 @@
 								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--phone" /></svg>
 							</x-icon>
 							<strong>Tel:</strong>
-							<span>(647) 123-4567</span>
+							<span itemprop="telephone">+1 (647) 123-4567</span>
 							<sup>
 								<a href="tel:+16471234567" target="_blank">
 									<sr-only>Call phone number</sr-only>
@@ -381,6 +395,10 @@
 								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--map-marker" /></svg>
 							</x-icon>
 							<a href="https://www.google.com/maps?ll=43.650376,-79.388112&z=17&t=m&hl=en&gl=CA&mapclient=embed&q=227+Queen+St+W+Toronto,+ON+M5V+1Z4">Map link</a>
+							<div hidden itemscope itemtype="https://schema.org/GeoCoordinates">
+								<meta itemprop="latitude" content="43.650550667533764" />
+								<meta itemprop="longitude" content="-79.38815491534251" />
+							</div>
 						</p>
 					</address>
 				</contact-info>

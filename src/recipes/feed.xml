@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+	<title>Marco's Trattoria - Recipes</title>
+	<subtitle>A piece of our famiglia to yours</subtitle>
+	<id>https://trattoria.madcampos.dev/recipes/</id>
+	<link rel="alternate" type="text/html" href="https://trattoria.madcampos.dev/recipes/" />
+	<link rel="self" type="application/atom+xml" href="https://trattoria.madcampos.dev/recipes/feed.xml" />
+	<updated>2025-08-29T20:55:09.030Z</updated>
+	<logo>https://trattoria.madcampos.dev/assets/icons/icon.svg</logo>
+	<icon>https://trattoria.madcampos.dev/assets/icons/icon.svg</icon>
+	<author>
+		<name>Marco Campos</name>
+		<email>me@madcampos.dev</email>
+		<uri>https://madcampos.dev/</uri>
+	</author>
+
+	<entry>
+		<id>https://trattoria.madcampos.dev/recipes/nonnas-pasta.html</id>
+		<link rel="alternate" type="text/html" href="https://trattoria.madcampos.dev/recipes/nonnas-pasta.html" />
+		<updated>2025-08-29T20:55:09.030Z</updated>
+		<published>2025-08-29T20:55:09.030Z</published>
+		<title>Nonna&rsquo;s Pasta</title>
+		<summary>As my mamma used to say: the best pasta, is home made pasta.</summary>
+		<content
+		>## Ingredients
+- 3 large eggs
+- ½ cup of water
+- 1 kg of all purpose flour
+- Corn flour for sprinkling the pasta
+
+## Instructions
+01. Over a clean surface, spread a little bit of all purpose flour in it.
+02. Make a small mountain with the all purpose flour.
+03. Create a valley in the middle of the flour mountain and break the eggs inside of it.
+04. Knead the dough to mix the flour and eggs, adding water as needed.
+05. The dough should be in one single large piece and should not stick too much to your hands nor the surface.
+06. If the dough is too sticky, adding more flour will make it be more consistent.
+07. If the dough is too dry, adding more water will make it softer.
+08. Once the dough is ready, break small pieces or it and open them with a rolling pin.
+09. With a knife gently cut the open dough making strands. The pasta strands should not be so thin as they will break.
+10. After the pasta is cut, sprinkle the corn flour on the pasta and move them to a large baking pan or other flat surface.
+11. Let the pasta dry for 2 hours.</content>
+
+		<category term="recipe" />
+	</entry>
+
+	<entry>
+		<id>https://trattoria.madcampos.dev/recipes/apple-pie.html</id>
+		<link rel="alternate" type="text/html" href="https://trattoria.madcampos.dev/recipes/apple-pie.html" />
+		<updated>2025-08-29T20:55:09.030Z</updated>
+		<published>2025-08-29T20:55:09.030Z</published>
+		<title>Apple Pie</title>
+		<summary>A mix of Italian and German influences makes for a tasty dessert.</summary>
+		<content
+		>## Ingredients
+- 6 large apples, pealed and sliced
+- 2 cups of all purpose flour
+- 1 tbsp of baking powder
+- 1 cup of brown suggar
+- ½ cup of margarine
+- 1 egg
+- 1 cup of granulated suggar
+- 2 tbsp of cinnamon
+
+## Instructions
+01. Grease and flour a large pan.
+02. Place the apple slices in the pan trying to leave no gaps, you may use small apple slices to fill in the gaps.
+03. Mix the flour, baking powder, and the brown suggar.
+04. Cover the apples with the mixture.
+05. Using the back of a spoon carefully smooth the dry ingredients mixture.
+06. Soften the margarine until liquid, then carefully pour it on the pan trying not to peel the dry ingredients mixture.
+07. Mix the egg yolk and white and pour it on the pan.
+08. Mix the cinnamon and the granulated suggarm, then sprinkle it on the pan.
+09. Bake at 350 ℉ for about 40 minutes.</content>
+
+		<category term="recipe" />
+	</entry>
+
+	<entry>
+		<id>https://trattoria.madcampos.dev/recipes/francisquito.html</id>
+		<link rel="alternate" type="text/html" href="https://trattoria.madcampos.dev/recipes/francisquito.html" />
+		<updated>2025-08-29T20:55:09.030Z</updated>
+		<published>2025-08-29T20:55:09.030Z</published>
+		<title>Francisquito</title>
+		<summary>From Chef Marco’s childhood to your table</summary>
+		<content
+		>## Ingredients
+- 7 large eggs
+- 3 and ½ cups of suggar
+- 1 and ¾ cups of margarine
+- 1 and ½ tbsp of baking powder
+- 1kg of all purpose flour
+
+## Instructions
+01. Preheat the oven at 450 ℉.
+02. In a large bowl mix the eggs, suggar, and margarine.
+03. With the tips of the fingers, delicately mix the ingredients in the bowl.
+04. Add flour until the dough is still buttery but very firm.
+05. Making small horseshoes shaped cookies, lay them in a large baking pan.
+06. Bake for 25 to 30 minutes.</content>
+
+		<category term="recipe" />
+	</entry>
+
+	<entry>
+		<id>https://trattoria.madcampos.dev/recipes/brigadeiro.html</id>
+		<link rel="alternate" type="text/html" href="https://trattoria.madcampos.dev/recipes/brigadeiro.html" />
+		<updated>2025-08-29T20:55:09.030Z</updated>
+		<published>2025-08-29T20:55:09.030Z</published>
+		<title>Brigadeiro</title>
+		<summary>A classic Brazilian treat, this is the pure definition of "comfort food"</summary>
+		<content
+		>## Ingredients
+- 1 can of condensed milk
+- 2 tbsp of cocoa powder
+- 1 tbsp of margarine
+
+## Instructions
+01. In a medium pan mix the condensed milk and cocoa powder.
+02. Add the margarine to the pan.
+03. Keep stirring over medium heat for it to thicken.
+04. When you are able to split the liquid and it takes between 3 to 5 seconds to get back together it is done.
+05. Spread over a large dish to cool.
+06. Eat once cooled.</content>
+
+		<category term="recipe" />
+	</entry>
+</feed>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA" itemscope itemtype="https://schema.org/WebPage">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,6 +18,7 @@
 		<link rel="icon" href="/favicon.ico" sizes="48x48" type="image/x-icon" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="license" href="/license/" />
+		<link rel="author" href="/humans.txt" />
 
 		<!-- Social metadata -->
 		<meta property="og:title" name="twitter:title" itemprop="name" content="Menu — Marco&rsquo;s Trattoria" />
@@ -271,55 +272,67 @@
 		<hr />
 		<!-- #endregion -->
 
-		<main id="main">
+		<main id="main" itemscope itemtype="https://schema.org/Menu">
+			<meta itemprop="name" content="Marco&rsquo;s Trattoria Dine-in Menu" />
+
 			<!-- #region Wines -->
-			<section>
-				<h2>Wines</h2>
+			<section itemscope itemtype="https://schema.org/MenuSection">
+				<h2 itemprop="name">Wines</h2>
 				<dl>
-					<dt>Chianti Classico DOCG (Tuscany)</dt>
-					<dd>
-						<span><strong>Type:</strong> Red</span>
-						<br />
-						<span><strong>Notes:</strong> Medium-bodied with bright cherry, earthy spice, and a touch of oak.</span>
-						<br />
-						<span><strong>Pairing:</strong> Perfect with Tagliatelle al Ragù or Pizza Capricciosa.</span>
-					</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt itemprop="name">Chianti Classico DOCG (Tuscany)</dt>
+						<dd itemprop="description">
+							<span><strong>Type:</strong> Red</span>
+							<br />
+							<span><strong>Notes:</strong> Medium-bodied with bright cherry, earthy spice, and a touch of oak.</span>
+							<br />
+							<span><strong>Pairing:</strong> Perfect with Tagliatelle al Ragù or Pizza Capricciosa.</span>
+						</dd>
+					</div>
 
-					<dt>Pinot Grigio delle Venezie DOC (Veneto)</dt>
-					<dd>
-						<span><strong>Type:</strong> White</span>
-						<br />
-						<span><strong>Notes:</strong> Crisp and refreshing with citrus, green apple, and floral hints.</span>
-						<br />
-						<span><strong>Pairing:</strong> Ideal with Bruschetta, Caccio e Peppe, or Insalata Caprese.</span>
-					</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt itemprop="name">Pinot Grigio delle Venezie DOC (Veneto)</dt>
+						<dd itemprop="description">
+							<span><strong>Type:</strong> White</span>
+							<br />
+							<span><strong>Notes:</strong> Crisp and refreshing with citrus, green apple, and floral hints.</span>
+							<br />
+							<span><strong>Pairing:</strong> Ideal with Bruschetta, Caccio e Peppe, or Insalata Caprese.</span>
+						</dd>
+					</div>
 
-					<dt>Barolo DOCG (Piedmont)</dt>
-					<dd>
-						<span><strong>Type:</strong> Red</span>
-						<br />
-						<span><strong>Notes:</strong> Full-bodied with notes of dark cherry, rose, and leather; elegant tannins.</span>
-						<br />
-						<span><strong>Pairing:</strong> Pairs beautifully with rich dishes like Gnocchi al Pesto or Diavola Pizza.</span>
-					</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt itemprop="name">Barolo DOCG (Piedmont)</dt>
+						<dd itemprop="description">
+							<span><strong>Type:</strong> Red</span>
+							<br />
+							<span><strong>Notes:</strong> Full-bodied with notes of dark cherry, rose, and leather; elegant tannins.</span>
+							<br />
+							<span><strong>Pairing:</strong> Pairs beautifully with rich dishes like Gnocchi al Pesto or Diavola Pizza.</span>
+						</dd>
+					</div>
 
-					<dt>Prosecco Superiore DOCG (Valdobbiadene)</dt>
-					<dd>
-						<span><strong>Type:</strong> Sparkling White</span>
-						<br />
-						<span><strong>Notes:</strong> Light and bubbly with pear, white peach, and floral aromas.</span>
-						<br />
-						<span><strong>Pairing:</strong> A festive start with Prosciutto e Melone or Arancini. Also pairs greatly with dessert.</span>
-					</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt itemprop="name">Prosecco Superiore DOCG (Valdobbiadene)</dt>
+						<dd itemprop="description">
+							<span><strong>Type:</strong> Sparkling White</span>
+							<br />
+							<span><strong>Notes:</strong> Light and bubbly with pear, white peach, and floral aromas.</span>
+							<br />
+							<span><strong>Pairing:</strong> A festive start with Prosciutto e Melone or Arancini. Also pairs greatly with dessert.</span>
+						</dd>
+					</div>
 
-					<dt>Verdicchio dei Castelli di Jesi DOC (Marche)</dt>
-					<dd>
-						<span><strong>Type:</strong> White</span>
-						<br />
-						<span><strong>Notes:</strong> Dry and mineral-driven with almond, citrus, and herbal undertones.</span>
-						<br />
-						<span><strong>Pairing:</strong> Excellent with pizzas or Panna Cotta.</span>
-					</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt itemprop="name">Verdicchio dei Castelli di Jesi DOC (Marche)</dt>
+						<dd itemprop="description">
+							<span><strong>Type:</strong> White</span>
+							<br />
+							<span><strong>Notes:</strong> Dry and mineral-driven with almond, citrus, and herbal undertones.</span>
+							<br />
+							<span><strong>Pairing:</strong> Excellent with pizzas or Panna Cotta.</span>
+						</dd>
+					</div>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -334,20 +347,20 @@
 				</figure>
 
 				<dl>
-					<dt>Focaccia</dt>
-					<dd>House made focaccia, olive oil, and rosemary.</dd>
+					<dt itemprop="name">Focaccia</dt>
+					<dd itemprop="description">House made focaccia, olive oil, and rosemary.</dd>
 
-					<dt>Brucceta al Pomodoro</dt>
-					<dd>Grilled bread topped with marinated tomatoes, garlic, and basil.</dd>
+					<dt itemprop="name">Brucceta al Pomodoro</dt>
+					<dd itemprop="description">Grilled bread topped with marinated tomatoes, garlic, and basil.</dd>
 
-					<dt>Arancini Siciliani</dt>
-					<dd>Crispy risotto balls filled with mozzarella and vegan ragù.</dd>
+					<dt itemprop="name">Arancini Siciliani</dt>
+					<dd itemprop="description">Crispy risotto balls filled with mozzarella and vegan ragù.</dd>
 
-					<dt>Prosciutto e Melone</dt>
-					<dd>Sweet cantaloupe paired with smoked mushroom slices, in the style of Parma ham.</dd>
+					<dt itemprop="name">Prosciutto e Melone</dt>
+					<dd itemprop="description">Sweet cantaloupe paired with smoked mushroom slices, in the style of Parma ham.</dd>
 
-					<dt>Insalata Caprese</dt>
-					<dd>Fresh mozzarella, tomatoes, basil, and extra virgin olive oil.</dd>
+					<dt itemprop="name">Insalata Caprese</dt>
+					<dd itemprop="description">Fresh mozzarella, tomatoes, basil, and extra virgin olive oil.</dd>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -362,20 +375,20 @@
 				</figure>
 
 				<dl>
-					<dt>Spaghetti alla Carbonara</dt>
-					<dd>Egg yolk, vegan sausage, Pecorino Romano, and black pepper.</dd>
+					<dt itemprop="name">Spaghetti alla Carbonara</dt>
+					<dd itemprop="description">Egg yolk, vegan sausage, Pecorino Romano, and black pepper.</dd>
 
-					<dt>Tagliatelle al Ragù</dt>
-					<dd>Slow-cooked mushroom and lentil ragù over fresh tagliatelle.</dd>
+					<dt itemprop="name">Tagliatelle al Ragù</dt>
+					<dd itemprop="description">Slow-cooked mushroom and lentil ragù over fresh tagliatelle.</dd>
 
-					<dt>Penne all’Arrabbiata</dt>
-					<dd>Spicy tomato sauce with garlic and chili flakes.</dd>
+					<dt itemprop="name">Penne all’Arrabbiata</dt>
+					<dd itemprop="description">Spicy tomato sauce with garlic and chili flakes.</dd>
 
-					<dt>Caccio e Peppe</dt>
-					<dd>Spaghetti, grated pecorino, and black pepper.</dd>
+					<dt itemprop="name">Caccio e Peppe</dt>
+					<dd itemprop="description">Spaghetti, grated pecorino, and black pepper.</dd>
 
-					<dt>Gnocchi al Pesto Genovese</dt>
-					<dd>Potato gnocchi tossed in basil pesto and pine nuts.</dd>
+					<dt itemprop="name">Gnocchi al Pesto Genovese</dt>
+					<dd itemprop="description">Potato gnocchi tossed in basil pesto and pine nuts.</dd>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -394,26 +407,26 @@
 				</figure>
 
 				<dl>
-					<dt>Margherita</dt>
-					<dd>San Marzano tomato, mozzarella di bufala, and fresh basil.</dd>
+					<dt itemprop="name">Margherita</dt>
+					<dd itemprop="description">San Marzano tomato, mozzarella di bufala, and fresh basil.</dd>
 
-					<dt>Quattro Formaggi</dt>
-					<dd>Mozzarella, Gorgonzola, Fontina, and Parmigiano.</dd>
+					<dt itemprop="name">Quattro Formaggi</dt>
+					<dd itemprop="description">Mozzarella, Gorgonzola, Fontina, and Parmigiano.</dd>
 
-					<dt>Diavola</dt>
-					<dd>Spicy vegan salami, tomato sauce, mozzarella, and chili oil.</dd>
+					<dt itemprop="name">Diavola</dt>
+					<dd itemprop="description">Spicy vegan salami, tomato sauce, mozzarella, and chili oil.</dd>
 
-					<dt>Funghi e Tartufo</dt>
-					<dd>Wild mushrooms, truffle cream, and mozzarella.</dd>
+					<dt itemprop="name">Funghi e Tartufo</dt>
+					<dd itemprop="description">Wild mushrooms, truffle cream, and mozzarella.</dd>
 
-					<dt>Capricciosa</dt>
-					<dd>Artichokes, olives, mushrooms, and tomato sauce.</dd>
+					<dt itemprop="name">Capricciosa</dt>
+					<dd itemprop="description">Artichokes, olives, mushrooms, and tomato sauce.</dd>
 
-					<dt>Brazillian Style</dt>
-					<dd>A little bit of everything, it is as delicious as it is outragious.</dd>
+					<dt itemprop="name">Brazillian Style</dt>
+					<dd itemprop="description">A little bit of everything, it is as delicious as it is outragious.</dd>
 
-					<dt>Mezzo-a-Mezzo</dt>
-					<dd>Half and Half pizza. Choose two topping options.</dd>
+					<dt itemprop="name">Mezzo-a-Mezzo</dt>
+					<dd itemprop="description">Half and Half pizza. Choose two topping options.</dd>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -432,29 +445,29 @@
 				</figure>
 
 				<dl>
-					<dt>Tiramisù Classico</dt>
-					<dd>Layers of espresso-soaked ladyfingers and mascarpone cream.</dd>
+					<dt itemprop="name">Tiramisù Classico</dt>
+					<dd itemprop="description">Layers of espresso-soaked ladyfingers and mascarpone cream.</dd>
 
-					<dt>Panna Cotta alla Vaniglia</dt>
-					<dd>Silky vanilla custard with berry coulis.</dd>
+					<dt itemprop="name">Panna Cotta alla Vaniglia</dt>
+					<dd itemprop="description">Silky vanilla custard with berry coulis.</dd>
 
-					<dt>Cannoli Siciliani</dt>
-					<dd>Crispy pastry shells filled with sweet ricotta and chocolate chips.</dd>
+					<dt itemprop="name">Cannoli Siciliani</dt>
+					<dd itemprop="description">Crispy pastry shells filled with sweet ricotta and chocolate chips.</dd>
 
-					<dt>Gelato Artigianale</dt>
-					<dd>Choice of pistachio, hazelnut, stracciatella, or lemon.</dd>
+					<dt itemprop="name">Gelato Artigianale</dt>
+					<dd itemprop="description">Choice of pistachio, hazelnut, stracciatella, or lemon.</dd>
 
-					<dt>Affogato al Caffè</dt>
-					<dd>Vanilla gelato drowned in hot espresso.</dd>
+					<dt itemprop="name">Affogato al Caffè</dt>
+					<dd itemprop="description">Vanilla gelato drowned in hot espresso.</dd>
 
-					<dt>Apple Pie</dt>
-					<dd>Layers of apple intersected with a buttery flaky crust.</dd>
+					<dt itemprop="name">Apple Pie</dt>
+					<dd itemprop="description">Layers of apple intersected with a buttery flaky crust.</dd>
 
-					<dt><em lang="pt-BR">Brigadeiro</em></dt>
-					<dd>Traditional Brazilian chocolate fudge balls.</dd>
+					<dt itemprop="name"><em lang="pt-BR">Brigadeiro</em></dt>
+					<dd itemprop="description">Traditional Brazilian chocolate fudge balls.</dd>
 
-					<dt><em lang="pt-BR">Francisquito</em></dt>
-					<dd>Soft cookie with crusty shell.</dd>
+					<dt itemprop="name"><em lang="pt-BR">Francisquito</em></dt>
+					<dd itemprop="description">Soft cookie with crusty shell.</dd>
 				</dl>
 			</section>
 			<!-- #endregion -->
@@ -465,16 +478,29 @@
 		<footer>
 			<section>
 				<h2>Contact Info</h2>
-				<contact-info>
+				<contact-info itemscope itemtype="https://schema.org/Restaurant">
+					<meta itemprop="logo" content="https://trattoria.madcampos.dev/assets/images/logo.svg" />
+					<meta itemprop="servesCuisine" content="Italian" />
+					<meta itemprop="priceRange" content="$$" />
+					<meta itemprop="menu" content="https://trattoria.madcampos.dev/menu/" />
+					<meta itemprop="acceptsReservations" content="https://trattoria.madcampos.dev/book/" />
+					<meta itemprop="name" content="Marco&rsquo;s Trattoria" />
+					<meta itemprop="url" content="https://trattoria.madcampos.dev/" />
+					<meta itemprop="keywords" content="food, restaurant, italian, pasta, pizza" />
+
 					<address>
 						<div>
 							<x-icon role="presentation" aria-hidden="true">
 								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--store" /></svg>
 							</x-icon>
-							<blockquote>
-								<p>227 Queen Street West</p>
-								<p>Toronto, ON</p>
-								<p>M5V 1Z4</p>
+							<blockquote itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+								<p itemprop="streetAddress">227 Queen Street West</p>
+								<p>
+									<span itemprop="addressLocality">Toronto</span>,
+									<span itemprop="addressRegion">ON</span>
+									<meta itemprop="addressCountry" content="CA" />
+								</p>
+								<p itemprop="postalCode">M5V 1Z4</p>
 							</blockquote>
 						</div>
 						<p>
@@ -482,7 +508,7 @@
 								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--envelope-edit" /></svg>
 							</x-icon>
 							<strong>Email:</strong>
-							<span>book@marcos-trattoria.com</span>
+							<span itemprop="email">book@marcos-trattoria.com</span>
 							<sup>
 								<a href="mailto:book@marcos-trattoria.com" target="_blank">
 									<sr-only>Send an email to us</sr-only>
@@ -499,7 +525,7 @@
 								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--phone" /></svg>
 							</x-icon>
 							<strong>Tel:</strong>
-							<span>(647) 123-4567</span>
+							<span itemprop="telephone">+1 (647) 123-4567</span>
 							<sup>
 								<a href="tel:+16471234567" target="_blank">
 									<sr-only>Call phone number</sr-only>
@@ -516,6 +542,10 @@
 								<svg width="24" height="24" viewBox="0 0 24 24"><use href="#uil--map-marker" /></svg>
 							</x-icon>
 							<a href="https://www.google.com/maps?ll=43.650376,-79.388112&z=17&t=m&hl=en&gl=CA&mapclient=embed&q=227+Queen+St+W+Toronto,+ON+M5V+1Z4">Map link</a>
+							<div hidden itemscope itemtype="https://schema.org/GeoCoordinates">
+								<meta itemprop="latitude" content="43.650550667533764" />
+								<meta itemprop="longitude" content="-79.38815491534251" />
+							</div>
 						</p>
 					</address>
 				</contact-info>
