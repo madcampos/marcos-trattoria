@@ -203,18 +203,6 @@ self.addEventListener('fetch', (/** @type {FetchEvent} */ event) => {
 	event.respondWith((async () => {
 		const { request, preloadResponse } = event;
 		const url = new URL(request.url);
-
-		if (request.method === 'POST' && url.pathname.startsWith('/contact')) {
-			const title = url.searchParams.get('title') ?? '';
-			const text = url.searchParams.get('text') ?? '';
-
-			localStorage.setItem('contact-form-title', title);
-			localStorage.setItem('contact-form-text', text);
-
-			// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-			return Response.redirect('/contact/', 303);
-		}
-
 		const cache = await caches.open(CACHE_VERSION);
 
 		let response = await caches.match(request, {

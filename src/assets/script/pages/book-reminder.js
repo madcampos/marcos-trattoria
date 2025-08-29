@@ -1,7 +1,7 @@
 document.querySelector('#booking-alert')?.addEventListener('click', async () => {
 	await Notification.requestPermission();
 
-	/** @satisfies {import('../../sw.js').ServiceWorkerMessages['BOOKING_SAVED']} */
+	/** @satisfies {import('../../../sw.js').ServiceWorkerMessages['BOOKING_SAVED']} */
 	const message = 'booking-saved';
 
 	(await navigator.serviceWorker.ready).active?.postMessage(message);
