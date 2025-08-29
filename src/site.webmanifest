@@ -611,7 +611,65 @@
 	"edge_side_panel": {
 		"preffer_width": 460
 	},
-	"screenshots": [],
+
+	"screenshots": [
+		{
+			"src": "/assets/screenshots/landscape-1.png",
+			"sizes": "1024x593",
+			"type": "image/png",
+			"form_factor": "wide",
+			"label": "The logo for Marco's Trattoria"
+		},
+		{
+			"src": "/assets/screenshots/landscape-2.png",
+			"sizes": "1024x593",
+			"type": "image/png",
+			"form_factor": "wide",
+			"label": "A title reading: \"Good food at your fingertips!\". Below it reads: Easy to book reservations, Menu, Recipes, and More!"
+		},
+		{
+			"src": "/assets/screenshots/landscape-3.png",
+			"sizes": "1024x593",
+			"type": "image/png",
+			"form_factor": "wide",
+			"label": "Two diamond shapes, one reads \"Menu\" and the other reads \"Recipes\"."
+		},
+		{
+			"src": "/assets/screenshots/landscape-4.png",
+			"sizes": "1024x593",
+			"type": "image/png",
+			"form_factor": "wide",
+			"label": "A diamond shape reading \"Our History\". Below it the phrase \"Download Now!\""
+		},
+		{
+			"src": "/assets/screenshots/portrait-1.png",
+			"sizes": "540x720",
+			"type": "image/png",
+			"form_factor": "narrow",
+			"label": "The logo for Marco's Trattoria"
+		},
+		{
+			"src": "/assets/screenshots/portrait-2.png",
+			"sizes": "540x720",
+			"type": "image/png",
+			"form_factor": "narrow",
+			"label": "A title reading: \"Good food at your fingertips!\". Below it reads: Easy to book reservations, Menu, Recipes, and More!"
+		},
+		{
+			"src": "/assets/screenshots/portrait-3.png",
+			"sizes": "540x720",
+			"type": "image/png",
+			"form_factor": "narrow",
+			"label": "Two diamond shapes, one reads \"Menu\" and the other reads \"Recipes\"."
+		},
+		{
+			"src": "/assets/screenshots/portrait-4.png",
+			"sizes": "540x720",
+			"type": "image/png",
+			"form_factor": "narrow",
+			"label": "A diamond shape reading \"Our History\". Below it the phrase \"Download Now!\""
+		}
+	],
 
 	"changelog": {
 		"version": "1.0.0",
