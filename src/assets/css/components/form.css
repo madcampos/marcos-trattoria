@@ -47,6 +47,7 @@
 
 		:is(input:not(:is([type='checkbox'], [type='radio'])), textarea, select) {
 			display: block;
+			appearance: none;
 			margin: var(--input-margin);
 			border: solid 0.1rem var(--color-primary);
 			border-radius: 0.3rem;
@@ -54,6 +55,7 @@
 			padding: 0.3rem 0.4rem;
 			width: calc(100% - var(--input-margin) * 2);
 			resize: none;
+			color: var(--color-text-primary);
 			font-size: 1rem;
 
 			&:focus {
@@ -62,6 +64,14 @@
 				background-color: var(--color-primary);
 				color: var(--color-text-secondary);
 			}
+		}
+
+		select {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232f4da7' d='M17 9.17a1 1 0 0 0-1.41 0L12 12.71L8.46 9.17a1 1 0 0 0-1.41 0a1 1 0 0 0 0 1.42l4.24 4.24a1 1 0 0 0 1.42 0L17 10.59a1 1 0 0 0 0-1.42'/%3E%3C/svg%3E");
+			background-position: center right;
+			background-size: 1rem;
+			background-repeat: no-repeat;
+			padding-right: 1rem;
 		}
 
 		input:is([type='checkbox'], [type='radio']):focus {

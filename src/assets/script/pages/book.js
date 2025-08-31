@@ -61,7 +61,7 @@ function updateDisabledTimes() {
 	});
 
 	timeInput.selectedIndex = 0;
-	timeInput.ariaDisabled = 'true';
+	timeInput.disabled = false;
 	dateErrorMessage.textContent = 'Please select a valid date.';
 	dateInput.setCustomValidity('');
 
@@ -82,9 +82,20 @@ function updateDisabledTimes() {
 			option.disabled = true;
 		});
 
-		timeInput.ariaDisabled = 'true';
+		timeInput.disabled = true;
 		dateInput.setCustomValidity('The restaurant is closed on Mondays.');
 		dateErrorMessage.textContent = 'The restaurant is closed on Mondays.';
+	}
+
+	// Is a holiday
+	if (isHoliday(date)) {
+		[...timeInput.options].forEach((option) => {
+			option.disabled = true;
+		});
+
+		timeInput.disabled = true;
+		dateInput.setCustomValidity('The restaurant is closed on Holidays.');
+		dateErrorMessage.textContent = 'The restaurant is closed on Holidays.';
 	}
 
 	// Hours before now
@@ -100,25 +111,10 @@ function updateDisabledTimes() {
 		});
 	}
 
-	// Is a holiday
-	if (isHoliday(date)) {
-		[...timeInput.options].forEach((option) => {
-			option.disabled = true;
-		});
-
-		timeInput.ariaDisabled = 'true';
-		dateInput.setCustomValidity('The restaurant is closed on Holidays.');
-		dateErrorMessage.textContent = 'The restaurant is closed on Holidays.';
-	}
+	dateInput.reportValidity();
 }
 
 dateInput.addEventListener('change', () => updateDisabledTimes());
-
-timeInput.addEventListener('change', (evt) => {
-	if (timeInput.ariaDisabled === 'true') {
-		evt.preventDefault();
-	}
-});
 
 initializeDateInput();
 updateDisabledTimes();

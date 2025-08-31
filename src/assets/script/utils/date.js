@@ -52,21 +52,6 @@ function getNthMondayOfMonth(year, month, weeksToAdd = 0) {
 }
 
 /**
- * @param {number} year
- * @param {number} month
- */
-function getNthFridayOfMonth(year, month, weeksToAdd = 0) {
-	const date = new Date(year, month, 1);
-	const dayOfTheWeek = date.getDay();
-	const daysToAdd = (dayOfTheWeek <= 5) ? (5 - dayOfTheWeek) : (12 - dayOfTheWeek);
-	date.setDate(date.getDate() + daysToAdd);
-
-	date.setDate(date.getDate() + (7 * weeksToAdd));
-
-	return date;
-}
-
-/**
  * @param {Date} date
  */
 function getPreviousMonday(date) {
@@ -100,16 +85,16 @@ function getHolidays() {
 	holidayList.push(new Date(now.getFullYear(), 6, 25));
 
 	// Civic Holiday - 1st Monday of August
-	holidayList.push(getNthFridayOfMonth(now.getFullYear(), 7));
+	holidayList.push(getNthMondayOfMonth(now.getFullYear(), 7));
 
 	// Labour Day - 1st Monday of September
-	holidayList.push(getNthFridayOfMonth(now.getFullYear(), 8));
+	holidayList.push(getNthMondayOfMonth(now.getFullYear(), 8));
 
 	// Truth and Reconciliation Day - September 30th
 	holidayList.push(new Date(now.getFullYear(), 8, 30));
 
 	// Thanksgiving - 2nd Monday of October
-	holidayList.push(getNthFridayOfMonth(now.getFullYear(), 9, 1));
+	holidayList.push(getNthMondayOfMonth(now.getFullYear(), 9, 1));
 
 	// Rememberance Day - November 11th
 	holidayList.push(new Date(now.getFullYear(), 10, 11));
