@@ -331,38 +331,54 @@
 				</div>
 			</share-options>
 
-			<form action="#" method="post">
+			<form action="#" method="post" itemscope itemtype="https://schema.org/Recipe">
+				<section>
+					<h2>Information</h2>
+
+					<meta itemprop="name" content="Francisquito" />
+					<meta itemprop="description" content="From Chef Marco&rsquo;s childhood to your table." />
+					<meta itemprop="image" content="/assets/images/francisquito.webp" />
+					<meta itemprop="recipeCategory" content="Desert" />
+					<meta itemprop="recipeCuisine" content="Brazilian" />
+					<div hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<meta itemprop="name" content="Marco Campos" />
+					</div>
+
+					<p><strong>Prep Time:</strong> <meta itemprop="prepTime" content="PT30M" />30 minutes</p>
+					<p><strong>Cook time:</strong> <meta itemprop="cookTime" content="PT30M" />30 minutes</p>
+					<p><strong>Yield:</strong> <span itemprop="recipeYield">20 cookies</span></p>
+				</section>
 				<section>
 					<h2>Ingredients</h2>
 					<ul data-share-list="Ingredients">
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-1" />
-								<label for="ingredient-1">7 large eggs</label>
+								<label for="ingredient-1" itemprop="recipeIngredient">7 large eggs</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-2" />
-								<label for="ingredient-2">3 and &frac12; cups of suggar</label>
+								<label for="ingredient-2" itemprop="recipeIngredient">3 and &frac12; cups of suggar</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-3" />
-								<label for="ingredient-3">1 and &frac34; cups of margarine</label>
+								<label for="ingredient-3" itemprop="recipeIngredient">1 and &frac34; cups of margarine</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-4" />
-								<label for="ingredient-4">1 and &frac12; <abbr title="Table Spoon">tbsp</abbr> of baking powder</label>
+								<label for="ingredient-4" itemprop="recipeIngredient">1 and &frac12; <abbr title="Table Spoon">tbsp</abbr> of baking powder</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-5" />
-								<label for="ingredient-5">1kg of all purpose flour</label>
+								<label for="ingredient-5" itemprop="recipeIngredient">1kg of all purpose flour</label>
 							</span>
 						</li>
 					</ul>
@@ -373,37 +389,37 @@
 						<li>
 							<span>
 								<input type="checkbox" id="step-1" />
-								<label for="step-1">Preheat the oven at 450 &#x2109;.</label>
+								<label for="step-1" itemprop="recipeInstructions">Preheat the oven at 450 &deg;F.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-2" />
-								<label for="step-2">In a large bowl mix the eggs, suggar, and margarine.</label>
+								<label for="step-2" itemprop="recipeInstructions">In a large bowl mix the eggs, suggar, and margarine.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-3" />
-								<label for="step-3">With the tips of the fingers, delicately mix the ingredients in the bowl.</label>
+								<label for="step-3" itemprop="recipeInstructions">With the tips of the fingers, delicately mix the ingredients in the bowl.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-4" />
-								<label for="step-4">Add flour until the dough is still buttery but very firm.</label>
+								<label for="step-4" itemprop="recipeInstructions">Add flour until the dough is still buttery but very firm.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-5" />
-								<label for="step-5">Making small horseshoes shaped cookies, lay them in a large baking pan.</label>
+								<label for="step-5" itemprop="recipeInstructions">Making small horseshoes shaped cookies, lay them in a large baking pan.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-6" />
-								<label for="step-6">Bake for 25 to 30 minutes.</label>
+								<label for="step-6" itemprop="recipeInstructions">Bake for 25 to 30 minutes.</label>
 							</span>
 						</li>
 					</ol>

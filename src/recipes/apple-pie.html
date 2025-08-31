@@ -331,56 +331,72 @@
 				</div>
 			</share-options>
 
-			<form action="#" method="post">
+			<form action="#" method="post" itemscope itemtype="https://schema.org/Recipe">
+				<section>
+					<h2>Information</h2>
+
+					<meta itemprop="name" content="Apple Pie" />
+					<meta itemprop="description" content="A mix of Italian and German influences makes for a tasty dessert." />
+					<meta itemprop="image" content="/assets/images/apple-pie.webp" />
+					<meta itemprop="recipeCategory" content="Desert" />
+					<meta itemprop="recipeCuisine" content="Italian and German" />
+					<div hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<meta itemprop="name" content="Marco Campos" />
+					</div>
+
+					<p><strong>Prep Time:</strong> <meta itemprop="prepTime" content="PT30M" />30 minutes</p>
+					<p><strong>Cook time:</strong> <meta itemprop="cookTime" content="PT40M" />40 minutes</p>
+					<p><strong>Yield:</strong> <span itemprop="recipeYield">1 pie</span></p>
+				</section>
 				<section>
 					<h2>Ingredients</h2>
 					<ul data-share-list="Ingredients">
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-1" />
-								<label for="ingredient-1">6 large apples, pealed and sliced</label>
+								<label for="ingredient-1" itemprop="recipeIngredient">6 large apples, pealed and sliced</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-2" />
-								<label for="ingredient-2">2 cups of all purpose flour</label>
+								<label for="ingredient-2" itemprop="recipeIngredient">2 cups of all purpose flour</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-3" />
-								<label for="ingredient-3">1 <abbr title="Table Spoon">tbsp</abbr> of baking powder</label>
+								<label for="ingredient-3" itemprop="recipeIngredient">1 <abbr title="Table Spoon">tbsp</abbr> of baking powder</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-4" />
-								<label for="ingredient-4">1 cup of brown suggar</label>
+								<label for="ingredient-4" itemprop="recipeIngredient">1 cup of brown suggar</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-5" />
-								<label for="ingredient-5">&frac12; cup of margarine</label>
+								<label for="ingredient-5" itemprop="recipeIngredient">&frac12; cup of margarine</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-6" />
-								<label for="ingredient-6">1 egg</label>
+								<label for="ingredient-6" itemprop="recipeIngredient">1 egg</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-7" />
-								<label for="ingredient-7">1 cup of granulated suggar</label>
+								<label for="ingredient-7" itemprop="recipeIngredient">1 cup of granulated suggar</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-8" />
-								<label for="ingredient-8">2 <abbr title="Table Spoon">tbsp</abbr> of cinnamon</label>
+								<label for="ingredient-8" itemprop="recipeIngredient">2 <abbr title="Table Spoon">tbsp</abbr> of cinnamon</label>
 							</span>
 						</li>
 					</ul>
@@ -391,55 +407,57 @@
 						<li>
 							<span>
 								<input type="checkbox" id="step-1" />
-								<label for="step-1">Grease and flour a large pan.</label>
+								<label for="step-1" itemprop="recipeInstructions">Grease and flour a large pan.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-2" />
-								<label for="step-2">Place the apple slices in the pan trying to leave no gaps, you may use small apple slices to fill in the gaps.</label>
+								<label for="step-2" itemprop="recipeInstructions"
+								>Place the apple slices in the pan trying to leave no gaps, you may use small apple slices to fill in the gaps.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-3" />
-								<label for="step-3">Mix the flour, baking powder, and the brown suggar.</label>
+								<label for="step-3" itemprop="recipeInstructions">Mix the flour, baking powder, and the brown suggar.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-4" />
-								<label for="step-4">Cover the apples with the mixture.</label>
+								<label for="step-4" itemprop="recipeInstructions">Cover the apples with the mixture.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-5" />
-								<label for="step-5">Using the back of a spoon carefully smooth the dry ingredients mixture.</label>
+								<label for="step-5" itemprop="recipeInstructions">Using the back of a spoon carefully smooth the dry ingredients mixture.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-6" />
-								<label for="step-6">Soften the margarine until liquid, then carefully pour it on the pan trying not to peel the dry ingredients mixture.</label>
+								<label for="step-6" itemprop="recipeInstructions"
+								>Soften the margarine until liquid, then carefully pour it on the pan trying not to peel the dry ingredients mixture.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-7" />
-								<label for="step-7">Mix the egg yolk and white and pour it on the pan.</label>
+								<label for="step-7" itemprop="recipeInstructions">Mix the egg yolk and white and pour it on the pan.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-8" />
-								<label for="step-8">Mix the cinnamon and the granulated suggarm, then sprinkle it on the pan.</label>
+								<label for="step-8" itemprop="recipeInstructions">Mix the cinnamon and the granulated suggarm, then sprinkle it on the pan.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-9" />
-								<label for="step-9">Bake at 350 &#x2109; for about 40 minutes.</label>
+								<label for="step-9" itemprop="recipeInstructions">Bake at 350 &deg;F for about 40 minutes.</label>
 							</span>
 						</li>
 					</ol>

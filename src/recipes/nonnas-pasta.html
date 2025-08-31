@@ -331,32 +331,48 @@
 				</div>
 			</share-options>
 
-			<form action="#" method="post">
+			<form action="#" method="post" itemscope itemtype="https://schema.org/Recipe">
+				<section>
+					<h2>Information</h2>
+
+					<meta itemprop="name" content="Nonna&rsquo;s Pasta" />
+					<meta itemprop="description" content="As my mamma used to say: the best pasta, is home made pasta." />
+					<meta itemprop="image" content="/assets/images/pasta.webp" />
+					<meta itemprop="recipeCategory" content="Pasta" />
+					<meta itemprop="recipeCuisine" content="Italian" />
+					<div hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+						<meta itemprop="name" content="Marco Campos" />
+					</div>
+
+					<p><strong>Prep Time:</strong> <meta itemprop="prepTime" content="PT2H" />2 hours</p>
+					<p><strong>Cook time:</strong> <meta itemprop="cookTime" content="PT10M" />10 minutes</p>
+					<p><strong>Yield:</strong> <span itemprop="recipeYield">6 portions of pasta</span></p>
+				</section>
 				<section>
 					<h2>Ingredients</h2>
 					<ul data-share-list="Ingredients">
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-1" />
-								<label for="ingredient-1">3 large eggs</label>
+								<label for="ingredient-1" itemprop="recipeIngredient">3 large eggs</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-2" />
-								<label for="ingredient-2">&frac12; cup of water</label>
+								<label for="ingredient-2" itemprop="recipeIngredient">&frac12; cup of water</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-3" />
-								<label for="ingredient-3">1 kg of all purpose flour</label>
+								<label for="ingredient-3" itemprop="recipeIngredient">1 kg of all purpose flour</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="ingredient-4" />
-								<label for="ingredient-4">Corn flour for sprinkling the pasta</label>
+								<label for="ingredient-4" itemprop="recipeIngredient">Corn flour for sprinkling the pasta</label>
 							</span>
 						</li>
 					</ul>
@@ -367,67 +383,70 @@
 						<li>
 							<span>
 								<input type="checkbox" id="step-1" />
-								<label for="step-1">Over a clean surface, spread a little bit of all purpose flour in it.</label>
+								<label for="step-1" itemprop="recipeInstructions">Over a clean surface, spread a little bit of all purpose flour in it.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-2" />
-								<label for="step-2">Make a small mountain with the all purpose flour.</label>
+								<label for="step-2" itemprop="recipeInstructions">Make a small mountain with the all purpose flour.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-3" />
-								<label for="step-3">Create a valley in the middle of the flour mountain and break the eggs inside of it.</label>
+								<label for="step-3" itemprop="recipeInstructions">Create a valley in the middle of the flour mountain and break the eggs inside of it.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-4" />
-								<label for="step-4">Knead the dough to mix the flour and eggs, adding water as needed.</label>
+								<label for="step-4" itemprop="recipeInstructions">Knead the dough to mix the flour and eggs, adding water as needed.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-5" />
-								<label for="step-5">The dough should be in one single large piece and should not stick too much to your hands nor the surface.</label>
+								<label for="step-5" itemprop="recipeInstructions"
+								>The dough should be in one single large piece and should not stick too much to your hands nor the surface.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-6" />
-								<label for="step-6">If the dough is too sticky, adding more flour will make it be more consistent.</label>
+								<label for="step-6" itemprop="recipeInstructions">If the dough is too sticky, adding more flour will make it be more consistent.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-7" />
-								<label for="step-7">If the dough is too dry, adding more water will make it softer.</label>
+								<label for="step-7" itemprop="recipeInstructions">If the dough is too dry, adding more water will make it softer.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-8" />
-								<label for="step-8">Once the dough is ready, break small pieces or it and open them with a rolling pin.</label>
+								<label for="step-8" itemprop="recipeInstructions">Once the dough is ready, break small pieces or it and open them with a rolling pin.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-9" />
-								<label for="step-9">With a knife gently cut the open dough making strands. The pasta strands should not be so thin as they will break.</label>
+								<label for="step-9" itemprop="recipeInstructions"
+								>With a knife gently cut the open dough making strands. The pasta strands should not be so thin as they will break.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-10" />
-								<label for="step-10">After the pasta is cut, sprinkle the corn flour on the pasta and move them to a large baking pan or other flat surface.</label>
+								<label for="step-10" itemprop="recipeInstructions"
+								>After the pasta is cut, sprinkle the corn flour on the pasta and move them to a large baking pan or other flat surface.</label>
 							</span>
 						</li>
 						<li>
 							<span>
 								<input type="checkbox" id="step-11" />
-								<label for="step-11">Let the pasta dry for 2 hours.</label>
+								<label for="step-11" itemprop="recipeInstructions">Let the pasta dry for 2 hours.</label>
 							</span>
 						</li>
 					</ol>
