@@ -1,10 +1,55 @@
 @layer pages {
-	main {
-		dl { columns: 45ch auto; }
+	:root {
+		--color-dish-vegan: seagreen;
+		--color-dish-vegetarian: darkgoldenrod;
+	}
 
-		dd {
-			break-before: avoid;
-			break-inside: avoid;
+	main {
+		dl {
+			column-gap: 4rem;
+			columns: 45ch auto;
+
+			div {
+				break-inside: avoid;
+				margin-block-start: 1rem;
+
+				&:first-of-type { margin-block-start: 0; }
+			}
+
+			dt {
+				display: flex;
+				align-items: baseline;
+				gap: 0.5rem;
+
+				hr {
+					flex-grow: 1;
+					margin: 0;
+					border: none;
+					border-block-end: 0.1rem dotted var(--color-secondary);
+				}
+
+				small {
+					display: block;
+					border-radius: 0.2rem;
+					padding: 0.1rem;
+
+					&.dish-vegan {
+						background: var(--color-dish-vegan);
+						color: var(--color-text-secondary);
+					}
+
+					&.dish-vegetarian {
+						background: var(--color-dish-vegetarian);
+						color: var(--color-text-secondary);
+					}
+				}
+			}
+		}
+
+		.menu-note {
+			margin-block: 2rem;
+			font-style: italic;
+			text-align: center;
 		}
 
 		img {
@@ -18,8 +63,9 @@
 		}
 
 		figure {
-			float: left;
-			margin: 1rem;
+			float: inline-start;
+			margin: 0;
+			margin-inline-end: 4rem;
 			max-width: max(30ch, min(40vw, 50ch));
 
 			@media (max-width: 40rem) {
@@ -29,7 +75,9 @@
 		}
 
 		section:nth-of-type(even) figure {
-			float: right;
+			float: inline-end;
+			margin: 0;
+			margin-inline-start: 4rem;
 
 			@media (max-width: 40rem) {
 				float: none;

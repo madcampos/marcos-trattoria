@@ -133,6 +133,12 @@
 							d="m13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29l-4.3 4.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l4.29-4.3l4.29 4.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42Z"
 						/>
 					</symbol>
+					<symbol id="uil--exclamation-circle" viewBox="0 0 24 24">
+						<path
+							fill="currentColor"
+							d="M12 14a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 12 14m0-1.5a1 1 0 0 0 1-1v-3a1 1 0 0 0-2 0v3a1 1 0 0 0 1 1M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2m0 18a8 8 0 1 1 8-8a8.01 8.01 0 0 1-8 8"
+						/>
+					</symbol>
 				</defs>
 			</svg>
 		</svg-defs>
@@ -276,11 +282,27 @@
 			<meta itemprop="name" content="Marco&rsquo;s Trattoria Dine-in Menu" />
 
 			<!-- #region Wines -->
-			<section itemscope itemtype="https://schema.org/MenuSection">
+			<section itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
 				<h2 itemprop="name">Wines</h2>
 				<dl>
 					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
-						<dt itemprop="name">Chianti Classico DOCG (Tuscany)</dt>
+						<dt>
+							<span itemprop="name">Chianti Classico DOCG (Tuscany)</span>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Glass" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="12" />
+								<span>12</span>
+							</span>
+							<span>/</span>
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Bottle" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="70" />
+								<span>70</span>
+							</span>
+						</dt>
 						<dd itemprop="description">
 							<span><strong>Type:</strong> Red</span>
 							<br />
@@ -291,7 +313,23 @@
 					</div>
 
 					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
-						<dt itemprop="name">Pinot Grigio delle Venezie DOC (Veneto)</dt>
+						<dt>
+							<span itemprop="name">Pinot Grigio delle Venezie DOC (Veneto)</span>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Glass" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="25" />
+								<span>25</span>
+							</span>
+							<span>/</span>
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Bottle" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="120" />
+								<span>120</span>
+							</span>
+						</dt>
 						<dd itemprop="description">
 							<span><strong>Type:</strong> White</span>
 							<br />
@@ -302,7 +340,23 @@
 					</div>
 
 					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
-						<dt itemprop="name">Barolo DOCG (Piedmont)</dt>
+						<dt>
+							<span itemprop="name">Barolo DOCG (Piedmont)</span>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Glass" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="10" />
+								<span>10</span>
+							</span>
+							<span>/</span>
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Bottle" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="50" />
+								<span>50</span>
+							</span>
+						</dt>
 						<dd itemprop="description">
 							<span><strong>Type:</strong> Red</span>
 							<br />
@@ -313,7 +367,23 @@
 					</div>
 
 					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
-						<dt itemprop="name">Prosecco Superiore DOCG (Valdobbiadene)</dt>
+						<dt>
+							<span itemprop="name">Prosecco Superiore DOCG (Valdobbiadene)</span>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Glass" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="15" />
+								<span>15</span>
+							</span>
+							<span>/</span>
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Bottle" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="80" />
+								<span>80</span>
+							</span>
+						</dt>
 						<dd itemprop="description">
 							<span><strong>Type:</strong> Sparkling White</span>
 							<br />
@@ -324,7 +394,23 @@
 					</div>
 
 					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
-						<dt itemprop="name">Verdicchio dei Castelli di Jesi DOC (Marche)</dt>
+						<dt>
+							<span itemprop="name">Verdicchio dei Castelli di Jesi DOC (Marche)</span>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Glass" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="20" />
+								<span>20</span>
+							</span>
+							<span>/</span>
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="name" content="Bottle" />
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="100" />
+								<span>100</span>
+							</span>
+						</dt>
 						<dd itemprop="description">
 							<span><strong>Type:</strong> White</span>
 							<br />
@@ -338,8 +424,8 @@
 			<!-- #endregion -->
 
 			<!-- #region Antipasti -->
-			<section>
-				<h2>Antipasti</h2>
+			<section itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+				<h2 itemprop="name">Antipasti</h2>
 
 				<figure>
 					<img width="480" src="/assets/images/focaccia.webp" alt="A close up shot of a focaccia bread topped with tomatos and herbs." />
@@ -347,27 +433,89 @@
 				</figure>
 
 				<dl>
-					<dt itemprop="name">Focaccia</dt>
-					<dd itemprop="description">House made focaccia, olive oil, and rosemary.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Focaccia</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="15" />
+								<span>15</span>
+							</span>
+						</dt>
+						<dd itemprop="description">House made focaccia, olive oil, and rosemary.</dd>
+					</div>
 
-					<dt itemprop="name">Brucceta al Pomodoro</dt>
-					<dd itemprop="description">Grilled bread topped with marinated tomatoes, garlic, and basil.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Brucceta al Pomodoro</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="12" />
+								<span>12</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Grilled bread topped with marinated tomatoes, garlic, and basil.</dd>
+					</div>
 
-					<dt itemprop="name">Arancini Siciliani</dt>
-					<dd itemprop="description">Crispy risotto balls filled with mozzarella and vegan ragù.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Arancini Siciliani</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="10" />
+								<span>10</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Crispy risotto balls filled with mozzarella and vegan ragù.</dd>
+					</div>
 
-					<dt itemprop="name">Prosciutto e Melone</dt>
-					<dd itemprop="description">Sweet cantaloupe paired with smoked mushroom slices, in the style of Parma ham.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Prosciutto e Melone</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="18" />
+								<span>18</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Sweet cantaloupe paired with smoked mushroom slices, in the style of Parma ham.</dd>
+					</div>
 
-					<dt itemprop="name">Insalata Caprese</dt>
-					<dd itemprop="description">Fresh mozzarella, tomatoes, basil, and extra virgin olive oil.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Insalata Caprese</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="22" />
+								<span>22</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Fresh mozzarella, tomatoes, basil, and extra virgin olive oil.</dd>
+					</div>
 				</dl>
 			</section>
 			<!-- #endregion -->
 
 			<!-- #region Pasta -->
-			<section>
-				<h2>Pasta</h2>
+			<section itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+				<h2 itemprop="name">Pasta</h2>
+
+				<p class="menu-note">Gluten-free options available upon request.</p>
 
 				<figure>
 					<img width="480" src="/assets/images/pasta2.webp" alt="A top shot of plate of pasta with mushroom bolognese sauce and sprinkled cilantro." />
@@ -375,27 +523,89 @@
 				</figure>
 
 				<dl>
-					<dt itemprop="name">Spaghetti alla Carbonara</dt>
-					<dd itemprop="description">Egg yolk, vegan sausage, Pecorino Romano, and black pepper.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Spaghetti alla Carbonara</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="23" />
+								<span>23</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Egg yolk, vegan sausage, Pecorino Romano, and black pepper.</dd>
+					</div>
 
-					<dt itemprop="name">Tagliatelle al Ragù</dt>
-					<dd itemprop="description">Slow-cooked mushroom and lentil ragù over fresh tagliatelle.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Tagliatelle al Ragù</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="20" />
+								<span>20</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Slow-cooked mushroom and lentil ragù over fresh tagliatelle.</dd>
+					</div>
 
-					<dt itemprop="name">Penne all’Arrabbiata</dt>
-					<dd itemprop="description">Spicy tomato sauce with garlic and chili flakes.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Penne all’Arrabbiata</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="25" />
+								<span>25</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Spicy tomato sauce with garlic and chili flakes.</dd>
+					</div>
 
-					<dt itemprop="name">Caccio e Peppe</dt>
-					<dd itemprop="description">Spaghetti, grated pecorino, and black pepper.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Caccio e Peppe</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="25" />
+								<span>25</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Spaghetti, grated pecorino, and black pepper.</dd>
+					</div>
 
-					<dt itemprop="name">Gnocchi al Pesto Genovese</dt>
-					<dd itemprop="description">Potato gnocchi tossed in basil pesto and pine nuts.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Gnocchi al Pesto Genovese</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="22" />
+								<span>22</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Potato gnocchi tossed in basil pesto and pine nuts.</dd>
+					</div>
 				</dl>
 			</section>
 			<!-- #endregion -->
 
 			<!-- #region Pizza -->
-			<section>
-				<h2>Pizza</h2>
+			<section itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+				<h2 itemprop="name">Pizza</h2>
+
+				<p class="menu-note">Gluten-free options available upon request.</p>
 
 				<figure>
 					<img
@@ -407,33 +617,117 @@
 				</figure>
 
 				<dl>
-					<dt itemprop="name">Margherita</dt>
-					<dd itemprop="description">San Marzano tomato, mozzarella di bufala, and fresh basil.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Margherita</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="20" />
+								<span>20</span>
+							</span>
+						</dt>
+						<dd itemprop="description">San Marzano tomato, mozzarella di bufala, and fresh basil.</dd>
+					</div>
 
-					<dt itemprop="name">Quattro Formaggi</dt>
-					<dd itemprop="description">Mozzarella, Gorgonzola, Fontina, and Parmigiano.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Quattro Formaggi</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="25" />
+								<span>25</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Mozzarella, Gorgonzola, Fontina, and Parmigiano.</dd>
+					</div>
 
-					<dt itemprop="name">Diavola</dt>
-					<dd itemprop="description">Spicy vegan salami, tomato sauce, mozzarella, and chili oil.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Diavola</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="23" />
+								<span>23</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Spicy vegan salami, tomato sauce, mozzarella, and chili oil.</dd>
+					</div>
 
-					<dt itemprop="name">Funghi e Tartufo</dt>
-					<dd itemprop="description">Wild mushrooms, truffle cream, and mozzarella.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Funghi e Tartufo</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="30" />
+								<span>30</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Wild mushrooms, truffle cream, and mozzarella.</dd>
+					</div>
 
-					<dt itemprop="name">Capricciosa</dt>
-					<dd itemprop="description">Artichokes, olives, mushrooms, and tomato sauce.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Capricciosa</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="27" />
+								<span>27</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Artichokes, olives, mushrooms, and tomato sauce.</dd>
+					</div>
 
-					<dt itemprop="name">Brazillian Style</dt>
-					<dd itemprop="description">A little bit of everything, it is as delicious as it is outragious.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Brazillian Style</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="30" />
+								<span>30</span>
+							</span>
+						</dt>
+						<dd itemprop="description">A little bit of everything, it is as delicious as it is outragious.</dd>
+					</div>
 
-					<dt itemprop="name">Mezzo-a-Mezzo</dt>
-					<dd itemprop="description">Half and Half pizza. Choose two topping options.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Mezzo-a-Mezzo</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="27" />
+								<span>27</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Half and Half pizza. Choose two topping options.</dd>
+					</div>
 				</dl>
 			</section>
 			<!-- #endregion -->
 
 			<!-- #region Dessert -->
-			<section>
-				<h2>Dessert</h2>
+			<section itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+				<h2 itemprop="name">Dessert</h2>
 
 				<figure>
 					<img
@@ -445,29 +739,125 @@
 				</figure>
 
 				<dl>
-					<dt itemprop="name">Tiramisù Classico</dt>
-					<dd itemprop="description">Layers of espresso-soaked ladyfingers and mascarpone cream.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Tiramisù Classico</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="17" />
+								<span>17</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Layers of espresso-soaked ladyfingers and mascarpone cream.</dd>
+					</div>
 
-					<dt itemprop="name">Panna Cotta alla Vaniglia</dt>
-					<dd itemprop="description">Silky vanilla custard with berry coulis.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Panna Cotta alla Vaniglia</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="15" />
+								<span>15</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Silky vanilla custard with berry coulis.</dd>
+					</div>
 
-					<dt itemprop="name">Cannoli Siciliani</dt>
-					<dd itemprop="description">Crispy pastry shells filled with sweet ricotta and chocolate chips.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Cannoli Siciliani</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="20" />
+								<span>20</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Crispy pastry shells filled with sweet ricotta and chocolate chips.</dd>
+					</div>
 
-					<dt itemprop="name">Gelato Artigianale</dt>
-					<dd itemprop="description">Choice of pistachio, hazelnut, stracciatella, or lemon.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Gelato Artigianale</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="12" />
+								<span>12</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Choice of pistachio, hazelnut, stracciatella, or lemon.</dd>
+					</div>
 
-					<dt itemprop="name">Affogato al Caffè</dt>
-					<dd itemprop="description">Vanilla gelato drowned in hot espresso.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Affogato al Caffè</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VeganDiet" />
+							<small class="dish-vegan">(Vegan)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="10" />
+								<span>10</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Vanilla gelato drowned in hot espresso.</dd>
+					</div>
 
-					<dt itemprop="name">Apple Pie</dt>
-					<dd itemprop="description">Layers of apple intersected with a buttery flaky crust.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name">Apple Pie</span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="12" />
+								<span>12</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Layers of apple intersected with a buttery flaky crust.</dd>
+					</div>
 
-					<dt itemprop="name"><em lang="pt-BR">Brigadeiro</em></dt>
-					<dd itemprop="description">Traditional Brazilian chocolate fudge balls.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name"><em lang="pt-BR">Brigadeiro</em></span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="10" />
+								<span>10</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Traditional Brazilian chocolate fudge balls.</dd>
+					</div>
 
-					<dt itemprop="name"><em lang="pt-BR">Francisquito</em></dt>
-					<dd itemprop="description">Soft cookie with crusty shell.</dd>
+					<div itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+						<dt>
+							<span itemprop="name"><em lang="pt-BR">Francisquito</em></span>
+							<meta itemprop="suitableForDiet" content="https://schema.org/VegetarianDiet" />
+							<small class="dish-vegetarian">(Vegetarian)</small>
+							<hr />
+							<span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+								<meta itemprop="priceCurrency" content="CAD" />
+								<meta itemprop="price" content="18" />
+								<span>18</span>
+							</span>
+						</dt>
+						<dd itemprop="description">Soft cookie with crusty shell.</dd>
+					</div>
 				</dl>
 			</section>
 			<!-- #endregion -->
