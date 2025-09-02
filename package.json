@@ -1,7 +1,7 @@
 {
 	"name": "marcos-trattoria",
 	"private": true,
-	"version": "3.5.0",
+	"version": "1.5.0",
 	"license": "MIT",
 	"type": "module",
 	"engines": {
@@ -14,9 +14,8 @@
 		"start": "wrangler dev --https-cert-path certs/server.crt --https-key-path certs/server.key",
 		"deploy": "wrangler deploy --minify",
 		"typecheck": "tsc --noEmit",
-		"format": "dprint fmt --staged",
-		"lint:js": "eslint --fix",
-		"lint": "npm run typecheck && npm run lint:js"
+		"lint": "eslint --fix",
+		"format": "dprint fmt --staged"
 	},
 	"devDependencies": {
 		"@types/node": "^24.0.15",

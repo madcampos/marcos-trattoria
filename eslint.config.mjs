@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
+
 /// <reference types="@types/node" />
 
 import tsPlugin from '@typescript-eslint/eslint-plugin';
@@ -155,7 +157,8 @@ const rules = {
 	'no-this-before-super': 'error',
 	'no-throw-literal': 'off',
 	'no-undef-init': 'warn',
-	'no-undef': 'off', // Typescript provides better support
+	// INFO: Typescript provides better support
+	'no-undef': 'off',
 	'no-undefined': 'off',
 	'no-underscore-dangle': 'error',
 	'no-unexpected-multiline': 'error',
@@ -465,7 +468,7 @@ const languageOptions = {
 	}
 };
 
-const ignores = ['node_modules/**/*', 'dist/**/*', 'dev-dist/**/*', 'src/content/**/*'];
+const ignores = ['node_modules/**/*'];
 
 /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.Plugins} */
 const plugins = {
@@ -476,7 +479,10 @@ const plugins = {
 export default [
 	{
 		name: 'Default TS config',
-		files: ['src/**/*.{js,mjs,cjs,ts,cts,mts}'],
+		files: [
+			'src/**/*.{js,mjs,cjs,ts,cts,mts}',
+			'eslint.config.mjs'
+		],
 		ignores,
 		languageOptions,
 		plugins,

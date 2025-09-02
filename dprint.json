@@ -125,29 +125,7 @@
 		"ignoreCommentDirective": "dprint-ignore",
 		"ignoreFileCommentDirective": "dprint-ignore-file"
 	},
-	"yaml": {
-		"printWidth": 180,
-		"indentWidth": 2,
-		"lineBreak": "lf",
-		"quotes": "preferDouble",
-		"trailingComma": true,
-		"formatComments": false,
-		"indentBlockSequenceInMap": true,
-		"braceSpacing": true,
-		"bracketSpacing": false,
-		"dashSpacing": "oneSpace",
-		"trimTrailingWhitespaces": true,
-		"trimTrailingZero": false,
-		"ignoreCommentDirective": "dprint-ignore"
-	},
-	"toml": {
-		"indentWidth": 4,
-		"useTabs": true,
-		"newLineKind": "lf",
-		"comment.forceLeadingSpace": true
-	},
 	"excludes": [
-		"dist/**",
 		"**/node_modules",
 		"**/*-lock.json"
 	],
@@ -156,8 +134,6 @@
 		"https://plugins.dprint.dev/json-0.20.0.wasm",
 		"https://plugins.dprint.dev/g-plane/malva-v0.12.1.wasm",
 		"https://plugins.dprint.dev/g-plane/markup_fmt-v0.21.0.wasm",
-		"https://plugins.dprint.dev/markdown-0.18.0.wasm",
-		"https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.1.wasm",
-		"https://plugins.dprint.dev/toml-0.7.0.wasm"
+		"https://plugins.dprint.dev/markdown-0.18.0.wasm"
 	]
 }
