@@ -26,6 +26,6 @@
 		"eslint": "^9.32.0",
 		"globals": "^16.3.0",
 		"typescript": "^5.8.3",
-		"wrangler": "4.26.1"
+		"wrangler": "4.59.1"
 	}
 }
